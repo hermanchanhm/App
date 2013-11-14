@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF34AC9C1834D16D00C0F970 /* WidgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF34AC9B1834D16D00C0F970 /* WidgetViewController.m */; };
+		DF34AC9F1834D28C00C0F970 /* WidgetView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF34AC9E1834D28C00C0F970 /* WidgetView.m */; };
+		DF34ACA21834DEE200C0F970 /* GoalPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF34ACA11834DEE200C0F970 /* GoalPickerView.m */; };
+		DF34ACA51834E03F00C0F970 /* Goal1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF34ACA41834E03F00C0F970 /* Goal1ViewController.m */; };
 		DF7225AE18331274003C0D8F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF7225AD18331274003C0D8F /* Foundation.framework */; };
 		DF7225B018331274003C0D8F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF7225AF18331274003C0D8F /* CoreGraphics.framework */; };
 		DF7225B218331274003C0D8F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF7225B118331274003C0D8F /* UIKit.framework */; };
@@ -34,6 +38,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DF34AC9A1834D16D00C0F970 /* WidgetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WidgetViewController.h; sourceTree = "<group>"; };
+		DF34AC9B1834D16D00C0F970 /* WidgetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WidgetViewController.m; sourceTree = "<group>"; };
+		DF34AC9D1834D28C00C0F970 /* WidgetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WidgetView.h; sourceTree = "<group>"; };
+		DF34AC9E1834D28C00C0F970 /* WidgetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WidgetView.m; sourceTree = "<group>"; };
+		DF34ACA01834DEE200C0F970 /* GoalPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoalPickerView.h; sourceTree = "<group>"; };
+		DF34ACA11834DEE200C0F970 /* GoalPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalPickerView.m; sourceTree = "<group>"; };
+		DF34ACA31834E03F00C0F970 /* Goal1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Goal1ViewController.h; sourceTree = "<group>"; };
+		DF34ACA41834E03F00C0F970 /* Goal1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Goal1ViewController.m; sourceTree = "<group>"; };
 		DF7225AA18331274003C0D8F /* App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF7225AD18331274003C0D8F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DF7225AF18331274003C0D8F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -115,6 +127,14 @@
 				DF7225BC18331274003C0D8F /* MainAppDelegate.h */,
 				DF7225BD18331274003C0D8F /* MainAppDelegate.m */,
 				DF7225BF18331274003C0D8F /* Main.storyboard */,
+				DF34ACA31834E03F00C0F970 /* Goal1ViewController.h */,
+				DF34ACA41834E03F00C0F970 /* Goal1ViewController.m */,
+				DF34ACA01834DEE200C0F970 /* GoalPickerView.h */,
+				DF34ACA11834DEE200C0F970 /* GoalPickerView.m */,
+				DF34AC9D1834D28C00C0F970 /* WidgetView.h */,
+				DF34AC9E1834D28C00C0F970 /* WidgetView.m */,
+				DF34AC9A1834D16D00C0F970 /* WidgetViewController.h */,
+				DF34AC9B1834D16D00C0F970 /* WidgetViewController.m */,
 				DF7225C218331274003C0D8F /* MainViewController.h */,
 				DF7225C318331274003C0D8F /* MainViewController.m */,
 				DF7225C518331274003C0D8F /* Images.xcassets */,
@@ -250,9 +270,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF34AC9C1834D16D00C0F970 /* WidgetViewController.m in Sources */,
 				DF7225BA18331274003C0D8F /* main.m in Sources */,
+				DF34ACA51834E03F00C0F970 /* Goal1ViewController.m in Sources */,
 				DF7225C418331274003C0D8F /* MainViewController.m in Sources */,
+				DF34AC9F1834D28C00C0F970 /* WidgetView.m in Sources */,
 				DF7225BE18331274003C0D8F /* MainAppDelegate.m in Sources */,
+				DF34ACA21834DEE200C0F970 /* GoalPickerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
