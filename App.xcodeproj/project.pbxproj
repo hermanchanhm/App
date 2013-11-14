@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00A2253D1834693100C0A3FC /* icon in Resources */ = {isa = PBXBuildFile; fileRef = 00A2253C1834693100C0A3FC /* icon */; };
 		DF7225AE18331274003C0D8F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF7225AD18331274003C0D8F /* Foundation.framework */; };
 		DF7225B018331274003C0D8F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF7225AF18331274003C0D8F /* CoreGraphics.framework */; };
 		DF7225B218331274003C0D8F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF7225B118331274003C0D8F /* UIKit.framework */; };
@@ -35,7 +34,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00A2253C1834693100C0A3FC /* icon */ = {isa = PBXFileReference; lastKnownFileType = folder; name = icon; path = ../../icon; sourceTree = "<group>"; };
 		DF7225AA18331274003C0D8F /* App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF7225AD18331274003C0D8F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DF7225AF18331274003C0D8F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -120,7 +118,6 @@
 				DF7225C218331274003C0D8F /* MainViewController.h */,
 				DF7225C318331274003C0D8F /* MainViewController.m */,
 				DF7225C518331274003C0D8F /* Images.xcassets */,
-				00A2253C1834693100C0A3FC /* icon */,
 				DF7225B418331274003C0D8F /* Supporting Files */,
 			);
 			path = App;
@@ -233,7 +230,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF7225C618331274003C0D8F /* Images.xcassets in Resources */,
-				00A2253D1834693100C0A3FC /* icon in Resources */,
 				DF7225B818331274003C0D8F /* InfoPlist.strings in Resources */,
 				DF7225C118331274003C0D8F /* Main.storyboard in Resources */,
 			);
