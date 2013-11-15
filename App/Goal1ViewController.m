@@ -28,6 +28,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     self.goalArray = [[NSArray alloc] initWithObjects:@"Diet",@"Exercise",@"Bad Habit",@"4",@"5", nil];
+    self.selectorLabel.text = [NSString stringWithFormat:@"%.f", self.selectorStepper.value];
     
 }
 
@@ -66,7 +67,7 @@
             self.choice.text = @"Exercise";
             break;
         case 2:
-            self.choice.text = @"Bad HabitF";
+            self.choice.text = @"Bad Habit";
             break;
         case 3:
             self.choice.text = @"4";
@@ -75,5 +76,9 @@
             self.choice.text = @"5";
             break;
     }
+}
+//Change the value of the UILabel *selectorLabel
+- (IBAction)valueChanged:(id)sender {
+    self.selectorLabel.text = [NSString stringWithFormat:@"%.f", self.selectorStepper.value];
 }
 @end

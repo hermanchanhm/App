@@ -13,5 +13,10 @@
 @property (strong, nonatomic) IBOutlet UILabel *choice;
 @property (strong, nonatomic) IBOutlet UIPickerView *picker;
 @property (strong, nonatomic) NSArray *goalArray;
+@property (strong, nonatomic) IBOutlet UIStepper *selectorStepper;
+@property (strong, nonatomic) IBOutlet UILabel *selectorLabel;
+
+- (IBAction)valueChanged:(id)sender;
+
 
 @end
