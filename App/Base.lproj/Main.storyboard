@@ -926,7 +926,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <rect key="frame" x="0.0" y="66" width="320" height="328"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <string key="text">This is the contrat between patient ABC and physisian XYZ, MD...Be clicking Agree........I willl try my best to accomplish all the Goals settted and blah blah blah............</string>
+                                <string key="text">This is the contrat between patient ABC and physisian XYZ, MD...By tapping Agree........I willl try my best to accomplish all the Goals settted and blah blah blah............</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -947,6 +947,24 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 <placeholder placeholderIdentifier="IBFirstResponder" id="50P-qj-H18" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="891" y="297"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="A3x-Ox-l8G">
+            <objects>
+                <viewController id="7c7-wN-Of1" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9fu-Ym-NzC"/>
+                        <viewControllerLayoutGuide type="bottom" id="wBj-20-ANQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="r72-Of-3fp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Rg-f9-7ik" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1365" y="292"/>
         </scene>
     </scenes>
     <resources>

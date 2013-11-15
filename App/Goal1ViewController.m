@@ -70,10 +70,10 @@
             self.choice.text = @"Bad Habit";
             break;
         case 3:
-            self.choice.text = @"4";
+            self.choice.text = @"4th Goal Type";
             break;
         case 4:
-            self.choice.text = @"5";
+            self.choice.text = @"5th Goal Type";
             break;
     }
 }
