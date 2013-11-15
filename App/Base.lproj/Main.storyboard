@@ -223,6 +223,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="finishTypeGoal:" destination="koX-Ar-GSY" eventType="editingDidEndOnExit" id="NC1-Lu-WaM"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n8v-YV-D5K">
                                 <rect key="frame" x="98" y="501" width="124" height="29"/>
@@ -264,6 +267,7 @@
                     <navigationItem key="navigationItem" title="Goal #1" id="4n4-6m-IOC"/>
                     <connections>
                         <outlet property="choice" destination="wkK-Do-nb7" id="uAD-o3-zyZ"/>
+                        <outlet property="goalTextField" destination="HDZ-GZ-Bfx" id="7Py-Um-YsS"/>
                         <outlet property="picker" destination="VPP-CF-CIL" id="4IE-Yc-uMy"/>
                         <outlet property="selectorLabel" destination="Jeb-WE-kNA" id="kbF-xC-8Kw"/>
                         <outlet property="selectorStepper" destination="SGM-l7-Etp" id="7S7-Q3-Mic"/>

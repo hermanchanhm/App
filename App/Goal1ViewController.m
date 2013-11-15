@@ -81,4 +81,10 @@
 - (IBAction)valueChanged:(id)sender {
     self.selectorLabel.text = [NSString stringWithFormat:@"%.f", self.selectorStepper.value];
 }
+
+- (IBAction)finishTypeGoal:(id)sender {
+    [sender resignFirstResponder];
+}
+
+
 @end

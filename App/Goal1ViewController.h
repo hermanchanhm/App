@@ -15,8 +15,10 @@
 @property (strong, nonatomic) NSArray *goalArray;
 @property (strong, nonatomic) IBOutlet UIStepper *selectorStepper;
 @property (strong, nonatomic) IBOutlet UILabel *selectorLabel;
+@property (strong, nonatomic) IBOutlet UITextField *goalTextField;
 
 - (IBAction)valueChanged:(id)sender;
 
+- (IBAction)finishTypeGoal:(id)sender;
 
 @end
