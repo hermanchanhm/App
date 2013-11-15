@@ -39,7 +39,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TPj-LM-JDV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-147" y="-1093"/>
+            <point key="canvasLocation" x="-135" y="-1109"/>
         </scene>
         <!--View Controller - Widget-->
         <scene sceneID="nGS-hH-CK4">
@@ -114,7 +114,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WcW-9B-ahP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-367" y="-400"/>
+            <point key="canvasLocation" x="297" y="-1109"/>
         </scene>
         <!--View Controller - Set Goals-->
         <scene sceneID="uIs-jl-KfC">
@@ -195,7 +195,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i43-sS-7ay" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="55" y="-400"/>
+            <point key="canvasLocation" x="757" y="-1109"/>
         </scene>
         <!--Goal1 View Controller - Goal #1-->
         <scene sceneID="TUV-oq-I23">
@@ -239,7 +239,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n8v-YV-D5K">
-                                <rect key="frame" x="98" y="501" width="124" height="29"/>
+                                <rect key="frame" x="0.0" y="519" width="320" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Add Goal"/>
@@ -248,8 +248,8 @@
                                 <rect key="frame" x="177" y="222" width="123" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
-                                    <segment title="Day"/>
-                                    <segment title="Week"/>
+                                    <segment title="per Day"/>
+                                    <segment title="per Week"/>
                                 </segments>
                             </segmentedControl>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jeb-WE-kNA">
@@ -286,7 +286,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BCE-2t-SIs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="573" y="-400"/>
+            <point key="canvasLocation" x="757" y="-432"/>
         </scene>
         <!--View Controller - Home-->
         <scene sceneID="ifY-Bh-DWA">
@@ -688,7 +688,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EwA-ww-bC9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1706" y="-1415"/>
+            <point key="canvasLocation" x="1958" y="-2257"/>
         </scene>
         <!--View Controller - Calendar-->
         <scene sceneID="B8R-4i-Qid">
@@ -737,7 +737,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vWF-mU-BhD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1706" y="-2170"/>
+            <point key="canvasLocation" x="1290" y="-2594"/>
         </scene>
         <!--View Controller - Report-->
         <scene sceneID="BYV-Jl-jIO">
@@ -789,7 +789,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="goh-8u-0Nw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2320" y="-1415"/>
+            <point key="canvasLocation" x="2572" y="-2257"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NZ6-Tc-SWa">
@@ -807,7 +807,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eSJ-bR-iEF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-605" y="-1087"/>
+            <point key="canvasLocation" x="-593" y="-1103"/>
         </scene>
         <!--View Controller - Notifications-->
         <scene sceneID="re3-e2-gLE">
@@ -908,7 +908,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rq8-iH-ehd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="477" y="297"/>
+            <point key="canvasLocation" x="1205" y="-1103"/>
         </scene>
         <!--View Controller - Contract-->
         <scene sceneID="oWJ-3m-aYj">
@@ -946,12 +946,12 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="50P-qj-H18" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="891" y="297"/>
+            <point key="canvasLocation" x="1637" y="-1103"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller - Profile-->
         <scene sceneID="A3x-Ox-l8G">
             <objects>
-                <viewController id="7c7-wN-Of1" sceneMemberID="viewController">
+                <viewController title="Profile" id="7c7-wN-Of1" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9fu-Ym-NzC"/>
                         <viewControllerLayoutGuide type="bottom" id="wBj-20-ANQ"/>
@@ -964,7 +964,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Rg-f9-7ik" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1365" y="292"/>
+            <point key="canvasLocation" x="1525" y="-400"/>
         </scene>
     </scenes>
     <resources>
@@ -980,6 +980,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="x2O-wk-elV"/>
+        <segue reference="oky-uq-UZB"/>
     </inferredMetricsTieBreakers>
 </document>
