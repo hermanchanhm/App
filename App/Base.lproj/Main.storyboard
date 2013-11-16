@@ -1009,7 +1009,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     <connections>
                         <segue destination="il5-ZV-w3H" kind="relationship" relationship="viewControllers" id="gmO-tB-z2e"/>
                         <segue destination="zvA-MJ-MYV" kind="relationship" relationship="viewControllers" id="KaC-dF-MyB"/>
-                        <segue destination="2n9-5M-CZM" kind="relationship" relationship="viewControllers" id="RtP-TX-rIA"/>
+                        <segue destination="KL5-tI-z8b" kind="relationship" relationship="viewControllers" id="9xp-bi-2Ao"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wjf-Oe-CvE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1063,6 +1063,22 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uuX-O5-7Rd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="3992" y="653"/>
+        </scene>
+        <!--Navigation Controller - Settings-->
+        <scene sceneID="n98-X5-cP8">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="KL5-tI-z8b" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Settings" image="Settings(no link needed)" id="Nt1-QH-xLh"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aOm-9u-VhU">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="2n9-5M-CZM" kind="relationship" relationship="rootViewController" id="9bz-wN-aVP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P35-K4-a5o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="2680" y="225"/>
         </scene>
         <!--Settings Table View Controller - Settings-->
@@ -1075,7 +1091,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="settingsCell" id="a1v-43-xFt" customClass="SettingsTableViewCell">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="a1v-43-xFt" id="koh-Wf-peB">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -1100,10 +1116,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Settings" image="Settings(no link needed)" id="G4a-Ch-VJ2"/>
+                    <navigationItem key="navigationItem" title="Settings" id="dHU-lz-CkY"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Lq-gc-HGO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3034" y="225"/>
+            <point key="canvasLocation" x="3122" y="225"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="oIF-L0-G3E">
