@@ -989,7 +989,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Graphs" image="GraphTab" id="CCf-XD-O9e"/>
+                    <tabBarItem key="tabBarItem" title="Graphs" image="GraphTab(have to include link)" id="CCf-XD-O9e"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wKh-gh-aOg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1029,7 +1029,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="TODAY" id="T4Q-hA-WUD"/>
+                    <tabBarItem key="tabBarItem" title="TODAY" image="Today (have to include link)" id="T4Q-hA-WUD"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pFg-FO-d7Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1048,7 +1048,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="HMe-vF-PPj"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="Settings(no link needed)" id="HMe-vF-PPj"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uuX-O5-7Rd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1058,7 +1058,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
     <resources>
         <image name="Calendar" width="32" height="32"/>
         <image name="Gear" width="24" height="24"/>
-        <image name="GraphTab" width="512" height="512"/>
+        <image name="GraphTab(have to include link)" width="32" height="32"/>
+        <image name="Settings(no link needed)" width="32" height="32"/>
+        <image name="Today (have to include link)" width="32" height="32"/>
         <image name="graph-icon" width="32" height="32"/>
         <image name="graph-picture" width="128" height="128"/>
         <image name="list" width="32" height="32"/>
