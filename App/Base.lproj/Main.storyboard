@@ -1009,7 +1009,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     <connections>
                         <segue destination="il5-ZV-w3H" kind="relationship" relationship="viewControllers" id="gmO-tB-z2e"/>
                         <segue destination="zvA-MJ-MYV" kind="relationship" relationship="viewControllers" id="KaC-dF-MyB"/>
-                        <segue destination="sWb-Ke-ZEQ" kind="relationship" relationship="viewControllers" id="MdD-ln-uJa"/>
+                        <segue destination="2n9-5M-CZM" kind="relationship" relationship="viewControllers" id="RtP-TX-rIA"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wjf-Oe-CvE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1030,6 +1030,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="TODAY" image="Today (have to include link)" id="T4Q-hA-WUD"/>
+                    <navigationItem key="navigationItem" id="IV8-G4-hwc"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pFg-FO-d7Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1063,6 +1064,46 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uuX-O5-7Rd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2680" y="225"/>
+        </scene>
+        <!--Settings Table View Controller - Settings-->
+        <scene sceneID="xyR-Ki-hYu">
+            <objects>
+                <tableViewController id="2n9-5M-CZM" customClass="SettingsTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Fv0-Mr-HRG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="settingsCell" id="a1v-43-xFt" customClass="SettingsTableViewCell">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="a1v-43-xFt" id="koh-Wf-peB">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rk0-Gh-lsV">
+                                            <rect key="frame" x="20" y="0.0" width="280" height="43"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="settingsLabel" destination="Rk0-Gh-lsV" id="Sd7-5q-ZZl"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="2n9-5M-CZM" id="XYM-e0-OaP"/>
+                            <outlet property="delegate" destination="2n9-5M-CZM" id="eyW-rP-P55"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Settings" image="Settings(no link needed)" id="G4a-Ch-VJ2"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Lq-gc-HGO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3034" y="225"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="oIF-L0-G3E">
