@@ -72,6 +72,39 @@
     return cell;
 }
 
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(indexPath.row==0)
+    {
+        //Open New View select on 1st row
+        UIViewController *anotherVC = [self.storyboard instantiateViewControllerWithIdentifier:@"goalVC"];
+        [self.navigationController pushViewController:anotherVC animated:YES];
+        
+    }
+    if(indexPath.row==1)
+    {
+        //Open New View select on 2st row
+        UIViewController *anotherVC = [self.storyboard instantiateViewControllerWithIdentifier:@"notificationVC"];
+        [self.navigationController pushViewController:anotherVC animated:YES];
+    }
+    if(indexPath.row==2)
+    {
+        //Open New View select on 3rd row
+        UIViewController *anotherVC = [self.storyboard instantiateViewControllerWithIdentifier:@"widgetVC"];
+        [self.navigationController pushViewController:anotherVC animated:YES];
+        
+    }
+    if(indexPath.row==3)
+    {
+        //Open New View select on 4th row
+        UIViewController *anotherVC = [self.storyboard instantiateViewControllerWithIdentifier:@"profileVC"];
+        [self.navigationController pushViewController:anotherVC animated:YES];
+    }
+    
+}
+
+
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
