@@ -30,6 +30,9 @@
     self.goalArray = [[NSArray alloc] initWithObjects:@"Diet",@"Exercise",@"Bad Habits",@"Take Your Meds!",@"Monitoring", nil];
     self.selectorLabel.text = [NSString stringWithFormat:@"%.f", self.selectorStepper.value];
     
+    //Select default row as first row
+    [self.picker selectRow:0 inComponent:0 animated:YES];
+    
     //Add Tap Gesture Recognizer
     UITapGestureRecognizer *tapDismissKeyboard = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector (hideKeyboard)];
     
