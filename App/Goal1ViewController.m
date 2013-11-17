@@ -30,6 +30,13 @@
     self.goalArray = [[NSArray alloc] initWithObjects:@"Diet",@"Exercise",@"Bad Habits",@"Take Your Meds!",@"Monitoring", nil];
     self.selectorLabel.text = [NSString stringWithFormat:@"%.f", self.selectorStepper.value];
     
+    //Add Tap Gesture Recognizer
+    UITapGestureRecognizer *tapDismissKeyboard = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector (hideKeyboard)];
+    
+    [self.view addGestureRecognizer:tapDismissKeyboard];
+    
+    // or just add: [self.view endEditing:YES];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -86,5 +93,9 @@
     [sender resignFirstResponder];
 }
 
+-(void)hideKeyboard {
+    [self.goalTextField resignFirstResponder];
+    
+}
 
 @end

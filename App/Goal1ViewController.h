@@ -16,6 +16,7 @@
 @property (strong, nonatomic) IBOutlet UIStepper *selectorStepper;
 @property (strong, nonatomic) IBOutlet UILabel *selectorLabel;
 @property (strong, nonatomic) IBOutlet UITextField *goalTextField;
+@property UITapGestureRecognizer *tapDismissKeyboard;
 
 - (IBAction)valueChanged:(id)sender;
 
