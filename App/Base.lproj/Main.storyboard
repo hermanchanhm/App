@@ -1258,10 +1258,10 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="4414" y="-65"/>
         </scene>
-        <!--View Controller - Set Goals-->
+        <!--View Controller - View Goals-->
         <scene sceneID="33x-M1-Bh3">
             <objects>
-                <viewController storyboardIdentifier="goalVC" title="Set Goals" id="eSa-6f-VX5" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="goalVC" title="View Goals" id="eSa-6f-VX5" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vMD-4M-cbS"/>
                         <viewControllerLayoutGuide type="bottom" id="hbk-ec-7XF"/>

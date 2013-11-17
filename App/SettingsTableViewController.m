@@ -29,7 +29,7 @@
     [super viewDidLoad];
 
     //self.settingsArray = [[NSArray alloc] initWithObjects:@"Diet",@"Exercise",@"Bad Habit",@"4",@"5", nil];
-    self.settingsArray = @[@"Set Goals", @"Notification Time", @"Widgets", @"Profile"];
+    self.settingsArray = @[@"View Goals", @"Notification Time", @"Widgets", @"Profile"];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
