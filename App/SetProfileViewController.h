@@ -1,5 +1,5 @@
 //
-//  ProfileViewController.h
+//  SetProfileViewController.h
 //  App
 //
 //  Created by Herman on 11/16/13.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ProfileViewController : UIViewController
+@interface SetProfileViewController : UIViewController
 @property UITapGestureRecognizer *tapDismissKeyboard;
 @property (strong, nonatomic) IBOutlet UITextField *nameField;
 @property (strong, nonatomic) IBOutlet UITextField *ageField;

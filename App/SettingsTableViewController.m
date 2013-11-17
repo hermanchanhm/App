@@ -98,7 +98,7 @@
     if(indexPath.row==3)
     {
         //Open New View select on 4th row
-        UIViewController *anotherVC = [self.storyboard instantiateViewControllerWithIdentifier:@"profileVC"];
+        UIViewController *anotherVC = [self.storyboard instantiateViewControllerWithIdentifier:@"setprofileVC"];
         [self.navigationController pushViewController:anotherVC animated:YES];
     }
     

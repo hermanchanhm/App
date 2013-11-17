@@ -1,18 +1,18 @@
 //
-//  ProfileViewController.m
+//  SetProfileViewController.m
 //  App
 //
 //  Created by Herman on 11/16/13.
 //  Copyright (c) 2013 Team 22. All rights reserved.
 //
 
-#import "ProfileViewController.h"
+#import "SetProfileViewController.h"
 
-@interface ProfileViewController ()
+@interface SetProfileViewController ()
 
 @end
 
-@implementation ProfileViewController
+@implementation SetProfileViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
