@@ -27,7 +27,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    self.goalArray = [[NSArray alloc] initWithObjects:@"Diet",@"Exercise",@"Bad Habit",@"4",@"5", nil];
+    self.goalArray = [[NSArray alloc] initWithObjects:@"Diet",@"Exercise",@"Bad Habits",@"Take Your Meds!",@"Monitoring", nil];
     self.selectorLabel.text = [NSString stringWithFormat:@"%.f", self.selectorStepper.value];
     
 }
@@ -67,13 +67,13 @@
             self.choice.text = @"Exercise";
             break;
         case 2:
-            self.choice.text = @"Bad Habit";
+            self.choice.text = @"Bad Habits";
             break;
         case 3:
-            self.choice.text = @"4th Goal Type";
+            self.choice.text = @"Take Your Meds!";
             break;
         case 4:
-            self.choice.text = @"5th Goal Type";
+            self.choice.text = @"Monitoring";
             break;
     }
 }
