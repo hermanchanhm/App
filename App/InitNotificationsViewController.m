@@ -67,5 +67,8 @@
     //Repeat Daily
     PMNotification.repeatInterval = NSDayCalendarUnit;
     
+    //below is code for cancel old notifications scheuled
+    //[[UIApplication sharedApplication] cancelAllLocalNotifications];
+    
 }
 @end
