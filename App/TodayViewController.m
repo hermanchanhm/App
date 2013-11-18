@@ -28,7 +28,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    self.quoteTextView.
+    
     
     self.quoteArray = [[NSArray alloc] initWithObjects:@"Dietkjfkqjekqehfqkejfqkwfjhqwkjqhwkgjqwhkgjhwkjqhwkqhgkjqhgkqjwhg",@"Exercise",@"Bad Habits",@"Take Your Meds!",@"Monitoring", nil];
     //random generate quote and display quote
