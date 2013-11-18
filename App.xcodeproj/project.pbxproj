@@ -29,6 +29,7 @@
 		DF7225CF18331274003C0D8F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF7225B118331274003C0D8F /* UIKit.framework */; };
 		DF7225D718331274003C0D8F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DF7225D518331274003C0D8F /* InfoPlist.strings */; };
 		DF7225D918331274003C0D8F /* AppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DF7225D818331274003C0D8F /* AppTests.m */; };
+		DFF255B5183A0F7200A73387 /* TodayPMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF255B4183A0F7200A73387 /* TodayPMViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,8 @@
 		DF7225D418331274003C0D8F /* AppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AppTests-Info.plist"; sourceTree = "<group>"; };
 		DF7225D618331274003C0D8F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DF7225D818331274003C0D8F /* AppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppTests.m; sourceTree = "<group>"; };
+		DFF255B3183A0F7200A73387 /* TodayPMViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodayPMViewController.h; sourceTree = "<group>"; };
+		DFF255B4183A0F7200A73387 /* TodayPMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodayPMViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +142,8 @@
 				DF7225BC18331274003C0D8F /* MainAppDelegate.h */,
 				DF7225BD18331274003C0D8F /* MainAppDelegate.m */,
 				DF7225BF18331274003C0D8F /* Main.storyboard */,
+				DFF255B3183A0F7200A73387 /* TodayPMViewController.h */,
+				DFF255B4183A0F7200A73387 /* TodayPMViewController.m */,
 				DF34ACBA1839857000C0F970 /* TodayViewController.h */,
 				DF34ACBB1839857000C0F970 /* TodayViewController.m */,
 				DF34ACB71838A58400C0F970 /* SetProfileViewController.h */,
@@ -301,6 +306,7 @@
 				DF34AC9F1834D28C00C0F970 /* WidgetView.m in Sources */,
 				DF7225BE18331274003C0D8F /* MainAppDelegate.m in Sources */,
 				DF34ACA21834DEE200C0F970 /* GoalPickerView.m in Sources */,
+				DFF255B5183A0F7200A73387 /* TodayPMViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,9 +11,12 @@
 @interface TodayViewController : UIViewController
 @property (strong, nonatomic) IBOutlet UITextView *quoteTextView;
 @property (strong, nonatomic) NSArray *quoteArray;
-@property (strong, nonatomic) IBOutlet UIButton *nextDayButton;
+@property (strong, nonatomic) IBOutlet UIButton *motivatedButton;
+@property (strong, nonatomic) IBOutlet UILabel *dayLabel;
 
-- (IBAction)generate:(id)sender;
+- (IBAction)btnTapped:(id)sender;
+
+
 
 
 @end
