@@ -1093,21 +1093,21 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" text="Test" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uNM-UB-573">
-                                <rect key="frame" x="0.0" y="67" width="320" height="124"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="103"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KSd-iy-YwP">
-                                <rect key="frame" x="118" y="353" width="85" height="33"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r40-K3-Boj">
+                                <rect key="frame" x="0.0" y="474" width="320" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="Next Day">
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Save">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="generate:" destination="zvA-MJ-MYV" eventType="touchUpInside" id="eoA-be-Msc"/>
+                                    <action selector="generate:" destination="zvA-MJ-MYV" eventType="touchUpInside" id="0zq-tn-bRi"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1116,7 +1116,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     <tabBarItem key="tabBarItem" title="TODAY" image="Today (have to include link)" id="T4Q-hA-WUD"/>
                     <navigationItem key="navigationItem" title="Today" id="IV8-G4-hwc"/>
                     <connections>
-                        <outlet property="nextDayButton" destination="KSd-iy-YwP" id="CSy-AE-c7j"/>
                         <outlet property="quoteTextView" destination="uNM-UB-573" id="btM-MG-pqk"/>
                     </connections>
                 </viewController>
@@ -1313,7 +1312,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yQz-nx-P8a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4414" y="-65"/>
+            <point key="canvasLocation" x="4734" y="-61"/>
         </scene>
         <!--View Controller - View Goals-->
         <scene sceneID="33x-M1-Bh3">
