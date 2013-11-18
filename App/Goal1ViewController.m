@@ -39,6 +39,7 @@
     [self.view addGestureRecognizer:tapDismissKeyboard];
     
     // or just add: [self.view endEditing:YES];
+    [self loadData];
     
 }
 
@@ -100,5 +101,17 @@
     [self.goalTextField resignFirstResponder];
     
 }
+
+-(void)loadData
+{
+    if(_objGoal.name == nil)
+        [[self choice]setText:@"Define your Goal"];
+    else
+        [[self choice]setText:_objGoal.name];
+    
+    [[self goalTextField]setText:_objGoal.description];
+}
+
+
 
 @end

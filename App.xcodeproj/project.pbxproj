@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00ECB3B3183AC7D100F71B81 /* appDB.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 00ECB3AA183AC7D100F71B81 /* appDB.sqlite */; };
+		00ECB3B4183AC7D100F71B81 /* DBConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 00ECB3AC183AC7D100F71B81 /* DBConnection.m */; };
+		00ECB3B5183AC7D100F71B81 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 00ECB3AE183AC7D100F71B81 /* FMDatabase.m */; };
+		00ECB3B6183AC7D100F71B81 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 00ECB3B0183AC7D100F71B81 /* FMDatabasePool.m */; };
+		00ECB3B7183AC7D100F71B81 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 00ECB3B2183AC7D100F71B81 /* FMResultSet.m */; };
+		00ECB3BD183AC7FE00F71B81 /* Goal.m in Sources */ = {isa = PBXBuildFile; fileRef = 00ECB3BA183AC7FE00F71B81 /* Goal.m */; };
+		00ECB3BE183AC7FE00F71B81 /* Widget.m in Sources */ = {isa = PBXBuildFile; fileRef = 00ECB3BC183AC7FE00F71B81 /* Widget.m */; };
+		00ECB3C0183AC84900F71B81 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 00ECB3BF183AC84900F71B81 /* libsqlite3.0.dylib */; };
+		00ECB3C3183AC95300F71B81 /* WelcomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00ECB3C2183AC95300F71B81 /* WelcomeView.m */; };
+		00ECB3C6183ACA7C00F71B81 /* SetGoalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00ECB3C5183ACA7C00F71B81 /* SetGoalView.m */; };
 		DF34AC9C1834D16D00C0F970 /* WidgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF34AC9B1834D16D00C0F970 /* WidgetViewController.m */; };
 		DF34AC9F1834D28C00C0F970 /* WidgetView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF34AC9E1834D28C00C0F970 /* WidgetView.m */; };
 		DF34ACA21834DEE200C0F970 /* GoalPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF34ACA11834DEE200C0F970 /* GoalPickerView.m */; };
@@ -44,6 +54,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00ECB3AA183AC7D100F71B81 /* appDB.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = appDB.sqlite; sourceTree = "<group>"; };
+		00ECB3AB183AC7D100F71B81 /* DBConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBConnection.h; sourceTree = "<group>"; };
+		00ECB3AC183AC7D100F71B81 /* DBConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBConnection.m; sourceTree = "<group>"; };
+		00ECB3AD183AC7D100F71B81 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		00ECB3AE183AC7D100F71B81 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		00ECB3AF183AC7D100F71B81 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		00ECB3B0183AC7D100F71B81 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		00ECB3B1183AC7D100F71B81 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		00ECB3B2183AC7D100F71B81 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		00ECB3B9183AC7FE00F71B81 /* Goal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Goal.h; sourceTree = "<group>"; };
+		00ECB3BA183AC7FE00F71B81 /* Goal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Goal.m; sourceTree = "<group>"; };
+		00ECB3BB183AC7FE00F71B81 /* Widget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Widget.h; sourceTree = "<group>"; };
+		00ECB3BC183AC7FE00F71B81 /* Widget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Widget.m; sourceTree = "<group>"; };
+		00ECB3BF183AC84900F71B81 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		00ECB3C1183AC95300F71B81 /* WelcomeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeView.h; sourceTree = "<group>"; };
+		00ECB3C2183AC95300F71B81 /* WelcomeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeView.m; sourceTree = "<group>"; };
+		00ECB3C4183ACA7C00F71B81 /* SetGoalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetGoalView.h; sourceTree = "<group>"; };
+		00ECB3C5183ACA7C00F71B81 /* SetGoalView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetGoalView.m; sourceTree = "<group>"; };
 		DF34AC9A1834D16D00C0F970 /* WidgetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WidgetViewController.h; sourceTree = "<group>"; };
 		DF34AC9B1834D16D00C0F970 /* WidgetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WidgetViewController.m; sourceTree = "<group>"; };
 		DF34AC9D1834D28C00C0F970 /* WidgetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WidgetView.h; sourceTree = "<group>"; };
@@ -90,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00ECB3C0183AC84900F71B81 /* libsqlite3.0.dylib in Frameworks */,
 				DF7225B018331274003C0D8F /* CoreGraphics.framework in Frameworks */,
 				DF7225B218331274003C0D8F /* UIKit.framework in Frameworks */,
 				DF7225AE18331274003C0D8F /* Foundation.framework in Frameworks */,
@@ -109,9 +138,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00ECB3A9183AC7A000F71B81 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				00ECB3AA183AC7D100F71B81 /* appDB.sqlite */,
+				00ECB3AB183AC7D100F71B81 /* DBConnection.h */,
+				00ECB3AC183AC7D100F71B81 /* DBConnection.m */,
+				00ECB3AD183AC7D100F71B81 /* FMDatabase.h */,
+				00ECB3AE183AC7D100F71B81 /* FMDatabase.m */,
+				00ECB3AF183AC7D100F71B81 /* FMDatabasePool.h */,
+				00ECB3B0183AC7D100F71B81 /* FMDatabasePool.m */,
+				00ECB3B1183AC7D100F71B81 /* FMResultSet.h */,
+				00ECB3B2183AC7D100F71B81 /* FMResultSet.m */,
+				00ECB3C7183ACF8200F71B81 /* Extended */,
+			);
+			name = Database;
+			sourceTree = "<group>";
+		};
+		00ECB3B8183AC7E200F71B81 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				00ECB3B9183AC7FE00F71B81 /* Goal.h */,
+				00ECB3BA183AC7FE00F71B81 /* Goal.m */,
+				00ECB3BB183AC7FE00F71B81 /* Widget.h */,
+				00ECB3BC183AC7FE00F71B81 /* Widget.m */,
+			);
+			name = Class;
+			sourceTree = "<group>";
+		};
+		00ECB3C7183ACF8200F71B81 /* Extended */ = {
+			isa = PBXGroup;
+			children = (
+				DF34AC9D1834D28C00C0F970 /* WidgetView.h */,
+				DF34AC9E1834D28C00C0F970 /* WidgetView.m */,
+			);
+			name = Extended;
+			path = App;
+			sourceTree = "<group>";
+		};
 		DF7225A118331274003C0D8F = {
 			isa = PBXGroup;
 			children = (
+				00ECB3B8183AC7E200F71B81 /* Class */,
+				00ECB3A9183AC7A000F71B81 /* Database */,
 				DF7225B318331274003C0D8F /* App */,
 				DF7225D218331274003C0D8F /* AppTests */,
 				DF7225AC18331274003C0D8F /* Frameworks */,
@@ -131,6 +200,7 @@
 		DF7225AC18331274003C0D8F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				00ECB3BF183AC84900F71B81 /* libsqlite3.0.dylib */,
 				DF7225AD18331274003C0D8F /* Foundation.framework */,
 				DF7225AF18331274003C0D8F /* CoreGraphics.framework */,
 				DF7225B118331274003C0D8F /* UIKit.framework */,
@@ -142,6 +212,10 @@
 		DF7225B318331274003C0D8F /* App */ = {
 			isa = PBXGroup;
 			children = (
+				00ECB3C4183ACA7C00F71B81 /* SetGoalView.h */,
+				00ECB3C5183ACA7C00F71B81 /* SetGoalView.m */,
+				00ECB3C1183AC95300F71B81 /* WelcomeView.h */,
+				00ECB3C2183AC95300F71B81 /* WelcomeView.m */,
 				DF7225BC18331274003C0D8F /* MainAppDelegate.h */,
 				DF7225BD18331274003C0D8F /* MainAppDelegate.m */,
 				DF7225BF18331274003C0D8F /* Main.storyboard */,
@@ -161,8 +235,6 @@
 				DF34ACA41834E03F00C0F970 /* Goal1ViewController.m */,
 				DF34ACA01834DEE200C0F970 /* GoalPickerView.h */,
 				DF34ACA11834DEE200C0F970 /* GoalPickerView.m */,
-				DF34AC9D1834D28C00C0F970 /* WidgetView.h */,
-				DF34AC9E1834D28C00C0F970 /* WidgetView.m */,
 				DF34AC9A1834D16D00C0F970 /* WidgetViewController.h */,
 				DF34AC9B1834D16D00C0F970 /* WidgetViewController.m */,
 				DF7225C218331274003C0D8F /* MainViewController.h */,
@@ -282,6 +354,7 @@
 				DF7225C618331274003C0D8F /* Images.xcassets in Resources */,
 				DF7225B818331274003C0D8F /* InfoPlist.strings in Resources */,
 				DF7225C118331274003C0D8F /* Main.storyboard in Resources */,
+				00ECB3B3183AC7D100F71B81 /* appDB.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,17 +373,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00ECB3BD183AC7FE00F71B81 /* Goal.m in Sources */,
 				DF34ACB618382EF700C0F970 /* SettingsTableViewCell.m in Sources */,
 				DF34ACB318382E4800C0F970 /* SettingsTableViewController.m in Sources */,
 				DF34AC9C1834D16D00C0F970 /* WidgetViewController.m in Sources */,
+				00ECB3B5183AC7D100F71B81 /* FMDatabase.m in Sources */,
 				DF34ACBC1839857000C0F970 /* TodayViewController.m in Sources */,
+				00ECB3C6183ACA7C00F71B81 /* SetGoalView.m in Sources */,
 				DF7225BA18331274003C0D8F /* main.m in Sources */,
 				DF34ACB91838A58400C0F970 /* SetProfileViewController.m in Sources */,
 				DF34ACA51834E03F00C0F970 /* Goal1ViewController.m in Sources */,
+				00ECB3B4183AC7D100F71B81 /* DBConnection.m in Sources */,
 				DF7225C418331274003C0D8F /* MainViewController.m in Sources */,
 				DF34AC9F1834D28C00C0F970 /* WidgetView.m in Sources */,
 				DF7225BE18331274003C0D8F /* MainAppDelegate.m in Sources */,
 				DF34ACA21834DEE200C0F970 /* GoalPickerView.m in Sources */,
+				00ECB3BE183AC7FE00F71B81 /* Widget.m in Sources */,
+				00ECB3C3183AC95300F71B81 /* WelcomeView.m in Sources */,
+				00ECB3B7183AC7D100F71B81 /* FMResultSet.m in Sources */,
+				00ECB3B6183AC7D100F71B81 /* FMDatabasePool.m in Sources */,
 				DFF255B5183A0F7200A73387 /* TodayPMViewController.m in Sources */,
 				DFF255B8183A294100A73387 /* InitNotificationsViewController.m in Sources */,
 			);

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Goal.h"
 
 @interface Goal1ViewController : UIViewController <UIPickerViewDataSource,UIPickerViewDelegate>
 
@@ -21,5 +22,9 @@
 - (IBAction)valueChanged:(id)sender;
 
 - (IBAction)finishTypeGoal:(id)sender;
+
+@property (strong, nonatomic) Goal *objGoal;
+
+-(void)loadData;
 
 @end
