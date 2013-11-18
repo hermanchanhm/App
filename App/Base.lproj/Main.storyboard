@@ -809,10 +809,10 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="-593" y="-1103"/>
         </scene>
-        <!--View Controller - Notifications-->
+        <!--Init Notifications View Controller - Notifications-->
         <scene sceneID="re3-e2-gLE">
             <objects>
-                <viewController title="Notifications" automaticallyAdjustsScrollViewInsets="NO" id="gmQ-fc-gcw" sceneMemberID="viewController">
+                <viewController title="Notifications" automaticallyAdjustsScrollViewInsets="NO" id="gmQ-fc-gcw" customClass="InitNotificationsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sCd-dV-9lW"/>
                         <viewControllerLayoutGuide type="bottom" id="qAo-QU-19j"/>
@@ -897,6 +897,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="nextTapped:" destination="gmQ-fc-gcw" eventType="touchUpInside" id="vo8-Xa-4aM"/>
                                     <segue destination="bWS-B6-duA" kind="push" id="bWt-GJ-bIr"/>
                                 </connections>
                             </button>
@@ -905,6 +906,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Set Notifications" id="4ro-ED-rnH"/>
+                    <connections>
+                        <outlet property="AMPicker" destination="5YK-kA-scn" id="MsW-uh-P8j"/>
+                        <outlet property="PMPicker" destination="EWx-uZ-aBo" id="xTp-5M-aap"/>
+                        <outlet property="btnNext" destination="Br5-Yv-ATS" id="b1Q-uK-PUF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rq8-iH-ehd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
