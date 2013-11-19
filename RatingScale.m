@@ -82,7 +82,7 @@
         [newValue stringByAppendingString:[NSString stringWithFormat:@"%d", [[array objectAtIndex:i] intValue]]];
     }
     
-    NSString *querySQL = [NSString stringWithFormat:@"update goal set value = '%@' where id = %@",newValue, paramName];
+    NSString *querySQL = [NSString stringWithFormat:@"update parameter set value = '%@' where id = %@",newValue, paramName];
     [db open];
     
     BOOL result = [db executeUpdate:querySQL];

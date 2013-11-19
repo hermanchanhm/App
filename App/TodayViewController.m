@@ -63,38 +63,43 @@ int count = 1;
 - (IBAction)btnTapped:(id)sender {
     [scale setRating:arrRating];
     
+    NSString * str =
+    [self.goal1SegmentControl titleForSegmentAtIndex:[self.goal1SegmentControl selectedSegmentIndex]];
+    
+    NSLog(@"%@",str);;
+    
     //code to save the selections...
 }
 
 
-
 - (IBAction)segRate01:(id)sender {
-    NSInteger value = ((UISegmentedControl *)sender).selectedSegmentIndex + 1;
-    [arrRating replaceObjectAtIndex:0 withObject:[NSNumber numberWithInt:value]];
-    NSLog(@"select %d", value);
+    //NSInteger value = ((UISegmentedControl *)sender).selectedSegmentIndex + 1;
+    //[arrRating replaceObjectAtIndex:0 withObject:[NSNumber numberWithInt:value]];
+   // NSLog(@"select %d", value);
 }
 
 - (IBAction)segRate02:(id)sender {
-    NSInteger value = ((UISegmentedControl *)sender).selectedSegmentIndex + 1;
-    [arrRating replaceObjectAtIndex:1 withObject:[NSNumber numberWithInt:value]];
-    NSLog(@"select %d", value);
+    //NSInteger value = ((UISegmentedControl *)sender).selectedSegmentIndex + 1;
+    //[arrRating replaceObjectAtIndex:1 withObject:[NSNumber numberWithInt:value]];
+    //NSLog(@"select %d", value);
 }
 
 - (IBAction)segRate03:(id)sender {
-    NSInteger value = ((UISegmentedControl *)sender).selectedSegmentIndex + 1;
-    [arrRating replaceObjectAtIndex:2 withObject:[NSNumber numberWithInt:value]];
-    NSLog(@"select %d", value);
+    //NSInteger value = ((UISegmentedControl *)sender).selectedSegmentIndex + 1;
+    //[arrRating replaceObjectAtIndex:2 withObject:[NSNumber numberWithInt:value]];
+    //NSLog(@"select %d", value);
 }
 
 - (IBAction)segRate04:(id)sender {
-    NSInteger value = ((UISegmentedControl *)sender).selectedSegmentIndex + 1;
-    [arrRating replaceObjectAtIndex:3 withObject:[NSNumber numberWithInt:value]];
-    NSLog(@"select %d", value);
+    //NSInteger value = ((UISegmentedControl *)sender).selectedSegmentIndex + 1;
+    //[arrRating replaceObjectAtIndex:3 withObject:[NSNumber numberWithInt:value]];
+    //NSLog(@"select %d", value);
 }
 
 - (IBAction)segRate05:(id)sender {
-    NSInteger value = ((UISegmentedControl *)sender).selectedSegmentIndex + 1;
-    [arrRating replaceObjectAtIndex:4 withObject:[NSNumber numberWithInt:value]];
-    NSLog(@"select %d", value);
+    //NSInteger value = ((UISegmentedControl *)sender).selectedSegmentIndex + 1;
+    //[arrRating replaceObjectAtIndex:4 withObject:[NSNumber numberWithInt:value]];
+    //NSLog(@"select %d", value);
 }
+
 @end
