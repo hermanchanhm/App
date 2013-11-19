@@ -36,6 +36,8 @@
 }
 
 - (IBAction)nextTapped:(id)sender {
+    //cancel all old notifications
+    [[UIApplication sharedApplication] cancelAllLocalNotifications];
     
     //AM Notification
     NSDate *AMPickerDate = [self.AMPicker date];

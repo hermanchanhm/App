@@ -832,7 +832,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <!--Init Notifications View Controller - Notifications-->
         <scene sceneID="re3-e2-gLE">
             <objects>
-                <viewController title="Notifications" automaticallyAdjustsScrollViewInsets="NO" id="gmQ-fc-gcw" customClass="InitNotificationsViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="initNotificationVC" title="Notifications" automaticallyAdjustsScrollViewInsets="NO" id="gmQ-fc-gcw" customClass="InitNotificationsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sCd-dV-9lW"/>
                         <viewControllerLayoutGuide type="bottom" id="qAo-QU-19j"/>
@@ -1690,6 +1690,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="oky-uq-UZB"/>
-        <segue reference="57K-7D-tv1"/>
+        <segue reference="1Mc-Bv-r7Z"/>
     </inferredMetricsTieBreakers>
 </document>
