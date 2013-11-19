@@ -28,7 +28,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     //hides the tab bar
-    self.tabBarController.tabBar.hidden = YES;
+    //self.tabBarController.tabBar.hidden = YES;
 }
 
 - (void)didReceiveMemoryWarning
