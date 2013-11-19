@@ -1,18 +1,18 @@
 //
-//  InitNotificationsViewController.m
+//  SetNotificationsViewController.m
 //  App
 //
 //  Created by Herman on 11/18/13.
 //  Copyright (c) 2013 Team 22. All rights reserved.
 //
 
-#import "InitNotificationsViewController.h"
+#import "SetNotificationsViewController.h"
 
-@interface InitNotificationsViewController ()
+@interface SetNotificationsViewController ()
 
 @end
 
-@implementation InitNotificationsViewController
+@implementation SetNotificationsViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,6 +27,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    //hides the tab bar
+    //self.tabBarController.tabBar.hidden = YES;
 }
 
 - (void)didReceiveMemoryWarning
@@ -35,7 +37,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)nextTapped:(id)sender {
+- (IBAction)updateTapped:(id)sender {
     //cancel all old notifications
     [[UIApplication sharedApplication] cancelAllLocalNotifications];
     
@@ -49,7 +51,7 @@
     AMNotification.applicationIconBadgeNumber = [[UIApplication sharedApplication] applicationIconBadgeNumber] + 1;
     AMNotification.timeZone = [NSTimeZone defaultTimeZone];
     
-     [[UIApplication sharedApplication] scheduleLocalNotification:AMNotification];
+    [[UIApplication sharedApplication] scheduleLocalNotification:AMNotification];
     //Repeat Daily
     AMNotification.repeatInterval = NSDayCalendarUnit;
     
@@ -69,8 +71,13 @@
     //Repeat Daily
     PMNotification.repeatInterval = NSDayCalendarUnit;
     
-    //below is code for cancel old notifications scheuled
-    //[[UIApplication sharedApplication] cancelAllLocalNotifications];
+    //notify user changes
+    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Changes Saved"
+                                                      message:nil
+                                                     delegate:nil
+                                            cancelButtonTitle:@"OK"
+                                            otherButtonTitles:nil];
+    [message show];
     
 }
 @end
