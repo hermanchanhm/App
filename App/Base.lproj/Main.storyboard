@@ -300,8 +300,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="Goal #1" id="4n4-6m-IOC"/>
                     <connections>
-                        <outlet property="addGoalTapped" destination="n8v-YV-D5K" id="PKU-Kp-jZu"/>
-                        <outlet property="btnAddGoal" destination="n8v-YV-D5K" id="CqK-ZN-bum"/>
                         <outlet property="choice" destination="wkK-Do-nb7" id="uAD-o3-zyZ"/>
                         <outlet property="goalTextField" destination="HDZ-GZ-Bfx" id="7Py-Um-YsS"/>
                         <outlet property="picker" destination="VPP-CF-CIL" id="4IE-Yc-uMy"/>
@@ -1601,10 +1599,10 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="4400" y="225"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller - Reset-->
         <scene sceneID="Ffk-cb-epk">
             <objects>
-                <viewController id="iE4-HM-B8e" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="resetVC" title="Reset" id="iE4-HM-B8e" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qmy-Mm-fsy"/>
                         <viewControllerLayoutGuide type="bottom" id="ZaO-Nq-jfG"/>
