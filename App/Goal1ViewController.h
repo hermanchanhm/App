@@ -18,6 +18,9 @@
 @property (strong, nonatomic) IBOutlet UILabel *selectorLabel;
 @property (strong, nonatomic) IBOutlet UITextField *goalTextField;
 @property UITapGestureRecognizer *tapDismissKeyboard;
+@property (strong, nonatomic) IBOutlet UIButton *btnAddGoal;
+- (IBAction)addGoalTapped:(id)sender;
+
 
 - (IBAction)valueChanged:(id)sender;
 

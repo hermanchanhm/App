@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="bR5-fj-yX7">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
         <!--Welcome View - Welcome-->
@@ -263,6 +263,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Add Goal"/>
+                                <connections>
+                                    <action selector="addGoalTapped:" destination="koX-Ar-GSY" eventType="touchUpInside" id="QSM-y0-Zjh"/>
+                                </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="OeJ-Tb-43L">
                                 <rect key="frame" x="177" y="222" width="123" height="29"/>
@@ -297,6 +300,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Goal #1" id="4n4-6m-IOC"/>
                     <connections>
+                        <outlet property="addGoalTapped" destination="n8v-YV-D5K" id="PKU-Kp-jZu"/>
+                        <outlet property="btnAddGoal" destination="n8v-YV-D5K" id="CqK-ZN-bum"/>
                         <outlet property="choice" destination="wkK-Do-nb7" id="uAD-o3-zyZ"/>
                         <outlet property="goalTextField" destination="HDZ-GZ-Bfx" id="7Py-Um-YsS"/>
                         <outlet property="picker" destination="VPP-CF-CIL" id="4IE-Yc-uMy"/>
