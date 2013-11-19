@@ -29,7 +29,7 @@
     [super viewDidLoad];
 
     //self.settingsArray = [[NSArray alloc] initWithObjects:@"Diet",@"Exercise",@"Bad Habit",@"4",@"5", nil];
-    self.settingsArray = @[@"View Goals", @"Notification Time", @"Widgets", @"Profile"];
+    self.settingsArray = @[@"View Goals", @"Notification Time", @"Widgets", @"Profile", @"Reset"];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -101,7 +101,12 @@
         UIViewController *anotherVC = [self.storyboard instantiateViewControllerWithIdentifier:@"setprofileVC"];
         [self.navigationController pushViewController:anotherVC animated:YES];
     }
-    
+    if(indexPath.row==4)
+    {
+        //Open New View select on 4th row
+        UIViewController *anotherVC = [self.storyboard instantiateViewControllerWithIdentifier:@"resetVC"];
+        [self.navigationController pushViewController:anotherVC animated:YES];
+    }
 }
 
 
