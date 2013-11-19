@@ -115,8 +115,9 @@
         [[self choice]setText:_objGoal.name];
     
     [[self goalTextField]setText:_objGoal.description];
+    
+    self.title = _objGoal.name;
 }
-
 
 
 @end

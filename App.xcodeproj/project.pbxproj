@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		00DC5DE9183AE63B00AB6FAD /* GoalListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DC5DE8183AE63B00AB6FAD /* GoalListView.m */; };
 		00DC5DEC183AF0D300AB6FAD /* WidgetDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DC5DEB183AF0D300AB6FAD /* WidgetDetailView.m */; };
+		00DC5DEF183AFFE600AB6FAD /* RatingScale.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DC5DEE183AFFE600AB6FAD /* RatingScale.m */; };
 		00ECB3B3183AC7D100F71B81 /* appDB.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 00ECB3AA183AC7D100F71B81 /* appDB.sqlite */; };
 		00ECB3B4183AC7D100F71B81 /* DBConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 00ECB3AC183AC7D100F71B81 /* DBConnection.m */; };
 		00ECB3B5183AC7D100F71B81 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 00ECB3AE183AC7D100F71B81 /* FMDatabase.m */; };
@@ -61,6 +62,8 @@
 		00DC5DE8183AE63B00AB6FAD /* GoalListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalListView.m; sourceTree = "<group>"; };
 		00DC5DEA183AF0D300AB6FAD /* WidgetDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WidgetDetailView.h; sourceTree = "<group>"; };
 		00DC5DEB183AF0D300AB6FAD /* WidgetDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WidgetDetailView.m; sourceTree = "<group>"; };
+		00DC5DED183AFFE600AB6FAD /* RatingScale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RatingScale.h; sourceTree = "<group>"; };
+		00DC5DEE183AFFE600AB6FAD /* RatingScale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RatingScale.m; sourceTree = "<group>"; };
 		00ECB3AA183AC7D100F71B81 /* appDB.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = appDB.sqlite; sourceTree = "<group>"; };
 		00ECB3AB183AC7D100F71B81 /* DBConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBConnection.h; sourceTree = "<group>"; };
 		00ECB3AC183AC7D100F71B81 /* DBConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBConnection.m; sourceTree = "<group>"; };
@@ -171,6 +174,8 @@
 				00ECB3BA183AC7FE00F71B81 /* Goal.m */,
 				00ECB3BB183AC7FE00F71B81 /* Widget.h */,
 				00ECB3BC183AC7FE00F71B81 /* Widget.m */,
+				00DC5DED183AFFE600AB6FAD /* RatingScale.h */,
+				00DC5DEE183AFFE600AB6FAD /* RatingScale.m */,
 			);
 			name = Class;
 			sourceTree = "<group>";
@@ -402,6 +407,7 @@
 				00DC5DE9183AE63B00AB6FAD /* GoalListView.m in Sources */,
 				DF34ACA51834E03F00C0F970 /* Goal1ViewController.m in Sources */,
 				00ECB3B4183AC7D100F71B81 /* DBConnection.m in Sources */,
+				00DC5DEF183AFFE600AB6FAD /* RatingScale.m in Sources */,
 				DF7225C418331274003C0D8F /* MainViewController.m in Sources */,
 				DF34AC9F1834D28C00C0F970 /* WidgetView.m in Sources */,
 				DF7225BE18331274003C0D8F /* MainAppDelegate.m in Sources */,

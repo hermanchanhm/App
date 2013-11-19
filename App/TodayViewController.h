@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RatingScale.h"
 
 @interface TodayViewController : UIViewController
+
 @property (strong, nonatomic) NSArray *quoteArray;
 @property (strong, nonatomic) IBOutlet UIButton *motivatedButton;
 @property (strong, nonatomic) IBOutlet UILabel *dayLabel;
@@ -18,5 +20,10 @@
 
 @property (strong, nonatomic) IBOutlet UILabel *quoteLabel;
 
+- (IBAction)segRate01:(id)sender;
+- (IBAction)segRate02:(id)sender;
+- (IBAction)segRate03:(id)sender;
+- (IBAction)segRate04:(id)sender;
+- (IBAction)segRate05:(id)sender;
 
 @end
