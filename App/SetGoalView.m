@@ -96,6 +96,7 @@
     [self.navigationController pushViewController:self.goalDetailView animated:YES];
     
     [[self goalDetailView] loadData];
+    
 }
 
 

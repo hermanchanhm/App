@@ -9,7 +9,11 @@
 #import "TodayViewController.h"
 
 @interface TodayViewController ()
-
+{
+    NSMutableArray *arrRating;
+    NSMutableArray *arrFeedback;
+    RatingScale * scale;
+}
 @end
 
 @implementation TodayViewController
@@ -44,6 +48,9 @@ int count = 1;
     
     count++;
     
+    scale = [[RatingScale alloc]init];
+    arrRating = [scale getRating];
+    arrFeedback = [scale getFeedback];
 }
 
 - (void)didReceiveMemoryWarning
@@ -54,8 +61,40 @@ int count = 1;
     
 //Action when button tapped
 - (IBAction)btnTapped:(id)sender {
-    
+    [scale setRating:arrRating];
     
     //code to save the selections...
+}
+
+
+
+- (IBAction)segRate01:(id)sender {
+    NSInteger value = ((UISegmentedControl *)sender).selectedSegmentIndex + 1;
+    [arrRating replaceObjectAtIndex:0 withObject:[NSNumber numberWithInt:value]];
+    NSLog(@"select %d", value);
+}
+
+- (IBAction)segRate02:(id)sender {
+    NSInteger value = ((UISegmentedControl *)sender).selectedSegmentIndex + 1;
+    [arrRating replaceObjectAtIndex:1 withObject:[NSNumber numberWithInt:value]];
+    NSLog(@"select %d", value);
+}
+
+- (IBAction)segRate03:(id)sender {
+    NSInteger value = ((UISegmentedControl *)sender).selectedSegmentIndex + 1;
+    [arrRating replaceObjectAtIndex:2 withObject:[NSNumber numberWithInt:value]];
+    NSLog(@"select %d", value);
+}
+
+- (IBAction)segRate04:(id)sender {
+    NSInteger value = ((UISegmentedControl *)sender).selectedSegmentIndex + 1;
+    [arrRating replaceObjectAtIndex:3 withObject:[NSNumber numberWithInt:value]];
+    NSLog(@"select %d", value);
+}
+
+- (IBAction)segRate05:(id)sender {
+    NSInteger value = ((UISegmentedControl *)sender).selectedSegmentIndex + 1;
+    [arrRating replaceObjectAtIndex:4 withObject:[NSNumber numberWithInt:value]];
+    NSLog(@"select %d", value);
 }
 @end
