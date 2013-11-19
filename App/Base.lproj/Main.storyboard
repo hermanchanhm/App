@@ -1537,10 +1537,10 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="4044" y="225"/>
         </scene>
-        <!--View Controller - Widget-->
+        <!--Widget Detail View - Widget-->
         <scene sceneID="gOL-43-bAV">
             <objects>
-                <viewController storyboardIdentifier="widgetVC" title="Widget" id="y6s-Lj-yq6" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="widgetVC" title="Widget" id="y6s-Lj-yq6" customClass="WidgetDetailView" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VbD-Rb-nkX"/>
                         <viewControllerLayoutGuide type="bottom" id="TR8-zf-u2j"/>
@@ -1585,10 +1585,10 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="4734" y="-61"/>
         </scene>
-        <!--View Controller - View Goals-->
+        <!--Goal List View - View Goals-->
         <scene sceneID="33x-M1-Bh3">
             <objects>
-                <viewController storyboardIdentifier="goalVC" title="View Goals" id="eSa-6f-VX5" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="goalVC" title="View Goals" id="eSa-6f-VX5" customClass="GoalListView" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vMD-4M-cbS"/>
                         <viewControllerLayoutGuide type="bottom" id="hbk-ec-7XF"/>
@@ -1604,12 +1604,28 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <sections>
                                     <tableViewSection id="5gM-YI-tZK">
                                         <cells>
-                                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="kHB-vm-biN">
+                                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="7zF-ng-UZx" detailTextLabel="Eru-I5-WwF" style="IBUITableViewCellStyleSubtitle" id="kHB-vm-biN">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kHB-vm-biN" id="5ge-0z-d3j">
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7zF-ng-UZx">
+                                                            <rect key="frame" x="15" y="3" width="34" height="22"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Eru-I5-WwF">
+                                                            <rect key="frame" x="15" y="25" width="43" height="15"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
                                                 </tableViewCellContentView>
                                             </tableViewCell>
                                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="R1A-qr-7Rb">
@@ -1635,6 +1651,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="3h4-vO-aSt" id="Lhy-VN-sHd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cwq-yX-ht3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
