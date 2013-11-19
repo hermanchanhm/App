@@ -43,6 +43,7 @@
 		DF7225D918331274003C0D8F /* AppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DF7225D818331274003C0D8F /* AppTests.m */; };
 		DFF255B5183A0F7200A73387 /* TodayPMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF255B4183A0F7200A73387 /* TodayPMViewController.m */; };
 		DFF255B8183A294100A73387 /* InitNotificationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF255B7183A294100A73387 /* InitNotificationsViewController.m */; };
+		DFF255BE183B03CA00A73387 /* SetNotificationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF255BD183B03CA00A73387 /* SetNotificationsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +118,8 @@
 		DFF255B4183A0F7200A73387 /* TodayPMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodayPMViewController.m; sourceTree = "<group>"; };
 		DFF255B6183A294100A73387 /* InitNotificationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitNotificationsViewController.h; sourceTree = "<group>"; };
 		DFF255B7183A294100A73387 /* InitNotificationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitNotificationsViewController.m; sourceTree = "<group>"; };
+		DFF255BC183B03CA00A73387 /* SetNotificationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetNotificationsViewController.h; sourceTree = "<group>"; };
+		DFF255BD183B03CA00A73387 /* SetNotificationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetNotificationsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +230,8 @@
 				DF7225BC18331274003C0D8F /* MainAppDelegate.h */,
 				DF7225BD18331274003C0D8F /* MainAppDelegate.m */,
 				DF7225BF18331274003C0D8F /* Main.storyboard */,
+				DFF255BC183B03CA00A73387 /* SetNotificationsViewController.h */,
+				DFF255BD183B03CA00A73387 /* SetNotificationsViewController.m */,
 				DFF255B6183A294100A73387 /* InitNotificationsViewController.h */,
 				DFF255B7183A294100A73387 /* InitNotificationsViewController.m */,
 				DFF255B3183A0F7200A73387 /* TodayPMViewController.h */,
@@ -391,6 +396,7 @@
 				DF34ACBC1839857000C0F970 /* TodayViewController.m in Sources */,
 				00ECB3C6183ACA7C00F71B81 /* SetGoalView.m in Sources */,
 				DF7225BA18331274003C0D8F /* main.m in Sources */,
+				DFF255BE183B03CA00A73387 /* SetNotificationsViewController.m in Sources */,
 				00DC5DEC183AF0D300AB6FAD /* WidgetDetailView.m in Sources */,
 				DF34ACB91838A58400C0F970 /* SetProfileViewController.m in Sources */,
 				00DC5DE9183AE63B00AB6FAD /* GoalListView.m in Sources */,
