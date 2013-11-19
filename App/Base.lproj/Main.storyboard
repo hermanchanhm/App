@@ -1273,6 +1273,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     <navigationItem key="navigationItem" title="Today" id="IV8-G4-hwc"/>
                     <connections>
                         <outlet property="dayLabel" destination="faE-9X-y6v" id="4L1-yp-SR7"/>
+                        <outlet property="goal1SegmentControl" destination="Tb1-eX-QV0" id="JYK-rb-BKv"/>
+                        <outlet property="goal2SegmentControl" destination="KpZ-1N-zk1" id="mtA-jL-pCB"/>
+                        <outlet property="goal3SegmentControl" destination="TyL-oc-TEV" id="gEl-DA-jn8"/>
+                        <outlet property="goal4SegmentControl" destination="Ca0-nB-1jf" id="12e-4B-nxN"/>
+                        <outlet property="goal5SegmentControl" destination="0lf-9I-9lR" id="g78-cR-YqV"/>
                         <outlet property="motivatedButton" destination="r40-K3-Boj" id="XvG-bq-B9H"/>
                         <outlet property="quoteLabel" destination="0Yl-ow-mJG" id="KM1-ti-koK"/>
                     </connections>

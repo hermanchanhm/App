@@ -63,6 +63,11 @@ int count = 1;
 - (IBAction)btnTapped:(id)sender {
     [scale setRating:arrRating];
     
+    NSString * str =
+    [self.goal1SegmentControl titleForSegmentAtIndex:[self.goal1SegmentControl selectedSegmentIndex]];
+    
+    NSLog(@"%@",str);;
+    
     //code to save the selections...
 }
 
