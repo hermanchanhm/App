@@ -27,10 +27,17 @@
 
 
 -(NSMutableArray *)getRating{
+    if(arrRating.count<=0)
+        for(int i = 0;i < 5; i++)
+            [arrRating addObject:[NSNumber numberWithInt:0]];
     return arrRating;
 }
 
 -(NSMutableArray *)getFeedback{
+    if(arrFeedback.count<=0)
+        for(int i = 0;i < 5; i++)
+            [arrFeedback addObject:[NSNumber numberWithInt:0]];
+
     return arrFeedback;
 }
 
@@ -47,7 +54,7 @@
 
 -(void)loadData:(NSString *)paramName arrayName:(NSMutableArray *)array
 {
-    NSString *querySQL = [NSString stringWithFormat:@"select * from parameter where id = '%@'",paramName];
+    NSString *querySQL = [NSString stringWithFormat:@"select * from parameter where name = '%@'",paramName];
     
     [db open];
     
@@ -82,7 +89,7 @@
         [newValue stringByAppendingString:[NSString stringWithFormat:@"%d", [[array objectAtIndex:i] intValue]]];
     }
     
-    NSString *querySQL = [NSString stringWithFormat:@"update goal set value = '%@' where id = %@",newValue, paramName];
+    NSString *querySQL = [NSString stringWithFormat:@"update parameter set value = '%@' where name = '%@'",newValue, paramName];
     [db open];
     
     BOOL result = [db executeUpdate:querySQL];

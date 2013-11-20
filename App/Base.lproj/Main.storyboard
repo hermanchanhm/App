@@ -1139,7 +1139,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 </state>
                                 <connections>
                                     <action selector="btnTapped:" destination="zvA-MJ-MYV" eventType="touchUpInside" id="FAq-N4-KkQ"/>
-                                    <segue destination="Qe7-EZ-fRn" kind="push" id="ENT-9x-XgJ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Day 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="faE-9X-y6v">
@@ -1199,9 +1198,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                     <segment title="4"/>
                                     <segment title="5"/>
                                 </segments>
-                                <connections>
-                                    <action selector="segRate01:" destination="zvA-MJ-MYV" eventType="valueChanged" id="PRG-oj-uto"/>
-                                </connections>
                             </segmentedControl>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Yl-ow-mJG">
                                 <rect key="frame" x="20" y="64" width="280" height="103"/>
@@ -1220,9 +1216,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                     <segment title="4"/>
                                     <segment title="5"/>
                                 </segments>
-                                <connections>
-                                    <action selector="segRate02:" destination="zvA-MJ-MYV" eventType="valueChanged" id="es8-S0-o7D"/>
-                                </connections>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="TyL-oc-TEV">
                                 <rect key="frame" x="20" y="346" width="280" height="29"/>
@@ -1234,9 +1227,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                     <segment title="4"/>
                                     <segment title="5"/>
                                 </segments>
-                                <connections>
-                                    <action selector="segRate03:" destination="zvA-MJ-MYV" eventType="valueChanged" id="3v6-bm-dVX"/>
-                                </connections>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ca0-nB-1jf">
                                 <rect key="frame" x="20" y="397" width="280" height="29"/>
@@ -1248,9 +1238,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                     <segment title="4"/>
                                     <segment title="5"/>
                                 </segments>
-                                <connections>
-                                    <action selector="segRate04:" destination="zvA-MJ-MYV" eventType="valueChanged" id="6hg-et-Vko"/>
-                                </connections>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="0lf-9I-9lR">
                                 <rect key="frame" x="21" y="449" width="280" height="29"/>
@@ -1262,9 +1249,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                     <segment title="4"/>
                                     <segment title="5"/>
                                 </segments>
-                                <connections>
-                                    <action selector="segRate05:" destination="zvA-MJ-MYV" eventType="valueChanged" id="adt-f6-FZf"/>
-                                </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -1275,6 +1259,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <outlet property="dayLabel" destination="faE-9X-y6v" id="4L1-yp-SR7"/>
                         <outlet property="motivatedButton" destination="r40-K3-Boj" id="XvG-bq-B9H"/>
                         <outlet property="quoteLabel" destination="0Yl-ow-mJG" id="KM1-ti-koK"/>
+                        <outlet property="ratingSegment01" destination="Tb1-eX-QV0" id="mQz-Uv-CGQ"/>
+                        <outlet property="ratingSegment02" destination="KpZ-1N-zk1" id="TpQ-B9-FIX"/>
+                        <outlet property="ratingSegment03" destination="TyL-oc-TEV" id="sal-rZ-NBF"/>
+                        <outlet property="ratingSegment04" destination="Ca0-nB-1jf" id="lKh-tI-h5N"/>
+                        <outlet property="ratingSegment05" destination="0lf-9I-9lR" id="SO1-WR-NlI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pFg-FO-d7Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1389,8 +1378,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 </state>
                                 <connections>
                                     <action selector="btnEndDayTapped:" destination="Qe7-EZ-fRn" eventType="touchUpInside" id="qLl-Ar-irh"/>
-                                    <action selector="generate:" destination="zvA-MJ-MYV" eventType="touchUpInside" id="fRS-lx-PTV"/>
-                                    <segue destination="zvA-MJ-MYV" kind="push" id="57K-7D-tv1"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1401,6 +1388,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     </navigationItem>
                     <connections>
                         <outlet property="btnEndDay" destination="qHD-5E-vUi" id="vM1-Zp-hnr"/>
+                        <outlet property="segmentFb01" destination="Et9-J6-gq0" id="9sF-WB-LR6"/>
+                        <outlet property="segmentFb02" destination="4He-3D-aj6" id="6uu-tC-gJM"/>
+                        <outlet property="segmentFb03" destination="fFt-HU-W12" id="ig9-IK-n9g"/>
+                        <outlet property="segmentFb04" destination="0nC-Ib-CX5" id="tAh-2I-myE"/>
+                        <outlet property="segmentFb05" destination="5Ds-cN-Mze" id="dsG-PQ-M4d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pbr-ld-825" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1437,7 +1429,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="agk-sL-e3i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2675" y="-442"/>
+            <point key="canvasLocation" x="2680" y="-454"/>
         </scene>
         <!--Settings Table View Controller - Settings-->
         <scene sceneID="xyR-Ki-hYu">
@@ -1828,7 +1820,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="57K-7D-tv1"/>
         <segue reference="oky-uq-UZB"/>
     </inferredMetricsTieBreakers>
 </document>

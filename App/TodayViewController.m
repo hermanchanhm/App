@@ -11,7 +11,6 @@
 @interface TodayViewController ()
 {
     NSMutableArray *arrRating;
-    NSMutableArray *arrFeedback;
     RatingScale * scale;
 }
 @end
@@ -50,7 +49,6 @@ int count = 1;
     
     scale = [[RatingScale alloc]init];
     arrRating = [scale getRating];
-    arrFeedback = [scale getFeedback];
 }
 
 - (void)didReceiveMemoryWarning
@@ -61,40 +59,66 @@ int count = 1;
     
 //Action when button tapped
 - (IBAction)btnTapped:(id)sender {
+    
+    //Store the rating info
+    [self getCurrentRating];
     [scale setRating:arrRating];
+     /*
+    //navigate to TodayPMViewController
+    if( self.todayPMView == nil)
+    {
+        self.todayPMView = [self.storyboard instantiateViewControllerWithIdentifier:@"tonightVC"];
+        //self.todayPMView.to = self;
+    }
+    
+     
+    [self.navigationController pushViewController:self.todayPMView animated:YES];
+*/
     
     //code to save the selections...
 }
 
+-(void)resetArrayRating{
+    [arrRating removeAllObjects];
+    
+    for(int i =0; i<5; i++){
+        [arrRating addObject:[NSNumber numberWithInt:1]];
+    }
+}
 
-
-- (IBAction)segRate01:(id)sender {
-    NSInteger value = ((UISegmentedControl *)sender).selectedSegmentIndex + 1;
+-(void)getCurrentRating{
+    NSInteger value;
+    
+    [self resetArrayRating];
+    
+    //segment 01
+    value = [[self ratingSegment01]selectedSegmentIndex] + 1;
     [arrRating replaceObjectAtIndex:0 withObject:[NSNumber numberWithInt:value]];
-    NSLog(@"select %d", value);
-}
-
-- (IBAction)segRate02:(id)sender {
-    NSInteger value = ((UISegmentedControl *)sender).selectedSegmentIndex + 1;
+    
+    //segment 02
+    value = [[self ratingSegment01]selectedSegmentIndex] + 1;
     [arrRating replaceObjectAtIndex:1 withObject:[NSNumber numberWithInt:value]];
-    NSLog(@"select %d", value);
-}
-
-- (IBAction)segRate03:(id)sender {
-    NSInteger value = ((UISegmentedControl *)sender).selectedSegmentIndex + 1;
+    
+    //segment 01
+    value = [[self ratingSegment01]selectedSegmentIndex] + 1;
     [arrRating replaceObjectAtIndex:2 withObject:[NSNumber numberWithInt:value]];
-    NSLog(@"select %d", value);
-}
-
-- (IBAction)segRate04:(id)sender {
-    NSInteger value = ((UISegmentedControl *)sender).selectedSegmentIndex + 1;
+    
+    //segment 01
+    value = [[self ratingSegment01]selectedSegmentIndex] + 1;
     [arrRating replaceObjectAtIndex:3 withObject:[NSNumber numberWithInt:value]];
-    NSLog(@"select %d", value);
+    
+    //segment 01
+    value = [[self ratingSegment01]selectedSegmentIndex] + 1;
+    [arrRating replaceObjectAtIndex:4 withObject:[NSNumber numberWithInt:value]];
 }
 
-- (IBAction)segRate05:(id)sender {
-    NSInteger value = ((UISegmentedControl *)sender).selectedSegmentIndex + 1;
-    [arrRating replaceObjectAtIndex:4 withObject:[NSNumber numberWithInt:value]];
-    NSLog(@"select %d", value);
-}
+- (IBAction)segRate01:(id)sender {}
+
+- (IBAction)segRate02:(id)sender {}
+
+- (IBAction)segRate03:(id)sender {}
+
+- (IBAction)segRate04:(id)sender {}
+
+- (IBAction)segRate05:(id)sender {}
 @end

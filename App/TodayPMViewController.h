@@ -7,9 +7,25 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RatingScale.h"
+#import "TodayViewController.h"
 
 @interface TodayPMViewController : UIViewController
+
+//@property (strong, nonatomic) TodayViewController *todayView;
+
 @property (strong, nonatomic) IBOutlet UIButton *btnEndDay;
+
+@property (strong, nonatomic) IBOutlet UISegmentedControl *segmentFb01;
+@property (strong, nonatomic) IBOutlet UISegmentedControl *segmentFb02;
+@property (strong, nonatomic) IBOutlet UISegmentedControl *segmentFb03;
+@property (strong, nonatomic) IBOutlet UISegmentedControl *segmentFb04;
+@property (strong, nonatomic) IBOutlet UISegmentedControl *segmentFb05;
+
+
+
 - (IBAction)btnEndDayTapped:(id)sender;
+
+
 
 @end

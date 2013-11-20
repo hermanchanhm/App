@@ -8,17 +8,26 @@
 
 #import <UIKit/UIKit.h>
 #import "RatingScale.h"
+#import "TodayPMViewController.h"
 
 @interface TodayViewController : UIViewController
+
+//@property (strong, nonatomic) TodayPMViewController *todayPMView;
 
 @property (strong, nonatomic) NSArray *quoteArray;
 @property (strong, nonatomic) IBOutlet UIButton *motivatedButton;
 @property (strong, nonatomic) IBOutlet UILabel *dayLabel;
 
-- (IBAction)btnTapped:(id)sender;
-
-
 @property (strong, nonatomic) IBOutlet UILabel *quoteLabel;
+
+@property (strong, nonatomic) IBOutlet UISegmentedControl *ratingSegment01;
+@property (strong, nonatomic) IBOutlet UISegmentedControl *ratingSegment02;
+@property (strong, nonatomic) IBOutlet UISegmentedControl *ratingSegment03;
+@property (strong, nonatomic) IBOutlet UISegmentedControl *ratingSegment04;
+@property (strong, nonatomic) IBOutlet UISegmentedControl *ratingSegment05;
+
+
+- (IBAction)btnTapped:(id)sender;
 
 - (IBAction)segRate01:(id)sender;
 - (IBAction)segRate02:(id)sender;
