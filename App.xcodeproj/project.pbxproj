@@ -520,6 +520,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Team 22";
 				TargetAttributes = {
+					DF7225A918331274003C0D8F = {
+						DevelopmentTeam = 4NZP92642L;
+					};
 					DF7225CA18331274003C0D8F = {
 						TestTargetID = DF7225A918331274003C0D8F;
 					};
