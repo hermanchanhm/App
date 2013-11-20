@@ -1430,7 +1430,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="settingsCell" id="a1v-43-xFt" customClass="SettingsTableViewCell">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="a1v-43-xFt" id="koh-Wf-peB">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -1813,9 +1813,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="57K-7D-tv1"/>
-        <segue reference="YjK-bT-RWV"/>
-        <segue reference="rsu-5W-ry4"/>
+        <segue reference="1Mc-Bv-r7Z"/>
         <segue reference="oky-uq-UZB"/>
+        <segue reference="rsu-5W-ry4"/>
+        <segue reference="YjK-bT-RWV"/>
     </inferredMetricsTieBreakers>
 </document>
