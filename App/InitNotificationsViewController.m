@@ -44,7 +44,7 @@
     
     UILocalNotification* AMNotification = [[UILocalNotification alloc] init];
     AMNotification.fireDate = AMPickerDate;
-    AMNotification.alertBody = @"How Motivated Are You? Fill out the survey for today!";
+    AMNotification.alertBody = @"How motivated are you to change? Fill out the survey for today!";
     AMNotification.alertAction = @"Good Morning!";
     AMNotification.applicationIconBadgeNumber = [[UIApplication sharedApplication] applicationIconBadgeNumber] + 1;
     AMNotification.timeZone = [NSTimeZone defaultTimeZone];
