@@ -52,6 +52,8 @@ int count = 1;
     self.quoteLabel.text = self.quoteArray[index];
     //Wrap Text
     self.quoteLabel.numberOfLines = 0;
+    self.quoteLabel.adjustsFontSizeToFitWidth = YES;
+    
     
     //hides the back button
     self.navigationItem.hidesBackButton = YES;
