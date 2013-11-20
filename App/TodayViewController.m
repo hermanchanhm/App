@@ -33,7 +33,17 @@ int count = 1;
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    self.dayLabel.text = [NSString stringWithFormat:@"%d", count];
+    //set title as today's date
+        //format date
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"MM/dd"];
+    //date for today
+    NSDate *today = [[NSDate alloc] init];
+    
+    self.navigationItem.title = [NSString stringWithFormat: @"Today - %@",[dateFormatter stringFromDate:today]];
+    
+    self.dayLabel.text = [NSString stringWithFormat:@"Day %d", count];
+    //end
     
     self.quoteArray = [[NSArray alloc] initWithObjects:@"Whatever the mind of man can conceive and believe, it can achieve. –Napoleon Hill",@"Your time is limited, so don’t waste it living someone else’s life. –Steve Jobs",@"Strive not to be a success, but rather to be of value. –Albert Einstein",@"Two roads diverged in a wood, and I took the one less traveled by, and that has made all the difference.  –Robert Frost",@"The common question that gets asked in business is, ‘why?’ That’s a good question, but an equally valid question is, ‘why not?’ -Jeffrey Bezos", nil];
     //random generate quote and display quote
@@ -74,6 +84,11 @@ int count = 1;
      
     [self.navigationController pushViewController:self.todayPMView animated:YES];
 */
+    
+    NSString * str =
+    [self.goal1SegmentControl titleForSegmentAtIndex:[self.goal1SegmentControl selectedSegmentIndex]];
+    
+    NSLog(@"%@",str);;
     
     //code to save the selections...
 }

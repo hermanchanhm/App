@@ -35,4 +35,15 @@
 - (IBAction)segRate04:(id)sender;
 - (IBAction)segRate05:(id)sender;
 
+
+//test code...
+
+@property (strong, nonatomic) IBOutlet UISegmentedControl *goal1SegmentControl;
+@property (strong, nonatomic) IBOutlet UISegmentedControl *goal2SegmentControl;
+@property (strong, nonatomic) IBOutlet UISegmentedControl *goal3SegmentControl;
+@property (strong, nonatomic) IBOutlet UISegmentedControl *goal4SegmentControl;
+@property (strong, nonatomic) IBOutlet UISegmentedControl *goal5SegmentControl;
+
+
+
 @end
