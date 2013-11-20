@@ -730,7 +730,7 @@
 				INFOPLIST_FILE = "App/App-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/Seer/Documents/Workspace/ObjectiveCWorkspace/App,
+					"$(SRCROOT)/**",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -748,7 +748,7 @@
 				INFOPLIST_FILE = "App/App-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/Seer/Documents/Workspace/ObjectiveCWorkspace/App,
+					"$(SRCROOT)/**",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
