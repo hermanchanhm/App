@@ -52,4 +52,17 @@
         application.applicationIconBadgeNumber = 0;
 }
 
+/*
+//code for preservation and restoration
+- (BOOL) application:(UIApplication *)application shouldSaveApplicationState:(NSCoder *)coder
+{
+    return YES;
+}
+
+//code for preservation and restoration
+- (BOOL) application:(UIApplication *)application shouldRestoreApplicationState:(NSCoder *)coder
+{
+    return YES;
+}
+*/
 @end
