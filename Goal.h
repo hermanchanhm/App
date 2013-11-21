@@ -19,6 +19,7 @@
 @property (strong, nonatomic)NSString *description;
 @property (nonatomic)int point;
 @property (nonatomic)int feedback;
+@property (nonatomic)int enable;
 
 -(id)initWithGoalID:(int)goalID;
 

@@ -12,18 +12,21 @@
 {
     NSMutableArray *arrRating;
     RatingScale * scale;
+    TodayPMViewController *todayPMView;
+    int count;
 }
 @end
 
 @implementation TodayViewController
-int count = 1;
+
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-
+        
     }
     return self;
 }
@@ -32,9 +35,15 @@ int count = 1;
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    
+   
     //set title as today's date
         //format date
+    scale = [[RatingScale alloc]init];
+    arrRating = [scale getRating];
+    [self setCurrentRating];
+    count = [scale getDayCount];
+    
+    
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"MM/dd"];
     //date for today
@@ -55,10 +64,11 @@ int count = 1;
     //hides the back button
     self.navigationItem.hidesBackButton = YES;
     
-    count++;
+    //count++;
+    //count = 0;
     
-    scale = [[RatingScale alloc]init];
-    arrRating = [scale getRating];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -73,22 +83,21 @@ int count = 1;
     //Store the rating info
     [self getCurrentRating];
     [scale setRating:arrRating];
-     /*
+    
+    
     //navigate to TodayPMViewController
-    if( self.todayPMView == nil)
+    
+    if( todayPMView == nil)
     {
-        self.todayPMView = [self.storyboard instantiateViewControllerWithIdentifier:@"tonightVC"];
+        todayPMView = [self.storyboard instantiateViewControllerWithIdentifier:@"tonightVC"];
         //self.todayPMView.to = self;
+        count++;
+        NSLog(@"View count : %d", count);
     }
     
-     
-    [self.navigationController pushViewController:self.todayPMView animated:YES];
-*/
     
-    NSString * str =
-    [self.goal1SegmentControl titleForSegmentAtIndex:[self.goal1SegmentControl selectedSegmentIndex]];
-    
-    NSLog(@"%@",str);;
+    [self.navigationController pushViewController:todayPMView animated:YES];
+    //[self.navigationController popViewControllerAnimated:YES];
     
     //code to save the selections...
 }
@@ -102,30 +111,35 @@ int count = 1;
 }
 
 -(void)getCurrentRating{
-    NSInteger value;
-    
     [self resetArrayRating];
     
-    //segment 01
+    NSInteger value;
+    
     value = [[self ratingSegment01]selectedSegmentIndex] + 1;
     [arrRating replaceObjectAtIndex:0 withObject:[NSNumber numberWithInt:value]];
     
-    //segment 02
-    value = [[self ratingSegment01]selectedSegmentIndex] + 1;
+    value = [[self ratingSegment02]selectedSegmentIndex] + 1;
     [arrRating replaceObjectAtIndex:1 withObject:[NSNumber numberWithInt:value]];
     
-    //segment 01
-    value = [[self ratingSegment01]selectedSegmentIndex] + 1;
+    value = [[self ratingSegment03]selectedSegmentIndex] + 1;
     [arrRating replaceObjectAtIndex:2 withObject:[NSNumber numberWithInt:value]];
     
-    //segment 01
-    value = [[self ratingSegment01]selectedSegmentIndex] + 1;
+    value = [[self ratingSegment04]selectedSegmentIndex] + 1;
     [arrRating replaceObjectAtIndex:3 withObject:[NSNumber numberWithInt:value]];
     
-    //segment 01
-    value = [[self ratingSegment01]selectedSegmentIndex] + 1;
+    value = [[self ratingSegment05]selectedSegmentIndex] + 1;
     [arrRating replaceObjectAtIndex:4 withObject:[NSNumber numberWithInt:value]];
+
 }
+
+-(void)setCurrentRating{
+    self.ratingSegment01.selectedSegmentIndex = [[arrRating objectAtIndex:0] intValue];
+    self.ratingSegment01.selectedSegmentIndex = [[arrRating objectAtIndex:1] intValue];
+    self.ratingSegment01.selectedSegmentIndex = [[arrRating objectAtIndex:2] intValue];
+    self.ratingSegment01.selectedSegmentIndex = [[arrRating objectAtIndex:3] intValue];
+    self.ratingSegment01.selectedSegmentIndex = [[arrRating objectAtIndex:4] intValue];
+}
+
 
 - (IBAction)segRate01:(id)sender {}
 

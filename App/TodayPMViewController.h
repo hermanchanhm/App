@@ -8,11 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "RatingScale.h"
-#import "TodayViewController.h"
 
 @interface TodayPMViewController : UIViewController
-
-//@property (strong, nonatomic) TodayViewController *todayView;
 
 @property (strong, nonatomic) IBOutlet UIButton *btnEndDay;
 

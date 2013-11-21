@@ -11,6 +11,9 @@
 #import "TodayPMViewController.h"
 
 @interface TodayViewController : UIViewController
+{
+    //TodayPMViewController *todayPMView;
+}
 
 //@property (strong, nonatomic) TodayPMViewController *todayPMView;
 
@@ -28,21 +31,6 @@
 
 
 - (IBAction)btnTapped:(id)sender;
-
-- (IBAction)segRate01:(id)sender;
-- (IBAction)segRate02:(id)sender;
-- (IBAction)segRate03:(id)sender;
-- (IBAction)segRate04:(id)sender;
-- (IBAction)segRate05:(id)sender;
-
-
-//test code...
-
-@property (strong, nonatomic) IBOutlet UISegmentedControl *goal1SegmentControl;
-@property (strong, nonatomic) IBOutlet UISegmentedControl *goal2SegmentControl;
-@property (strong, nonatomic) IBOutlet UISegmentedControl *goal3SegmentControl;
-@property (strong, nonatomic) IBOutlet UISegmentedControl *goal4SegmentControl;
-@property (strong, nonatomic) IBOutlet UISegmentedControl *goal5SegmentControl;
 
 
 

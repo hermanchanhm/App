@@ -55,6 +55,7 @@
         [self setDescription:[resultSet stringForColumn:@"description"]];
         [self setPoint:[resultSet intForColumn:@"point"]];
         [self setFeedback:[resultSet intForColumn:@"Feedback"]];
+        [self setEnable:[resultSet intForColumn:@"Enable"]];
         
         NSLog(@"initLoad");
     }
@@ -64,7 +65,7 @@
 
 -(BOOL)updateData
 {
-    NSString *querySQL = [NSString stringWithFormat:@"update goal set name = '%@', description = '%@', point = %d, feedback = %d where id = %d",[self name],[self description],[self point],[self feedback],[self ID]];
+    NSString *querySQL = [NSString stringWithFormat:@"update goal set name = '%@', description = '%@', point = %d, feedback = %d, enable = %d where id = %d",[self name],[self description],[self point],[self feedback],[self enable],[self ID]];
     
     [db open];
     
@@ -82,11 +83,10 @@
 
 -(BOOL)deleteData
 {
-    self.name = NULL;
     self.description = NULL;
     self.point =0;
     self.feedback = 0;
-    
+    self.enable = 0;
     return [self updateData];
 }
 
