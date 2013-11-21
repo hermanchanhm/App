@@ -95,5 +95,61 @@
     }
 }
 
+//calculate score of each day
+-(double)calScoreOfDay:(int)ratingScore feedback:(int)feedbackScore
+{
+    //initialize
+    double scoreOfDay = 1.0;
+    
+    //condition for "NO"
+    if(feedbackScore == 1)
+    {
+        if(ratingScore == 1) //if 1
+            {scoreOfDay = 1.0;}
+        else if(ratingScore == 2)//if 2
+            {scoreOfDay = 1.5;}
+        else if (ratingScore == 3) //if 3
+            {scoreOfDay = 2.0;}
+        else if (ratingScore == 4) //if 4
+            {scoreOfDay = 2.5;}
+        else //if 5
+            {scoreOfDay = 3.0;}
+    }
+    
+    //condition for "KINDA"
+    else if(feedbackScore == 2)
+    {
+        if(ratingScore == 1) //if 1
+        {scoreOfDay = 1.0;}
+        else if(ratingScore == 2)//if 2
+        {scoreOfDay = 1.75;}
+        else if (ratingScore == 3) //if 3
+        {scoreOfDay = 2.5;}
+        else if (ratingScore == 4) //if 4
+        {scoreOfDay = 3.25;}
+        else //if 5
+        {scoreOfDay = 4.0;}
+    }
+    
+    //condition for "YES" (feedbackScre == 3)
+    else
+    {
+        if(ratingScore == 1) //if 1
+        {scoreOfDay = 1.0;}
+        else if(ratingScore == 2)//if 2
+        {scoreOfDay = 2.0;}
+        else if (ratingScore == 3) //if 3
+        {scoreOfDay = 3.0;}
+        else if (ratingScore == 4) //if 4
+        {scoreOfDay = 4.0;}
+        else //if 5
+        {scoreOfDay = 5.0;}
+    }
+    
+    return scoreOfDay;
+}
+
+
+
 
 @end
