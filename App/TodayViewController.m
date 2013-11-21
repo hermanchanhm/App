@@ -78,10 +78,6 @@
     
 }
 
--(void)viewWillAppear:(BOOL)animated
-{
-    [self viewDidLoad];
-}
 
 - (void)didReceiveMemoryWarning
 {
