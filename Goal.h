@@ -34,4 +34,8 @@
 
 -(int)getEnableGoal;
 
+-(double)getAvgOfScores:(int)goalID;
+
+-(NSString *)stageOfChange;
+
 @end

@@ -8,21 +8,24 @@
 
 #import <Foundation/Foundation.h>
 #import "DBConnection.h"
-#import "Goal.h"
+#import "GoalDetail.h"
 
 @interface RatingScale : NSObject
 {
     FMDatabase *db;
-    NSMutableArray *arrRating;
-    NSMutableArray *arrFeedback;
     int dayCount;
 }
+
+@property (strong, nonatomic) NSMutableArray *arrRating;
+@property (strong, nonatomic) NSMutableArray *arrFeedback;;
+
 
 -(NSMutableArray *)getRating;
 -(NSMutableArray *)getFeedback;
 
--(void)setRating:(NSMutableArray *)newRating;
--(void)setFeedback:(NSMutableArray *)newFeedback;
+-(void)setRating;
+-(void)setFeedback;
 -(int)getDayCount;
 -(void)dayCompleted;
+-(void)reloadData;
 @end

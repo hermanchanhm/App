@@ -11,12 +11,12 @@
 @implementation RatingScale
 
 -(id)init{
-    arrRating = [[NSMutableArray alloc]init];
-     arrFeedback = [[NSMutableArray alloc]init];
+    self.arrRating = [[NSMutableArray alloc]init];
+    self.arrFeedback = [[NSMutableArray alloc]init];
     db = [[[DBConnection alloc]init] connectDB];
-    [self loadData:@"Rating" arrayName:arrRating];
-    [self loadData:@"Feedback" arrayName:arrFeedback];
-    dayCount = [self loadDayCount];
+    dayCount = [self getDayCount];
+    [self loadData:dayCount];
+   
     return self;
 }
 
@@ -25,99 +25,104 @@
  int yourInteger = [anumber intValue];
  */
 
-
+-(void)resetArray:(NSMutableArray *)array{
+    [array removeAllObjects];
+    for(int i = 0;i < 5; i++)
+        [array addObject:[NSNumber numberWithInt:1]];
+}
 
 -(NSMutableArray *)getRating{
-    if(arrRating.count<=0)
-        for(int i = 0;i < 5; i++)
-            [arrRating addObject:[NSNumber numberWithInt:1]];
-    return arrRating;
+    if(self.arrRating.count<=0)
+        [self resetArray:self.arrRating];
+    return self.arrRating;
 }
 
 -(NSMutableArray *)getFeedback{
-    if(arrFeedback.count<=0)
-        for(int i = 0;i < 5; i++)
-            [arrFeedback addObject:[NSNumber numberWithInt:1]];
-
-    return arrFeedback;
+    if(self.arrFeedback.count<=0)
+        [self resetArray:self.arrFeedback];
+    return self.arrFeedback;
 }
 
--(void)setRating:(NSMutableArray *)newRating{
-    arrRating = newRating;
-    [self updateData:@"Rating" arrayName:arrRating];
- 
+-(void)setRating{
+    [self updateData:@"Rating" paramDay:dayCount arrayArray:self.arrRating];
 }
 
--(void)setFeedback:(NSMutableArray *)newFeedback{
-    arrFeedback = newFeedback;
-    [self updateData:@"Feedback" arrayName:arrFeedback];
+-(void)setFeedback{
+    [self updateData:@"Feedback" paramDay:dayCount arrayArray:self.arrFeedback];
 }
 
--(void)loadData:(NSString *)paramName arrayName:(NSMutableArray *)array
+-(void)reloadData{
+    [self loadData:dayCount];
+}
+
+-(void)loadData:(int)requiredDay
 {
-    NSString *querySQL = [NSString stringWithFormat:@"select * from parameter where name = '%@'",paramName];
+    GoalDetail * objGoalDetail = [[GoalDetail alloc]init];
+    NSMutableArray * temp = [objGoalDetail loadGoalDetailbyDay:requiredDay];
     
-    [db open];
-    
-    FMResultSet *resultSet = [db executeQuery:querySQL];
- 
-    if([resultSet next])
+    if(temp == nil || temp.count <5 )
     {
-        int point;
-        NSNumber *num;
-        NSInteger value;
-        
-        value = [resultSet intForColumn:@"Value"];
-        [array removeAllObjects];
-        while(value>0)
-        {
-            point = value%10;
-            num = [NSNumber numberWithInt:point];
-            [array addObject:num];
-            value = value/10;
-        }
+        [self resetArray:self.arrRating];
+        [self resetArray:self.arrFeedback];
+        return;
     }
     
-    [db close];
+    [self.arrFeedback removeAllObjects];
+    [self.arrRating removeAllObjects];
+    
+    for(int i = 0; i<5; i++)
+    {
+        objGoalDetail = [temp objectAtIndex:i];
+        [self.arrRating addObject:[NSNumber numberWithInt:objGoalDetail.ratingPoint]];
+        [self.arrFeedback addObject:[NSNumber numberWithInt:objGoalDetail.feedbackPoint]];
+    }
+    
 }
 
--(BOOL)updateData:(NSString *)paramName arrayName:(NSMutableArray *)array
+-(BOOL)updateData:(NSString *)paramName paramDay:(int)requiredDay arrayArray:(NSMutableArray *)array
 {
-    NSString *newValue =[array componentsJoinedByString:@""];;
-    NSString *querySQL = [NSString stringWithFormat:@"update parameter set value = '%@' where name = '%@'",newValue, paramName];
-    [db open];
+    GoalDetail * objGoalDetail = [[GoalDetail alloc]init];
+    NSMutableArray * temp = [objGoalDetail loadGoalDetailbyDay:requiredDay];
     
-    BOOL result = [db executeUpdate:querySQL];
+    if(temp == nil || temp.count <5)
+    {
+        return false;
+    }
     
-    if(result)
-        NSLog(@"update");
-    else
-        NSLog(@"Error Update");
+    for(int i = 0; i<5; i++)
+    {
+        
+        objGoalDetail = [temp objectAtIndex:i];
+        if([paramName isEqualToString:@"Rating"])
+        {
+            objGoalDetail.ratingPoint = [[array objectAtIndex:i] intValue];
+        }
+        else if ([paramName isEqualToString:@"Feedback"])
+        {
+            objGoalDetail.feedbackPoint = [[array objectAtIndex:i] intValue];
+        }
+        
+        [objGoalDetail updateGoalDetail];
+
+    }
     
-    [db close];
-    
-    return result;
+    return true;
 }
+
 
 -(int)getDayCount{
-    return dayCount;
-}
-
--(int)loadDayCount{
     NSString *querySQL = [NSString stringWithFormat:@"select * from parameter where name = 'DayCount'"];
     int value = 1;
+    
     [db open];
-    
     FMResultSet *resultSet = [db executeQuery:querySQL];
-    
-    if([resultSet next])
-    {
+    if([resultSet next]){
         value = [resultSet intForColumn:@"Value"];
-        
     }
-    
     [db close];
     
+    dayCount = value;
+        
     return value;
 }
 
@@ -125,42 +130,30 @@
     NSString *querySQL;
     
     //update day count
-    querySQL= [NSString stringWithFormat:@"update parameter set value = '%d' where name = 'DayCount'",(dayCount+1)];
+    dayCount = [self getDayCount] + 1;
+    
+    querySQL= [NSString stringWithFormat:@"update parameter set value = '%d' where name = 'DayCount'",(dayCount)];
     [db open];
     [db executeUpdate:querySQL];
     [db close];
     
-    //store feedback
-    [self setFeedback:arrFeedback];
+    //create new pattern on Goal_Detail for new day
+    GoalDetail * objGoalDetail = [[GoalDetail alloc]init];
     
-    
-    //update the data of current day to goal point
-    Goal * objGoal = [[Goal alloc]init];
-    int point,feedback;
-    [self loadData:@"Rating" arrayName:arrRating];
-    [self loadData:@"Feedback" arrayName:arrFeedback];
-    
-    for(int i = 0; i<5; i++)
+    for(int i = 1; i<=5; i++)
     {
-        point = 0;
-        [objGoal loadData:i+1];
-        //if(objGoal.enable == 0)
-        //    continue;
-        point = objGoal.point + [[arrRating objectAtIndex:i] intValue];
-        feedback = objGoal.feedback + [[arrFeedback objectAtIndex:i] intValue];
+        [objGoalDetail setGoal_ID:i];
+        [objGoalDetail setExecutedDay:(dayCount)];
+        [objGoalDetail setRatingPoint:1];
+        [objGoalDetail setFeedbackPoint:1];
+        [objGoalDetail setDayScore:1.0];
         
-        [objGoal setPoint:point];
-        [objGoal setFeedback:feedback];
-        
-        [objGoal updateData];
-        
+        [objGoalDetail addGoalDetail];
+
     }
     
-    querySQL= [NSString stringWithFormat:@"update parameter set value = '11111' where name = 'Rating' or name ='Feedback'"];
-    [db open];
-    [db executeUpdate:querySQL];
-    [db close];
-    
+    [self resetArray:[self arrRating]];
+    [self resetArray:[self arrFeedback]];
 }
 
 @end

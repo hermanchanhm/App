@@ -11,16 +11,12 @@
 #import "TodayPMViewController.h"
 
 @interface TodayViewController : UIViewController
-{
-    //TodayPMViewController *todayPMView;
-}
 
-//@property (strong, nonatomic) TodayPMViewController *todayPMView;
+@property (strong, nonatomic) RatingScale *objScale;
 
 @property (strong, nonatomic) NSArray *quoteArray;
 @property (strong, nonatomic) IBOutlet UIButton *motivatedButton;
 @property (strong, nonatomic) IBOutlet UILabel *dayLabel;
-
 @property (strong, nonatomic) IBOutlet UILabel *quoteLabel;
 
 @property (strong, nonatomic) IBOutlet UISegmentedControl *ratingSegment01;

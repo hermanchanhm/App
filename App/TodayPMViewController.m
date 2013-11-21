@@ -10,8 +10,7 @@
 
 @interface TodayPMViewController ()
 {
-    RatingScale *objScale;
-    NSMutableArray *arrFeedback;
+    bool isSaved;
 }
 
 @end
@@ -45,8 +44,29 @@
     
     //hides the back button
     self.navigationItem.hidesBackButton = YES;
-    objScale = [[RatingScale alloc]init];
-    arrFeedback = [objScale getFeedback];
+    
+    if(self.objScale == nil)
+        self.objScale = [[RatingScale alloc] init];
+    [self.objScale getFeedback];
+    [self.objScale getDayCount];
+    isSaved = false;
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [self.objScale getDayCount];
+    [self.objScale reloadData];
+    [self setCurrentFeedBack];
+    isSaved = false;
+}
+
+-(void)viewWillDisappear:(BOOL)animated
+{
+    if(!isSaved)
+    {
+        [self getCurrentFeedback];
+        [self.objScale setFeedback];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -60,23 +80,22 @@
     //store feedback info
 
     [self getCurrentFeedback];
-    [objScale setFeedback:arrFeedback];
-    [objScale dayCompleted];
+    [self.objScale setFeedback];
+    [self.objScale dayCompleted];
+    isSaved = true;
+    
     
     //navigate back to TodayView
     [self.navigationController popViewControllerAnimated:YES];
-    [self.navigationController popViewControllerAnimated:YES];
-    
-    
   
 }
 
 -(void)setCurrentFeedBack{
-    self.segmentFb01.selectedSegmentIndex = [[arrFeedback objectAtIndex:0] intValue];
-    self.segmentFb02.selectedSegmentIndex = [[arrFeedback objectAtIndex:1] intValue];
-    self.segmentFb03.selectedSegmentIndex = [[arrFeedback objectAtIndex:2] intValue];
-    self.segmentFb04.selectedSegmentIndex = [[arrFeedback objectAtIndex:3] intValue];
-    self.segmentFb05.selectedSegmentIndex = [[arrFeedback objectAtIndex:4] intValue];
+    self.segmentFb01.selectedSegmentIndex = [[self.objScale.arrFeedback objectAtIndex:0] intValue] -1;
+    self.segmentFb02.selectedSegmentIndex = [[self.objScale.arrFeedback objectAtIndex:1] intValue] -1;
+    self.segmentFb03.selectedSegmentIndex = [[self.objScale.arrFeedback objectAtIndex:2] intValue] -1;
+    self.segmentFb04.selectedSegmentIndex = [[self.objScale.arrFeedback objectAtIndex:3] intValue] -1;
+    self.segmentFb05.selectedSegmentIndex = [[self.objScale.arrFeedback objectAtIndex:4] intValue] -1;
 }
 
 -(void)getCurrentFeedback{
@@ -85,27 +104,27 @@
     NSInteger value;
     
     value = [[self segmentFb01]selectedSegmentIndex] + 1;
-    [arrFeedback replaceObjectAtIndex:0 withObject:[NSNumber numberWithInt:value]];
+    [self.objScale.arrFeedback replaceObjectAtIndex:0 withObject:[NSNumber numberWithInt:value]];
     
     value = [[self segmentFb02]selectedSegmentIndex] + 1;
-    [arrFeedback replaceObjectAtIndex:1 withObject:[NSNumber numberWithInt:value]];
+    [self.objScale.arrFeedback replaceObjectAtIndex:1 withObject:[NSNumber numberWithInt:value]];
     
     value = [[self segmentFb03]selectedSegmentIndex] + 1;
-    [arrFeedback replaceObjectAtIndex:2 withObject:[NSNumber numberWithInt:value]];
+    [self.objScale.arrFeedback replaceObjectAtIndex:2 withObject:[NSNumber numberWithInt:value]];
     
     value = [[self segmentFb04]selectedSegmentIndex] + 1;
-    [arrFeedback replaceObjectAtIndex:3 withObject:[NSNumber numberWithInt:value]];
+    [self.objScale.arrFeedback replaceObjectAtIndex:3 withObject:[NSNumber numberWithInt:value]];
     
     value = [[self segmentFb05]selectedSegmentIndex] + 1;
-    [arrFeedback replaceObjectAtIndex:4 withObject:[NSNumber numberWithInt:value]];
+    [self.objScale.arrFeedback replaceObjectAtIndex:4 withObject:[NSNumber numberWithInt:value]];
     
 }
 
 -(void)resetArrayFeedback{
-    [arrFeedback removeAllObjects];
+    [self.objScale.arrFeedback removeAllObjects];
     
     for(int i =0; i<5; i++){
-        [arrFeedback addObject:[NSNumber numberWithInt:1]];
+        [self.objScale.arrFeedback addObject:[NSNumber numberWithInt:1]];
     }
 }
 
@@ -166,17 +185,16 @@
 //method to stratify the averaged scoreOfDay into Stages
 -(NSString *)stageOfChange: (double)avgScoreOfDay
 {
-    if (1.0 <= avgScoreOfDay <=1.7 )
-        {return @"Precontemplation";}
-    else if (1.7 < avgScoreOfDay <= 2.4)
-        {return @"Contemplation";}
-    else if (2.4 < avgScoreOfDay  <= 3.25)
-        {return @"Preparation";}
-    else if (3.25 < avgScoreOfDay <= 4.25)
-        {return @"Action";}
-    else
-        {return @"Maintenance";}
-}
+    if (avgScoreOfDay <=1.7 )
+    {return @"Precontemplation";}
+    else if (avgScoreOfDay <= 2.4)
+    {return @"Contemplation";}
+    else if (avgScoreOfDay  <= 3.25)
+    {return @"Preparation";}
+    else if (avgScoreOfDay <= 4.25)
+    {return @"Action";}
+    
+    return @"Maintenance";}
 
 
 

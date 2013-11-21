@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0005AF16183E1CF20071379A /* GoalDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 0005AF15183E1CF20071379A /* GoalDetail.m */; };
 		00DC5DE9183AE63B00AB6FAD /* GoalListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DC5DE8183AE63B00AB6FAD /* GoalListView.m */; };
 		00DC5DEC183AF0D300AB6FAD /* WidgetDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DC5DEB183AF0D300AB6FAD /* WidgetDetailView.m */; };
 		00DC5DEF183AFFE600AB6FAD /* RatingScale.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DC5DEE183AFFE600AB6FAD /* RatingScale.m */; };
@@ -62,6 +63,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0005AF14183E1CF20071379A /* GoalDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GoalDetail.h; path = App/GoalDetail.h; sourceTree = "<group>"; };
+		0005AF15183E1CF20071379A /* GoalDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GoalDetail.m; path = App/GoalDetail.m; sourceTree = "<group>"; };
 		00DC5DE7183AE63B00AB6FAD /* GoalListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoalListView.h; sourceTree = "<group>"; };
 		00DC5DE8183AE63B00AB6FAD /* GoalListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalListView.m; sourceTree = "<group>"; };
 		00DC5DEA183AF0D300AB6FAD /* WidgetDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WidgetDetailView.h; sourceTree = "<group>"; };
@@ -265,6 +268,8 @@
 				00ECB3BC183AC7FE00F71B81 /* Widget.m */,
 				00DC5DED183AFFE600AB6FAD /* RatingScale.h */,
 				00DC5DEE183AFFE600AB6FAD /* RatingScale.m */,
+				0005AF14183E1CF20071379A /* GoalDetail.h */,
+				0005AF15183E1CF20071379A /* GoalDetail.m */,
 			);
 			name = Class;
 			path = ..;
@@ -578,6 +583,7 @@
 				00ECB3BD183AC7FE00F71B81 /* Goal.m in Sources */,
 				DF34ACB618382EF700C0F970 /* SettingsTableViewCell.m in Sources */,
 				DF34ACB318382E4800C0F970 /* SettingsTableViewController.m in Sources */,
+				0005AF16183E1CF20071379A /* GoalDetail.m in Sources */,
 				DF34AC9C1834D16D00C0F970 /* WidgetViewController.m in Sources */,
 				00ECB3B5183AC7D100F71B81 /* FMDatabase.m in Sources */,
 				DF34ACBC1839857000C0F970 /* TodayViewController.m in Sources */,

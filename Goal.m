@@ -57,6 +57,8 @@
         [self setPoint:[resultSet intForColumn:@"point"]];
         [self setFeedback:[resultSet intForColumn:@"Feedback"]];
         [self setEnable:[resultSet intForColumn:@"Enable"]];
+        [self setSelecFrequency:[resultSet intForColumn:@"SelectFrequency"]];
+        [self setNumFrequency:[resultSet intForColumn:@"NumFrequency"]];
         
         NSLog(@"initLoad");
     }
@@ -66,7 +68,7 @@
 
 -(BOOL)updateData
 {
-    NSString *querySQL = [NSString stringWithFormat:@"update goal set name = '%@', description = '%@', point = %d, feedback = %d, enable = %d where id = %d",[self name],[self description],[self point],[self feedback],[self enable],[self ID]];
+    NSString *querySQL = [NSString stringWithFormat:@"update goal set name = '%@', description = '%@', point = %d, feedback = %d, enable = %d, SelectFrequency = %d, NumFrequency = %d where id = %d",[self name],[self description],[self point],[self feedback],[self enable],[self selecFrequency], [self numFrequency] ,[self ID]];
     
     [db open];
     
@@ -84,10 +86,13 @@
 
 -(BOOL)deleteData
 {
+    self.name = @"<Goal #>";
     self.description = NULL;
     self.point =0;
     self.feedback = 0;
     self.enable = 0;
+    self.selecFrequency = 0;
+    self.numFrequency = 0;
     return [self updateData];
 }
 
@@ -105,5 +110,41 @@
     
     return count;
 }
+
+-(double)getAvgOfScores:(int)goalID
+{
+    double avgValue=0.0;
+    
+    NSString *querySQL = [NSString stringWithFormat:@"select avg(Score) from Goal_Detail where Goal_ID = '%d'",goalID];
+    
+    [db open];
+    
+    FMResultSet *resultSet = [db executeQuery:querySQL];
+    
+    if([resultSet next])
+    {
+        avgValue = [resultSet doubleForColumnIndex:0];
+    }
+    
+    [db close];
+    
+    return avgValue;
+}
+
+-(NSString *)stageOfChange
+{
+    double avgScoreOfDay = [self getAvgOfScores:self.ID];
+    if (avgScoreOfDay <=1.7 )
+    {return @"Precontemplation";}
+    else if (avgScoreOfDay <= 2.4)
+    {return @"Contemplation";}
+    else if (avgScoreOfDay  <= 3.25)
+    {return @"Preparation";}
+    else if (avgScoreOfDay <= 4.25)
+    {return @"Action";}
+    
+    return @"Maintenance";
+}
+
 
 @end

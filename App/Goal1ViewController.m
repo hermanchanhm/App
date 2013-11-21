@@ -122,12 +122,10 @@
 
 -(void)loadData
 {
-    if(_objGoal.name == nil)
-        [[self choice]setText:@"Define your Goal"];
-    else
-        [[self choice]setText:_objGoal.name];
-    
+    [[self choice]setText:_objGoal.name];
     [[self goalTextField]setText:_objGoal.description];
+    [self.selectorLabel setText:[NSString stringWithFormat:@"%d",_objGoal.numFrequency]];
+    self.optSelector.selectedSegmentIndex = _objGoal.selecFrequency;
     
     self.title = _objGoal.name;
 }
