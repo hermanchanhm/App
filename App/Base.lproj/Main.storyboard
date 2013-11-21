@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="bR5-fj-yX7">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
     </dependencies>
     <scenes>
         <!--Welcome View - Welcome-->
@@ -62,7 +62,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nPg-1G-1V2">
                                 <rect key="frame" x="49" y="180" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="mewtwo"/>
+                                <state key="normal" backgroundImage="squirtle"/>
                                 <connections>
                                     <action selector="btnWidget01:" destination="Bfm-5d-fyf" eventType="touchUpInside" id="C0Q-MH-9nJ"/>
                                     <segue destination="ghb-qb-t0G" kind="push" id="pz6-FS-BDC"/>
@@ -71,7 +71,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7mJ-4r-vw5">
                                 <rect key="frame" x="172" y="288" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" backgroundImage="graph-picture"/>
+                                <state key="normal" backgroundImage="charmander"/>
                                 <connections>
                                     <action selector="btnWidget04:" destination="Bfm-5d-fyf" eventType="touchUpInside" id="aSn-lH-nCq"/>
                                     <segue destination="ghb-qb-t0G" kind="push" id="Qm1-7Z-mtg"/>
@@ -80,7 +80,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JWP-25-N2f">
                                 <rect key="frame" x="172" y="180" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" backgroundImage="graph-picture"/>
+                                <state key="normal" backgroundImage="machop"/>
                                 <connections>
                                     <action selector="btnWidget02:" destination="Bfm-5d-fyf" eventType="touchUpInside" id="eoO-AP-UZC"/>
                                     <segue destination="ghb-qb-t0G" kind="push" id="4fz-Dk-vVC"/>
@@ -89,12 +89,19 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i40-iJ-7bN">
                                 <rect key="frame" x="49" y="288" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" backgroundImage="graph-picture"/>
+                                <state key="normal" backgroundImage="pikachu1"/>
                                 <connections>
                                     <action selector="btnWidget03:" destination="Bfm-5d-fyf" eventType="touchUpInside" id="Kpk-MG-SK2"/>
                                     <segue destination="ghb-qb-t0G" kind="push" id="oky-uq-UZB"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Click on pics to select" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lAA-ez-FU4">
+                                <rect key="frame" x="77" y="118" width="210" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -1789,10 +1796,14 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="GraphTab(have to include link)" width="32" height="32"/>
         <image name="Settings(no link needed)" width="32" height="32"/>
         <image name="Today (have to include link)" width="32" height="32"/>
+        <image name="charmander" width="194" height="218"/>
         <image name="graph-icon" width="32" height="32"/>
         <image name="graph-picture" width="128" height="128"/>
         <image name="list" width="32" height="32"/>
+        <image name="machop" width="186" height="215"/>
         <image name="mewtwo" width="250" height="320"/>
+        <image name="pikachu1" width="300" height="281"/>
+        <image name="squirtle" width="197" height="204"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
@@ -1802,6 +1813,5 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
     <inferredMetricsTieBreakers>
         <segue reference="oky-uq-UZB"/>
         <segue reference="JV5-Cg-r6b"/>
-        <segue reference="PGN-Oc-QXy"/>
     </inferredMetricsTieBreakers>
 </document>
