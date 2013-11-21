@@ -150,15 +150,15 @@
 }
 
 //method to stratify the averaged scoreOfDay into Stages
--(NSString *)stageOfChange: (double)scoreOfDay
+-(NSString *)stageOfChange: (double)avgScoreOfDay
 {
-    if (1.0 <= scoreOfDay <=1.7 )
+    if (1.0 <= avgScoreOfDay <=1.7 )
         {return @"Precontemplation";}
-    else if (1.7 < scoreOfDay <= 2.4)
+    else if (1.7 < avgScoreOfDay <= 2.4)
         {return @"Contemplation";}
-    else if (2.4 < scoreOfDay  <= 3.25)
+    else if (2.4 < avgScoreOfDay  <= 3.25)
         {return @"Preparation";}
-    else if (3.25 < scoreOfDay <= 4.25)
+    else if (3.25 < avgScoreOfDay <= 4.25)
         {return @"Action";}
     else
         {return @"Maintenance";}
