@@ -145,11 +145,11 @@
 }
 
 -(void)setCurrentRating{
-    self.ratingSegment01.selectedSegmentIndex = [[arrRating objectAtIndex:0] intValue];
-    self.ratingSegment01.selectedSegmentIndex = [[arrRating objectAtIndex:1] intValue];
-    self.ratingSegment01.selectedSegmentIndex = [[arrRating objectAtIndex:2] intValue];
-    self.ratingSegment01.selectedSegmentIndex = [[arrRating objectAtIndex:3] intValue];
-    self.ratingSegment01.selectedSegmentIndex = [[arrRating objectAtIndex:4] intValue];
+    self.ratingSegment01.selectedSegmentIndex = [[arrRating objectAtIndex:0] intValue] - 1;
+    self.ratingSegment01.selectedSegmentIndex = [[arrRating objectAtIndex:1] intValue] - 1;
+    self.ratingSegment01.selectedSegmentIndex = [[arrRating objectAtIndex:2] intValue] -1 ;
+    self.ratingSegment01.selectedSegmentIndex = [[arrRating objectAtIndex:3] intValue]-1 ;
+    self.ratingSegment01.selectedSegmentIndex = [[arrRating objectAtIndex:4] intValue]-1;
 }
 
 

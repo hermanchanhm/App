@@ -144,8 +144,8 @@
     {
         point = 0;
         [objGoal loadData:i+1];
-        if(objGoal.enable == 0)
-            continue;
+        //if(objGoal.enable == 0)
+        //    continue;
         point = objGoal.point + [[arrRating objectAtIndex:i] intValue];
         feedback = objGoal.feedback + [[arrFeedback objectAtIndex:i] intValue];
         
@@ -155,6 +155,11 @@
         [objGoal updateData];
         
     }
+    
+    querySQL= [NSString stringWithFormat:@"update parameter set value = '11111' where name = 'Rating' or name ='Feedback'"];
+    [db open];
+    [db executeUpdate:querySQL];
+    [db close];
     
 }
 

@@ -58,13 +58,16 @@
 - (IBAction)btnEndDayTapped:(id)sender {
    
     //store feedback info
-    [objScale dayCompleted];
+
     [self getCurrentFeedback];
     [objScale setFeedback:arrFeedback];
+    [objScale dayCompleted];
     
     //navigate back to TodayView
     [self.navigationController popViewControllerAnimated:YES];
     [self.navigationController popViewControllerAnimated:YES];
+    
+    
   
 }
 
