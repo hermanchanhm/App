@@ -30,10 +30,12 @@
 {
     databaseName = @"appDB.sqlite";
     
-    NSArray *path = NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory,NSUserDomainMask,YES);
-    NSString *docPath =[path objectAtIndex:0];
+    //NSArray *path = NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory,NSUserDomainMask,YES);
+    //NSString *docPath =[path objectAtIndex:0];
     
-    dbPathString = [docPath stringByAppendingPathComponent:databaseName];
+    //dbPathString = [docPath stringByAppendingPathComponent:databaseName];
+    NSString * str = NSHomeDirectory();
+    dbPathString = [str stringByAppendingPathComponent:databaseName];
     
     //[self createAndCheckDatabase];
     

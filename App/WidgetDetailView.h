@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface WidgetDetailView : UIViewController
+@property (strong, nonatomic) IBOutlet UIButton *btnEvolve;
+- (IBAction)btnEvolveTapped:(id)sender;
+@property (strong, nonatomic) IBOutlet UILabel *expLabel;
+@property (strong, nonatomic) IBOutlet UILabel *levelLabel;
+@property (strong, nonatomic) IBOutlet UIButton *btnWidget;
 
 @end

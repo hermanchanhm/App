@@ -27,6 +27,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    //check exp then load appropriate image...
 }
 
 - (void)didReceiveMemoryWarning
@@ -35,4 +37,32 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)btnEvolveTapped:(id)sender {
+    //check if the score to evolve reached
+    /*if (exp reached) {
+        //notify user changes
+        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Congratulations!"
+                                                          message:@"You have to evolved to Lv. X"
+                                                         delegate:nil
+                                                cancelButtonTitle:@"OK"
+                                                otherButtonTitles:nil];
+        [message show];
+     
+        //update levelLabel to new level
+        //update expLabel to new Exp
+        //update widget image
+    } else { */
+        //notify user changes
+    
+        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Not Enough Exp."
+                                                          message:@"You have to reach xxx Exp. to evolve"
+                                                         delegate:nil
+                                                cancelButtonTitle:@"OK"
+                                                otherButtonTitles:nil];
+        [message show];
+
+    //}
+    
+    
+}
 @end

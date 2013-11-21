@@ -27,9 +27,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
     //self.settingsArray = [[NSArray alloc] initWithObjects:@"Diet",@"Exercise",@"Bad Habit",@"4",@"5", nil];
-    self.settingsArray = @[@"View Goals", @"Notification Time", @"Widgets", @"Profile", @"Reset"];
+    self.settingsArray = @[@"View Goals", @"Notification Time", @"Widgets", @"Profile", @"Reset and Erase All Data"];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -77,38 +77,55 @@
 {
     if(indexPath.row==0)
     {
-        //Open New View select on 1st row
+        //push to view selected on 1st row
         UIViewController *anotherVC = [self.storyboard instantiateViewControllerWithIdentifier:@"goalVC"];
         [self.navigationController pushViewController:anotherVC animated:YES];
         
     }
     if(indexPath.row==1)
     {
-        //Open New View select on 2st row
+        //push to view selected on 2st row
         UIViewController *anotherVC = [self.storyboard instantiateViewControllerWithIdentifier:@"notificationVC"];
         [self.navigationController pushViewController:anotherVC animated:YES];
     }
     if(indexPath.row==2)
     {
-        //Open New View select on 3rd row
+        //push to view selected on 3rd row
         UIViewController *anotherVC = [self.storyboard instantiateViewControllerWithIdentifier:@"widgetVC"];
         [self.navigationController pushViewController:anotherVC animated:YES];
         
     }
     if(indexPath.row==3)
     {
-        //Open New View select on 4th row
+        //push to view selected on 4th row
         UIViewController *anotherVC = [self.storyboard instantiateViewControllerWithIdentifier:@"setprofileVC"];
         [self.navigationController pushViewController:anotherVC animated:YES];
     }
     if(indexPath.row==4)
     {
-        //Open New View select on 4th row
-        UIViewController *anotherVC = [self.storyboard instantiateViewControllerWithIdentifier:@"resetVC"];
-        [self.navigationController pushViewController:anotherVC animated:YES];
+        //Trigger UIActionSheet to confirm user selection
+        
+        UIActionSheet *actionSheet = [[UIActionSheet alloc]
+                                      initWithTitle:@"Are You Sure? This cannot be undone."
+                                      delegate:self
+                                      cancelButtonTitle:@"Cancel"
+                                      destructiveButtonTitle:@"Reset and Erase All Data"
+                                      otherButtonTitles:nil];
+        [actionSheet showInView:self.view];
+        
+        //UIViewController *anotherVC = [self.storyboard instantiateViewControllerWithIdentifier:@"resetVC"];
+        //[self.navigationController pushViewController:anotherVC animated:YES];
     }
 }
 
+- (void) actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    NSString *buttonClicked = [actionSheet buttonTitleAtIndex:buttonIndex];
+    if  ([buttonClicked isEqualToString:@"Reset and Erase All Data"])
+    {
+        NSLog(@"All data erased");
+    }
+}
 
 /*
 // Override to support conditional editing of the table view.
