@@ -33,11 +33,6 @@
     NSArray *path = NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory,NSUserDomainMask,YES);
     NSString *docPath =[path objectAtIndex:0];
     
-    //NSString * dbFilePath=[NSHomeDirectory stringByAppendingPathComponent:@"mysqlite.sqlite"];
-    //NSString *dbFile = NSHomeDirectory();
-    //dbFile = [dbFile stringByAppendingPathComponent:databaseName];
-    //dbPathString = dbFile;
-    
     dbPathString = [docPath stringByAppendingPathComponent:databaseName];
     
     //[self createAndCheckDatabase];
