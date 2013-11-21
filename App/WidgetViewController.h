@@ -17,7 +17,5 @@
 - (IBAction)btnWidget02:(id)sender;
 - (IBAction)btnWidget03:(id)sender;
 - (IBAction)btnWidget04:(id)sender;
-- (IBAction)btnWidget05:(id)sender;
-- (IBAction)btnWidget06:(id)sender;
 
 @end

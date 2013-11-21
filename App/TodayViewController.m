@@ -31,6 +31,11 @@
     return self;
 }
 
+- (void) viewWillAppear:(BOOL)animated
+{
+    [self viewDidLoad];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -94,7 +99,7 @@
     
     //navigate to TodayPMViewController
     
-    if( todayPMView == nil)
+    if(todayPMView == nil)
     {
         todayPMView = [self.storyboard instantiateViewControllerWithIdentifier:@"tonightVC"];
         //self.todayPMView.to = self;
@@ -108,6 +113,9 @@
     //[self.navigationController popViewControllerAnimated:YES];
     
     //code to save the selections...
+    
+    
+    
 }
 
 -(void)resetArrayRating{
