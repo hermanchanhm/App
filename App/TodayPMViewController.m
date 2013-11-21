@@ -120,35 +120,49 @@
     else if(feedbackScore == 2)
     {
         if(ratingScore == 1) //if 1
-        {scoreOfDay = 1.0;}
+            {scoreOfDay = 1.0;}
         else if(ratingScore == 2)//if 2
-        {scoreOfDay = 1.75;}
+            {scoreOfDay = 1.75;}
         else if (ratingScore == 3) //if 3
-        {scoreOfDay = 2.5;}
+            {scoreOfDay = 2.5;}
         else if (ratingScore == 4) //if 4
-        {scoreOfDay = 3.25;}
+            {scoreOfDay = 3.25;}
         else //if 5
-        {scoreOfDay = 4.0;}
+            {scoreOfDay = 4.0;}
     }
     
     //condition for "YES" (feedbackScre == 3)
     else
     {
         if(ratingScore == 1) //if 1
-        {scoreOfDay = 1.0;}
+            {scoreOfDay = 1.0;}
         else if(ratingScore == 2)//if 2
-        {scoreOfDay = 2.0;}
+            {scoreOfDay = 2.0;}
         else if (ratingScore == 3) //if 3
-        {scoreOfDay = 3.0;}
+            {scoreOfDay = 3.0;}
         else if (ratingScore == 4) //if 4
-        {scoreOfDay = 4.0;}
+            {scoreOfDay = 4.0;}
         else //if 5
-        {scoreOfDay = 5.0;}
+            {scoreOfDay = 5.0;}
     }
     
     return scoreOfDay;
 }
 
+//method to stratify the averaged scoreOfDay into Stages
+-(NSString *)stageOfChange: (double)scoreOfDay
+{
+    if (1.0 <= scoreOfDay <=1.7 )
+        {return @"Precontemplation";}
+    else if (1.7 < scoreOfDay <= 2.4)
+        {return @"Contemplation";}
+    else if (2.4 < scoreOfDay  <= 3.25)
+        {return @"Preparation";}
+    else if (3.25 < scoreOfDay <= 4.25)
+        {return @"Action";}
+    else
+        {return @"Maintenance";}
+}
 
 
 
