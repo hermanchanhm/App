@@ -284,6 +284,7 @@
                     <connections>
                         <outlet property="choice" destination="wkK-Do-nb7" id="uAD-o3-zyZ"/>
                         <outlet property="goalTextField" destination="HDZ-GZ-Bfx" id="7Py-Um-YsS"/>
+                        <outlet property="optSelector" destination="OeJ-Tb-43L" id="HBR-X9-QuK"/>
                         <outlet property="picker" destination="VPP-CF-CIL" id="4IE-Yc-uMy"/>
                         <outlet property="selectorLabel" destination="Jeb-WE-kNA" id="kbF-xC-8Kw"/>
                         <outlet property="selectorStepper" destination="SGM-l7-Etp" id="7S7-Q3-Mic"/>
@@ -1417,7 +1418,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="settingsCell" id="a1v-43-xFt" customClass="SettingsTableViewCell">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="a1v-43-xFt" id="koh-Wf-peB">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -1801,8 +1802,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="oky-uq-UZB"/>
-        <segue reference="PGN-Oc-QXy"/>
-        <segue reference="JV5-Cg-r6b"/>
-        <segue reference="PGN-Oc-QXy"/>
+        <segue reference="rsu-5W-ry4"/>
+        <segue reference="YjK-bT-RWV"/>
     </inferredMetricsTieBreakers>
 </document>

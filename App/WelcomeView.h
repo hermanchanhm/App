@@ -10,11 +10,13 @@
 #import "Widget.h"
 #import "WidgetViewController.h"
 #import "SetGoalView.h"
+#import "TodayViewController.h"
 
 @interface WelcomeView : UIViewController
 
-@property (weak, nonatomic) WidgetViewController *widgetView;
-@property (weak, nonatomic) SetGoalView *setGoalView;
+@property (strong, nonatomic) WidgetViewController *widgetView;
+@property (strong, nonatomic) SetGoalView *setGoalView;
+@property (strong, nonatomic) TodayViewController *todayView;
 
 - (IBAction)btnStart:(id)sender;
 

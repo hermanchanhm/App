@@ -73,6 +73,11 @@
     
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [self viewDidLoad];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -99,6 +104,7 @@
     
     
     [self.navigationController pushViewController:todayPMView animated:YES];
+    [todayPMView viewDidLoad];
     //[self.navigationController popViewControllerAnimated:YES];
     
     //code to save the selections...

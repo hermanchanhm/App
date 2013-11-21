@@ -31,7 +31,18 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-   
+    
+    //set title as today's date
+    //format date
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"MM/dd"];
+    //date for today
+    NSDate *today = [[NSDate alloc] init];
+    
+    self.navigationItem.title = [NSString stringWithFormat: @"Today - %@",[dateFormatter stringFromDate:today]];
+    //end
+
+    
     //hides the back button
     self.navigationItem.hidesBackButton = YES;
     objScale = [[RatingScale alloc]init];

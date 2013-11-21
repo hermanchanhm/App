@@ -51,6 +51,7 @@
     
     while([resultSet next])
     {
+        [self setID:goalID];
         [self setName:[resultSet stringForColumn:@"name"]];
         [self setDescription:[resultSet stringForColumn:@"description"]];
         [self setPoint:[resultSet intForColumn:@"point"]];
@@ -90,5 +91,19 @@
     return [self updateData];
 }
 
+-(int)getEnableGoal{
+    NSString *querySQL = [NSString stringWithFormat:@"select count() from goal where enable = 1"];
+    int count = 0;
+    [db open];
+    
+    FMResultSet *resultSet = [db executeQuery:querySQL];
+    
+    if([resultSet next])
+        count = [resultSet intForColumnIndex:0];
+    
+    [db close];
+    
+    return count;
+}
 
 @end
