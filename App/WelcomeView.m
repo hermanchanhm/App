@@ -28,6 +28,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    /*
     Goal * objGoal = [[Goal alloc]init];
     int goalCount = [objGoal getEnableGoal];
     if( goalCount > 0)
@@ -36,6 +37,8 @@
             self.todayView = [self.storyboard instantiateViewControllerWithIdentifier:@"todayVC"];
         [self.navigationController pushViewController:self.todayView animated:YES];
     }
+     */
+     
 }
 
 - (void)didReceiveMemoryWarning
@@ -45,6 +48,11 @@
 }
 
 - (IBAction)btnStart:(id)sender {
+    if(self.widgetView ==nil)
+        self.widgetView = [self.storyboard instantiateViewControllerWithIdentifier:@"widgetView"];
+    [self.navigationController pushViewController:self.widgetView animated:YES];
+    
+    /*
     Widget *widget = [[Widget alloc]init];
     if( ([widget getWidget] == nil) || ([[widget getWidget]isEqualToString:@""]))  {
         if(self.widgetView ==nil)
@@ -57,5 +65,6 @@
         [self.navigationController pushViewController:self.setGoalView animated:YES];
 
     }
+     */
 }
 @end
