@@ -43,6 +43,11 @@
     
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [self loadData];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -91,7 +96,15 @@
 //Change the value of the UILabel *selectorLabel
 - (IBAction)addGoalTapped:(id)sender {
     //code to save changes....
-
+    self.objGoal.name = self.choice.text;
+    self.objGoal.description = self.goalTextField.text;
+    self.objGoal.selecFrequency = [[self optSelector] selectedSegmentIndex];
+    self.objGoal.numFrequency = [self.selectorLabel.text intValue];
+    self.objGoal.enable =1;
+    [[self objGoal] updateData];
+    
+    [self.navigationController popViewControllerAnimated:YES];
+    
 }
 
 - (IBAction)valueChanged:(id)sender {

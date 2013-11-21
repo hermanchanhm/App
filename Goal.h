@@ -19,6 +19,10 @@
 @property (strong, nonatomic)NSString *description;
 @property (nonatomic)int point;
 @property (nonatomic)int feedback;
+@property (nonatomic)int enable;
+@property (nonatomic)int selecFrequency;
+@property (nonatomic)int numFrequency;
+
 
 -(id)initWithGoalID:(int)goalID;
 
@@ -27,5 +31,7 @@
 -(BOOL)updateData;
 
 -(BOOL)deleteData;
+
+-(int)getEnableGoal;
 
 @end

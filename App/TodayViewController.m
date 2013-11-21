@@ -11,31 +11,44 @@
 @interface TodayViewController ()
 {
     NSMutableArray *arrRating;
-    NSMutableArray *arrFeedback;
     RatingScale * scale;
+    TodayPMViewController *todayPMView;
+    int count;
 }
 @end
 
 @implementation TodayViewController
-int count = 1;
+
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-
+        
     }
     return self;
+}
+
+- (void) viewWillAppear:(BOOL)animated
+{
+    [self viewDidLoad];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    
+   
     //set title as today's date
         //format date
+    scale = [[RatingScale alloc]init];
+    arrRating = [scale getRating];
+    [self setCurrentRating];
+    count = [scale getDayCount];
+    
+    
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"MM/dd"];
     //date for today
@@ -58,11 +71,16 @@ int count = 1;
     //hides the back button
     self.navigationItem.hidesBackButton = YES;
     
-    count++;
+    //count++;
+    //count = 0;
     
-    scale = [[RatingScale alloc]init];
-    arrRating = [scale getRating];
-    arrFeedback = [scale getFeedback];
+    
+    
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [self viewDidLoad];
 }
 
 - (void)didReceiveMemoryWarning
@@ -73,45 +91,79 @@ int count = 1;
     
 //Action when button tapped
 - (IBAction)btnTapped:(id)sender {
+    
+    //Store the rating info
+    [self getCurrentRating];
     [scale setRating:arrRating];
     
-    NSString * str =
-    [self.goal1SegmentControl titleForSegmentAtIndex:[self.goal1SegmentControl selectedSegmentIndex]];
     
-    NSLog(@"%@",str);;
+    //navigate to TodayPMViewController
+    
+    if(todayPMView == nil)
+    {
+        todayPMView = [self.storyboard instantiateViewControllerWithIdentifier:@"tonightVC"];
+        //self.todayPMView.to = self;
+        count++;
+        NSLog(@"View count : %d", count);
+    }
+    
+    
+    [self.navigationController pushViewController:todayPMView animated:YES];
+    [todayPMView viewDidLoad];
+    //[self.navigationController popViewControllerAnimated:YES];
     
     //code to save the selections...
+    
+    
+    
+}
+
+-(void)resetArrayRating{
+    [arrRating removeAllObjects];
+    
+    for(int i =0; i<5; i++){
+        [arrRating addObject:[NSNumber numberWithInt:1]];
+    }
+}
+
+-(void)getCurrentRating{
+    [self resetArrayRating];
+    
+    NSInteger value;
+    
+    value = [[self ratingSegment01]selectedSegmentIndex] + 1;
+    [arrRating replaceObjectAtIndex:0 withObject:[NSNumber numberWithInt:value]];
+    
+    value = [[self ratingSegment02]selectedSegmentIndex] + 1;
+    [arrRating replaceObjectAtIndex:1 withObject:[NSNumber numberWithInt:value]];
+    
+    value = [[self ratingSegment03]selectedSegmentIndex] + 1;
+    [arrRating replaceObjectAtIndex:2 withObject:[NSNumber numberWithInt:value]];
+    
+    value = [[self ratingSegment04]selectedSegmentIndex] + 1;
+    [arrRating replaceObjectAtIndex:3 withObject:[NSNumber numberWithInt:value]];
+    
+    value = [[self ratingSegment05]selectedSegmentIndex] + 1;
+    [arrRating replaceObjectAtIndex:4 withObject:[NSNumber numberWithInt:value]];
+
+}
+
+-(void)setCurrentRating{
+    self.ratingSegment01.selectedSegmentIndex = [[arrRating objectAtIndex:0] intValue];
+    self.ratingSegment01.selectedSegmentIndex = [[arrRating objectAtIndex:1] intValue];
+    self.ratingSegment01.selectedSegmentIndex = [[arrRating objectAtIndex:2] intValue];
+    self.ratingSegment01.selectedSegmentIndex = [[arrRating objectAtIndex:3] intValue];
+    self.ratingSegment01.selectedSegmentIndex = [[arrRating objectAtIndex:4] intValue];
 }
 
 
-- (IBAction)segRate01:(id)sender {
-    //NSInteger value = ((UISegmentedControl *)sender).selectedSegmentIndex + 1;
-    //[arrRating replaceObjectAtIndex:0 withObject:[NSNumber numberWithInt:value]];
-   // NSLog(@"select %d", value);
-}
+- (IBAction)segRate01:(id)sender {}
 
-- (IBAction)segRate02:(id)sender {
-    //NSInteger value = ((UISegmentedControl *)sender).selectedSegmentIndex + 1;
-    //[arrRating replaceObjectAtIndex:1 withObject:[NSNumber numberWithInt:value]];
-    //NSLog(@"select %d", value);
-}
+- (IBAction)segRate02:(id)sender {}
 
-- (IBAction)segRate03:(id)sender {
-    //NSInteger value = ((UISegmentedControl *)sender).selectedSegmentIndex + 1;
-    //[arrRating replaceObjectAtIndex:2 withObject:[NSNumber numberWithInt:value]];
-    //NSLog(@"select %d", value);
-}
+- (IBAction)segRate03:(id)sender {}
 
-- (IBAction)segRate04:(id)sender {
-    //NSInteger value = ((UISegmentedControl *)sender).selectedSegmentIndex + 1;
-    //[arrRating replaceObjectAtIndex:3 withObject:[NSNumber numberWithInt:value]];
-    //NSLog(@"select %d", value);
-}
+- (IBAction)segRate04:(id)sender {}
 
-- (IBAction)segRate05:(id)sender {
-    //NSInteger value = ((UISegmentedControl *)sender).selectedSegmentIndex + 1;
-    //[arrRating replaceObjectAtIndex:4 withObject:[NSNumber numberWithInt:value]];
-    //NSLog(@"select %d", value);
-}
-
+- (IBAction)segRate05:(id)sender {}
 @end

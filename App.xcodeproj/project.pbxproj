@@ -267,6 +267,7 @@
 				00DC5DEE183AFFE600AB6FAD /* RatingScale.m */,
 			);
 			name = Class;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		00ECB3C7183ACF8200F71B81 /* Extended */ = {
@@ -367,7 +368,6 @@
 		DF7225A118331274003C0D8F = {
 			isa = PBXGroup;
 			children = (
-				00ECB3B8183AC7E200F71B81 /* Class */,
 				00ECB3A9183AC7A000F71B81 /* Database */,
 				DF7225B318331274003C0D8F /* App */,
 				DF7225D218331274003C0D8F /* AppTests */,
@@ -404,6 +404,7 @@
 		DF7225B318331274003C0D8F /* App */ = {
 			isa = PBXGroup;
 			children = (
+				00ECB3B8183AC7E200F71B81 /* Class */,
 				00DC5DE7183AE63B00AB6FAD /* GoalListView.h */,
 				00DC5DE8183AE63B00AB6FAD /* GoalListView.m */,
 				00ECB3C4183ACA7C00F71B81 /* SetGoalView.h */,

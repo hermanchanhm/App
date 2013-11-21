@@ -59,11 +59,4 @@
     [self selectWidget:@"picture_04"];
 }
 
-- (IBAction)btnWidget05:(id)sender {
-    [self selectWidget:@"picture_05"];
-}
-
-- (IBAction)btnWidget06:(id)sender {
-    [self selectWidget:@"picture_06"];
-}
 @end

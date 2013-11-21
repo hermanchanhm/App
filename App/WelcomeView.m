@@ -28,6 +28,14 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    Goal * objGoal = [[Goal alloc]init];
+    int goalCount = [objGoal getEnableGoal];
+    if( goalCount > 0)
+    {
+        if(self.todayView ==nil)
+            self.todayView = [self.storyboard instantiateViewControllerWithIdentifier:@"todayVC"];
+        [self.navigationController pushViewController:self.todayView animated:YES];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -47,6 +55,7 @@
         if(self.setGoalView ==nil)
             self.setGoalView = [self.storyboard instantiateViewControllerWithIdentifier:@"setGoalView"];
         [self.navigationController pushViewController:self.setGoalView animated:YES];
+
     }
 }
 @end

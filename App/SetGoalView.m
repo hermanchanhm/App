@@ -33,6 +33,12 @@
     [self prepareData];
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [self prepareData];
+    [self.tableView reloadData];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

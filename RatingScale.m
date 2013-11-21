@@ -16,6 +16,7 @@
     db = [[[DBConnection alloc]init] connectDB];
     [self loadData:@"Rating" arrayName:arrRating];
     [self loadData:@"Feedback" arrayName:arrFeedback];
+    dayCount = [self loadDayCount];
     return self;
 }
 
@@ -27,10 +28,17 @@
 
 
 -(NSMutableArray *)getRating{
+    if(arrRating.count<=0)
+        for(int i = 0;i < 5; i++)
+            [arrRating addObject:[NSNumber numberWithInt:1]];
     return arrRating;
 }
 
 -(NSMutableArray *)getFeedback{
+    if(arrFeedback.count<=0)
+        for(int i = 0;i < 5; i++)
+            [arrFeedback addObject:[NSNumber numberWithInt:1]];
+
     return arrFeedback;
 }
 
@@ -47,7 +55,7 @@
 
 -(void)loadData:(NSString *)paramName arrayName:(NSMutableArray *)array
 {
-    NSString *querySQL = [NSString stringWithFormat:@"select * from parameter where id = '%@'",paramName];
+    NSString *querySQL = [NSString stringWithFormat:@"select * from parameter where name = '%@'",paramName];
     
     [db open];
     
@@ -75,14 +83,8 @@
 
 -(BOOL)updateData:(NSString *)paramName arrayName:(NSMutableArray *)array
 {
-    NSString *newValue;
-    
-    for( int i = 0; i< array.count; i++)
-    {
-        [newValue stringByAppendingString:[NSString stringWithFormat:@"%d", [[array objectAtIndex:i] intValue]]];
-    }
-    
-    NSString *querySQL = [NSString stringWithFormat:@"update parameter set value = '%@' where id = %@",newValue, paramName];
+    NSString *newValue =[array componentsJoinedByString:@""];;
+    NSString *querySQL = [NSString stringWithFormat:@"update parameter set value = '%@' where name = '%@'",newValue, paramName];
     [db open];
     
     BOOL result = [db executeUpdate:querySQL];
@@ -95,6 +97,65 @@
     [db close];
     
     return result;
+}
+
+-(int)getDayCount{
+    return dayCount;
+}
+
+-(int)loadDayCount{
+    NSString *querySQL = [NSString stringWithFormat:@"select * from parameter where name = 'DayCount'"];
+    int value = 1;
+    [db open];
+    
+    FMResultSet *resultSet = [db executeQuery:querySQL];
+    
+    if([resultSet next])
+    {
+        value = [resultSet intForColumn:@"Value"];
+        
+    }
+    
+    [db close];
+    
+    return value;
+}
+
+-(void)dayCompleted{
+    NSString *querySQL;
+    
+    //update day count
+    querySQL= [NSString stringWithFormat:@"update parameter set value = '%d' where name = 'DayCount'",(dayCount+1)];
+    [db open];
+    [db executeUpdate:querySQL];
+    [db close];
+    
+    //store feedback
+    [self setFeedback:arrFeedback];
+    
+    
+    //update the data of current day to goal point
+    Goal * objGoal = [[Goal alloc]init];
+    int point,feedback;
+    [self loadData:@"Rating" arrayName:arrRating];
+    [self loadData:@"Feedback" arrayName:arrFeedback];
+    
+    for(int i = 0; i<5; i++)
+    {
+        point = 0;
+        [objGoal loadData:i+1];
+        if(objGoal.enable == 0)
+            continue;
+        point = objGoal.point + [[arrRating objectAtIndex:i] intValue];
+        feedback = objGoal.feedback + [[arrFeedback objectAtIndex:i] intValue];
+        
+        [objGoal setPoint:point];
+        [objGoal setFeedback:feedback];
+        
+        [objGoal updateData];
+        
+    }
+    
 }
 
 @end

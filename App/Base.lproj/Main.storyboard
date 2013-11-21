@@ -64,41 +64,48 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nPg-1G-1V2">
-                                <rect key="frame" x="49" y="180" width="100" height="100"/>
+                                <rect key="frame" x="49" y="197" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="mewtwo"/>
+                                <state key="normal" backgroundImage="squirtle1"/>
                                 <connections>
                                     <action selector="btnWidget01:" destination="Bfm-5d-fyf" eventType="touchUpInside" id="C0Q-MH-9nJ"/>
                                     <segue destination="ghb-qb-t0G" kind="push" id="pz6-FS-BDC"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7mJ-4r-vw5">
-                                <rect key="frame" x="172" y="288" width="100" height="100"/>
+                                <rect key="frame" x="172" y="363" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" backgroundImage="graph-picture"/>
+                                <state key="normal" backgroundImage="charmander1"/>
                                 <connections>
                                     <action selector="btnWidget04:" destination="Bfm-5d-fyf" eventType="touchUpInside" id="aSn-lH-nCq"/>
                                     <segue destination="ghb-qb-t0G" kind="push" id="Qm1-7Z-mtg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JWP-25-N2f">
-                                <rect key="frame" x="172" y="180" width="100" height="100"/>
+                                <rect key="frame" x="172" y="197" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" backgroundImage="graph-picture"/>
+                                <state key="normal" backgroundImage="machop1"/>
                                 <connections>
                                     <action selector="btnWidget02:" destination="Bfm-5d-fyf" eventType="touchUpInside" id="eoO-AP-UZC"/>
                                     <segue destination="ghb-qb-t0G" kind="push" id="4fz-Dk-vVC"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i40-iJ-7bN">
-                                <rect key="frame" x="49" y="288" width="100" height="100"/>
+                                <rect key="frame" x="49" y="363" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" backgroundImage="graph-picture"/>
+                                <state key="normal" backgroundImage="pikachu1"/>
                                 <connections>
                                     <action selector="btnWidget03:" destination="Bfm-5d-fyf" eventType="touchUpInside" id="Kpk-MG-SK2"/>
                                     <segue destination="ghb-qb-t0G" kind="push" id="oky-uq-UZB"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Click on pics to select" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lAA-ez-FU4">
+                                <rect key="frame" x="77" y="118" width="210" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.1960784314" green="0.4941176471" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -305,6 +312,7 @@
                     <connections>
                         <outlet property="choice" destination="wkK-Do-nb7" id="uAD-o3-zyZ"/>
                         <outlet property="goalTextField" destination="HDZ-GZ-Bfx" id="7Py-Um-YsS"/>
+                        <outlet property="optSelector" destination="OeJ-Tb-43L" id="HBR-X9-QuK"/>
                         <outlet property="picker" destination="VPP-CF-CIL" id="4IE-Yc-uMy"/>
                         <outlet property="selectorLabel" destination="Jeb-WE-kNA" id="kbF-xC-8Kw"/>
                         <outlet property="selectorStepper" destination="SGM-l7-Etp" id="7S7-Q3-Mic"/>
@@ -1127,7 +1135,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 </state>
                                 <connections>
                                     <action selector="btnTapped:" destination="zvA-MJ-MYV" eventType="touchUpInside" id="FAq-N4-KkQ"/>
-                                    <segue destination="Qe7-EZ-fRn" kind="push" id="ENT-9x-XgJ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Day 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="faE-9X-y6v">
@@ -1285,13 +1292,13 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     </navigationItem>
                     <connections>
                         <outlet property="dayLabel" destination="faE-9X-y6v" id="4L1-yp-SR7"/>
-                        <outlet property="goal1SegmentControl" destination="Tb1-eX-QV0" id="JYK-rb-BKv"/>
-                        <outlet property="goal2SegmentControl" destination="KpZ-1N-zk1" id="mtA-jL-pCB"/>
-                        <outlet property="goal3SegmentControl" destination="TyL-oc-TEV" id="gEl-DA-jn8"/>
-                        <outlet property="goal4SegmentControl" destination="Ca0-nB-1jf" id="12e-4B-nxN"/>
-                        <outlet property="goal5SegmentControl" destination="0lf-9I-9lR" id="g78-cR-YqV"/>
                         <outlet property="motivatedButton" destination="r40-K3-Boj" id="XvG-bq-B9H"/>
                         <outlet property="quoteLabel" destination="0Yl-ow-mJG" id="KM1-ti-koK"/>
+                        <outlet property="ratingSegment01" destination="Tb1-eX-QV0" id="mQz-Uv-CGQ"/>
+                        <outlet property="ratingSegment02" destination="KpZ-1N-zk1" id="TpQ-B9-FIX"/>
+                        <outlet property="ratingSegment03" destination="TyL-oc-TEV" id="sal-rZ-NBF"/>
+                        <outlet property="ratingSegment04" destination="Ca0-nB-1jf" id="lKh-tI-h5N"/>
+                        <outlet property="ratingSegment05" destination="0lf-9I-9lR" id="SO1-WR-NlI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pFg-FO-d7Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1417,8 +1424,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 </state>
                                 <connections>
                                     <action selector="btnEndDayTapped:" destination="Qe7-EZ-fRn" eventType="touchUpInside" id="qLl-Ar-irh"/>
-                                    <action selector="generate:" destination="zvA-MJ-MYV" eventType="touchUpInside" id="fRS-lx-PTV"/>
-                                    <segue destination="zvA-MJ-MYV" kind="push" id="57K-7D-tv1"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1439,6 +1444,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     </navigationItem>
                     <connections>
                         <outlet property="btnEndDay" destination="qHD-5E-vUi" id="vM1-Zp-hnr"/>
+                        <outlet property="segmentFb01" destination="Et9-J6-gq0" id="9sF-WB-LR6"/>
+                        <outlet property="segmentFb02" destination="4He-3D-aj6" id="6uu-tC-gJM"/>
+                        <outlet property="segmentFb03" destination="fFt-HU-W12" id="ig9-IK-n9g"/>
+                        <outlet property="segmentFb04" destination="0nC-Ib-CX5" id="tAh-2I-myE"/>
+                        <outlet property="segmentFb05" destination="5Ds-cN-Mze" id="dsG-PQ-M4d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pbr-ld-825" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1486,7 +1496,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <color key="sectionIndexTrackingBackgroundColor" red="0.56470588239999997" green="0.74901960779999999" blue="0.81960784310000001" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="settingsCell" id="a1v-43-xFt" customClass="SettingsTableViewCell">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="a1v-43-xFt" id="koh-Wf-peB">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -1867,10 +1877,14 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="GraphTab(have to include link)" width="32" height="32"/>
         <image name="Settings(no link needed)" width="32" height="32"/>
         <image name="Today (have to include link)" width="32" height="32"/>
+        <image name="charmander1" width="194" height="218"/>
         <image name="graph-icon" width="32" height="32"/>
         <image name="graph-picture" width="128" height="128"/>
         <image name="list" width="32" height="32"/>
+        <image name="machop1" width="186" height="215"/>
         <image name="mewtwo" width="250" height="320"/>
+        <image name="pikachu1" width="300" height="281"/>
+        <image name="squirtle1" width="197" height="204"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
