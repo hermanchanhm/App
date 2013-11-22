@@ -140,6 +140,27 @@
     return avgValue;
 }
 
+
+-(double)getAvgOfScores
+{
+    double avgValue=0.0;
+    
+    NSString *querySQL = [NSString stringWithFormat:@"select avg(Score) from Goal_Detail where Goal_ID = '%d'",self.ID];
+    
+    [db open];
+    
+    FMResultSet *resultSet = [db executeQuery:querySQL];
+    
+    if([resultSet next])
+    {
+        avgValue = [resultSet doubleForColumnIndex:0];
+    }
+    
+    [db close];
+    
+    return avgValue;
+}
+
 -(NSString *)stageOfChange
 {
     double avgScoreOfDay = [self getAvgOfScores:self.ID];

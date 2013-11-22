@@ -312,8 +312,14 @@
     } else {
         plotIndex = 1;
     }
-    self.label1.text = [NSString stringWithFormat:@"Goal %d Stage:",plotIndex];
-    self.label2.text = [self getStageString:self.currentPlot];
+    
+    Goal * objGoal = [[Goal alloc]initWithGoalID:plotIndex];
+    double num = [objGoal getAvgOfScores];
+    
+    NSString * str = [NSString stringWithFormat:@"%.2lf", num];
+    
+    self.label1.text = [NSString stringWithFormat:@"Goal %d - Stage: %@ \n Score: %@",plotIndex, [objGoal stageOfChange], str];
+    //self.label2.text = [self getStageString:self.currentPlot];
 }
 
 - (NSString *)getStageString:(CPTPlot *)plot

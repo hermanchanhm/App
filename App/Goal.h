@@ -39,4 +39,6 @@
 
 -(NSString *)stageOfChange;
 
+-(double)getAvgOfScores;
+
 @end
