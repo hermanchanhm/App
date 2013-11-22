@@ -68,8 +68,8 @@
     Goal *goal = [arrayOfGoals objectAtIndex:indexPath.row];
     
     cell.textLabel.text = goal.name;
-    //cell.detailTextLabel.text= goal.description;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %@", [goal stageOfChange], goal.description];
+    cell.detailTextLabel.text= goal.description;
+    //cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %@", [goal stageOfChange], goal.description];
     
     return cell;
 }
