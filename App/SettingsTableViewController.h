@@ -10,6 +10,7 @@
 #import "Goal.h"
 #import "GoalDetail.h"
 #import "RatingScale.h"
+#import "AppStage.h"
 
 @interface SettingsTableViewController : UITableViewController <UIActionSheetDelegate>
 

@@ -64,7 +64,9 @@
     Goal *goal = [arrayOfGoals objectAtIndex:indexPath.row];
     
     cell.textLabel.text = goal.name;
-    cell.detailTextLabel.text= goal.description;
+    //cell.detailTextLabel.text= goal.description;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %d times/%@", goal.description, goal.numFrequency, goal.frequencyName];
+    
     
     return cell;
 }

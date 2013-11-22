@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "RatingScale.h"
 #import "TodayPMViewController.h"
+#import "Goal.h"
+#import "AppStage.h"
 
 @interface TodayViewController : UIViewController
 
@@ -24,6 +26,18 @@
 @property (strong, nonatomic) IBOutlet UISegmentedControl *ratingSegment03;
 @property (strong, nonatomic) IBOutlet UISegmentedControl *ratingSegment04;
 @property (strong, nonatomic) IBOutlet UISegmentedControl *ratingSegment05;
+
+@property (strong, nonatomic) IBOutlet UILabel *txtGoal01;
+
+@property (strong, nonatomic) IBOutlet UILabel *txtGoal02;
+@property (strong, nonatomic) IBOutlet UILabel *txtGoal03;
+@property (strong, nonatomic) IBOutlet UILabel *txtGoal04;
+@property (strong, nonatomic) IBOutlet UILabel *txtGoal05;
+
+
+
+
+
 
 
 - (IBAction)btnTapped:(id)sender;

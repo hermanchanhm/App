@@ -33,7 +33,7 @@
 - (void) viewWillAppear:(BOOL)animated
 {
     [self viewDidLoad];
-    
+    [self setGoalTitle];
     isSaved = false;
     
 }
@@ -69,6 +69,12 @@
     self.quoteLabel.numberOfLines = 0;
     self.quoteLabel.adjustsFontSizeToFitWidth = YES;
     
+    //shrink to fit
+    self.txtGoal01.adjustsFontSizeToFitWidth = YES;
+    self.txtGoal02.adjustsFontSizeToFitWidth = YES;
+    self.txtGoal03.adjustsFontSizeToFitWidth = YES;
+    self.txtGoal04.adjustsFontSizeToFitWidth = YES;
+    self.txtGoal05.adjustsFontSizeToFitWidth = YES;
     
     //hides the back button
     self.navigationItem.hidesBackButton = YES;
@@ -89,7 +95,26 @@
     }
 }
 
-
+-(void)setGoalTitle
+{
+    //cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %d times/%@", goal.description, goal.numFrequency, goal.frequencyName];
+    Goal * objGoal = [[Goal alloc] init];
+    
+    [objGoal loadData:1];
+    [self.txtGoal01 setText:[NSString stringWithFormat:@"%@ - %d times/%@", objGoal.description, objGoal.numFrequency, objGoal.frequencyName]];
+    
+    [objGoal loadData:2];
+    [self.txtGoal02 setText:[NSString stringWithFormat:@"%@ - %d times/%@", objGoal.description, objGoal.numFrequency, objGoal.frequencyName]];
+    
+    [objGoal loadData:3];
+    [self.txtGoal03 setText:[NSString stringWithFormat:@"%@ - %d times/%@", objGoal.description, objGoal.numFrequency, objGoal.frequencyName]];
+    
+    [objGoal loadData:4];
+    [self.txtGoal04 setText:[NSString stringWithFormat:@"%@ - %d times/%@", objGoal.description, objGoal.numFrequency, objGoal.frequencyName]];
+    
+    [objGoal loadData:5];
+    [self.txtGoal05 setText:[NSString stringWithFormat:@"%@ - %d times/%@", objGoal.description, objGoal.numFrequency, objGoal.frequencyName]];
+}
 
 - (void)didReceiveMemoryWarning
 {
@@ -104,6 +129,9 @@
     [self getCurrentRating];
     [self.objScale setRating];
     isSaved = YES;
+    
+    AppStage * objStage = [[AppStage alloc]init];
+    [objStage setStage:2];
     
     //navigate to TodayPMViewController
     

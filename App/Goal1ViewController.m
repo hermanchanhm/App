@@ -103,6 +103,9 @@
     self.objGoal.enable =1;
     [[self objGoal] updateData];
     
+    AppStage * objStage = [[AppStage alloc] init];
+    [objStage setStage:1];
+    
     [self.navigationController popViewControllerAnimated:YES];
     
     
@@ -125,8 +128,8 @@
 
 -(void)loadData
 {
-    
-    [[self choice]setText:_objGoal.name];
+    if(_objGoal.enable != 0)
+        [[self choice]setText:_objGoal.name];
     [[self goalTextField]setText:_objGoal.description];
     [self.selectorLabel setText:[NSString stringWithFormat:@"%d",_objGoal.numFrequency]];
     self.optSelector.selectedSegmentIndex = _objGoal.selecFrequency;

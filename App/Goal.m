@@ -53,12 +53,20 @@
     {
         [self setID:goalID];
         [self setName:[resultSet stringForColumn:@"name"]];
+        if(self.name == nil) self.name = @"";
         [self setDescription:[resultSet stringForColumn:@"description"]];
+        if(self.description == nil) self.description = @"";
         [self setPoint:[resultSet intForColumn:@"point"]];
         [self setFeedback:[resultSet intForColumn:@"Feedback"]];
         [self setEnable:[resultSet intForColumn:@"Enable"]];
         [self setSelecFrequency:[resultSet intForColumn:@"SelectFrequency"]];
         [self setNumFrequency:[resultSet intForColumn:@"NumFrequency"]];
+        
+        if(self.selecFrequency == 0)
+            [self setFrequencyName:@"day"];
+        else
+            [self setFrequencyName:@"week"];
+        
         
         NSLog(@"initLoad");
     }
@@ -87,7 +95,7 @@
 -(BOOL)deleteData:(int)goalID
 {
     self.ID= goalID;
-    self.name = @"<Goal #>";
+    self.name = [NSString stringWithFormat:@"<Goal %d>",goalID];
     self.description = @"";
     self.point =0;
     self.feedback = 0;

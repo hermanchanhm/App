@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Goal.h"
+#import "AppStage.h"
 
 @interface Goal1ViewController : UIViewController <UIPickerViewDataSource,UIPickerViewDelegate>
 

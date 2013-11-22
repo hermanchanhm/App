@@ -30,7 +30,11 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    
+    self.txtGoal01.adjustsFontSizeToFitWidth = YES;
+    self.txtGoal02.adjustsFontSizeToFitWidth = YES;
+    self.txtGoal03.adjustsFontSizeToFitWidth = YES;
+    self.txtGoal04.adjustsFontSizeToFitWidth = YES;
+    self.txtGoal05.adjustsFontSizeToFitWidth = YES;
     //set title as today's date
     //format date
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
@@ -50,6 +54,8 @@
     [self.objScale getFeedback];
     [self.objScale getDayCount];
     isSaved = false;
+    
+    [self setGoalTitle];
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -84,6 +90,8 @@
     [self.objScale dayCompleted];
     isSaved = true;
     
+    AppStage * objScale = [[AppStage alloc]init];
+    [objScale setStage:1];
     
     //navigate back to TodayView
     [self.navigationController popViewControllerAnimated:YES];
@@ -195,6 +203,28 @@
     {return @"Action";}
     
     return @"Maintenance";}
+
+
+-(void)setGoalTitle
+{
+    //cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %d times/%@", goal.description, goal.numFrequency, goal.frequencyName];
+    Goal * objGoal = [[Goal alloc] init];
+    
+    [objGoal loadData:1];
+    [self.txtGoal01 setText:[NSString stringWithFormat:@"%@ - %d times/%@", objGoal.description, objGoal.numFrequency, objGoal.frequencyName]];
+    
+    [objGoal loadData:2];
+    [self.txtGoal02 setText:[NSString stringWithFormat:@"%@ - %d times/%@", objGoal.description, objGoal.numFrequency, objGoal.frequencyName]];
+    
+    [objGoal loadData:3];
+    [self.txtGoal03 setText:[NSString stringWithFormat:@"%@ - %d times/%@", objGoal.description, objGoal.numFrequency, objGoal.frequencyName]];
+    
+    [objGoal loadData:4];
+    [self.txtGoal04 setText:[NSString stringWithFormat:@"%@ - %d times/%@", objGoal.description, objGoal.numFrequency, objGoal.frequencyName]];
+    
+    [objGoal loadData:5];
+    [self.txtGoal05 setText:[NSString stringWithFormat:@"%@ - %d times/%@", objGoal.description, objGoal.numFrequency, objGoal.frequencyName]];
+}
 
 
 
