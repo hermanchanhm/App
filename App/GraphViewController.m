@@ -119,12 +119,17 @@
 - (void)configureGraph
 {
     CPTGraph *graph = [[CPTXYGraph alloc] initWithFrame:_hostView.bounds];
-    [graph applyTheme:[CPTTheme themeNamed: kCPTPlainWhiteTheme]];
     _hostView.hostedGraph = graph;
+    [graph applyTheme:[CPTTheme themeNamed: kCPTPlainWhiteTheme]];
+    graph.fill = nil;
+    graph.plotAreaFrame.fill = nil;
+    CPTMutableLineStyle *borderLineStyle = [graph.plotAreaFrame.borderLineStyle mutableCopy];
+    borderLineStyle.lineColor = [CPTColor clearColor];
+    graph.plotAreaFrame.borderLineStyle = borderLineStyle;
     
     [self setGraphTitle];
     CPTMutableTextStyle *titleStyle = [CPTMutableTextStyle textStyle];
-    titleStyle.color = [CPTColor blackColor];
+    titleStyle.color = [CPTColor whiteColor];
     titleStyle.fontName = @"Helvetica-Bold";
     titleStyle.fontSize = 24.0f;
     graph.titleTextStyle = titleStyle;
@@ -157,7 +162,7 @@
     
     CPTMutableLineStyle *lineStyle = [self.plot1.dataLineStyle mutableCopy];
     lineStyle.lineWidth = 2.5;
-    lineStyle.lineColor = [CPTColor blueColor];
+    lineStyle.lineColor = [CPTColor blackColor];
     self.plot1.dataLineStyle = lineStyle;
     self.plot2.dataLineStyle = lineStyle;
     self.plot3.dataLineStyle = lineStyle;
@@ -165,9 +170,9 @@
     self.plot5.dataLineStyle = lineStyle;
     
     CPTMutableLineStyle *symbolLineStyle = [CPTMutableLineStyle lineStyle];
-    symbolLineStyle.lineColor = [CPTColor blueColor];
+    symbolLineStyle.lineColor = [CPTColor blackColor];
     CPTPlotSymbol *symbol = [CPTPlotSymbol ellipsePlotSymbol];
-    symbol.fill = [CPTFill fillWithColor:[CPTColor blueColor]];
+    symbol.fill = [CPTFill fillWithColor:[CPTColor blackColor]];
     symbol.lineStyle = symbolLineStyle;
     symbol.size = CGSizeMake(6.0f, 6.0f);
     self.plot1.plotSymbol = symbol;
@@ -180,25 +185,25 @@
 - (void)configureAxes
 {
     CPTMutableTextStyle *axisTitleStyle = [CPTMutableTextStyle textStyle];
-    axisTitleStyle.color = [CPTColor blackColor];
+    axisTitleStyle.color = [CPTColor whiteColor];
     axisTitleStyle.fontName = @"Helvetica-Bold";
     axisTitleStyle.fontSize = 12.0f;
     
     CPTMutableLineStyle *axisLineStyle = [CPTMutableLineStyle lineStyle];
     axisLineStyle.lineWidth = 2.0f;
-    axisLineStyle.lineColor = [CPTColor blackColor];
+    axisLineStyle.lineColor = [CPTColor whiteColor];
     
     CPTMutableTextStyle *axisTextStyle = [[CPTMutableTextStyle alloc] init];
-    axisTextStyle.color = [CPTColor blackColor];
+    axisTextStyle.color = [CPTColor whiteColor];
     axisTextStyle.fontName = @"Helvetica-Bold";
     axisTextStyle.fontSize = 11.0f;
     
     CPTMutableLineStyle *tickLineStyle = [CPTMutableLineStyle lineStyle];
-    tickLineStyle.lineColor = [CPTColor blackColor];
+    tickLineStyle.lineColor = [CPTColor whiteColor];
     tickLineStyle.lineWidth = 2.0f;
     
     CPTMutableLineStyle *gridLineStyle = [CPTMutableLineStyle lineStyle];
-    gridLineStyle.lineColor = [CPTColor grayColor];
+    gridLineStyle.lineColor = [CPTColor whiteColor];
     gridLineStyle.lineWidth = 1.0f;
     
     
