@@ -16,6 +16,8 @@
 		00612032183E911C0085FFD3 /* Widget.m in Sources */ = {isa = PBXBuildFile; fileRef = 0061202B183E911C0085FFD3 /* Widget.m */; };
 		00612034183E917C0085FFD3 /* appDB.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 00612033183E917C0085FFD3 /* appDB.sqlite */; };
 		00612037183E92390085FFD3 /* GoalDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 00612036183E92390085FFD3 /* GoalDetail.m */; };
+		00671A39183EF36E00EF92A7 /* GraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00671A38183EF36E00EF92A7 /* GraphViewController.m */; };
+		00671A3A183EF39100EF92A7 /* GraphViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 00671A37183EF36E00EF92A7 /* GraphViewController.h */; };
 		00DC5DE9183AE63B00AB6FAD /* GoalListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DC5DE8183AE63B00AB6FAD /* GoalListView.m */; };
 		00DC5DEC183AF0D300AB6FAD /* WidgetDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DC5DEB183AF0D300AB6FAD /* WidgetDetailView.m */; };
 		00ECB3C0183AC84900F71B81 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 00ECB3BF183AC84900F71B81 /* libsqlite3.0.dylib */; };
@@ -25,7 +27,6 @@
 		0A259898183C80CE006C7345 /* libCorePlot-CocoaTouch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A259896183C80CE006C7345 /* libCorePlot-CocoaTouch.a */; };
 		0A2598E9183C8170006C7345 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A2598E8183C8170006C7345 /* QuartzCore.framework */; };
 		0A2598EB183C8174006C7345 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A2598EA183C8174006C7345 /* Accelerate.framework */; };
-		0AB3FCD2183ECDFA00A23295 /* GraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AB3FCD1183ECDFA00A23295 /* GraphViewController.m */; };
 		DF34AC9C1834D16D00C0F970 /* WidgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF34AC9B1834D16D00C0F970 /* WidgetViewController.m */; };
 		DF34AC9F1834D28C00C0F970 /* WidgetView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF34AC9E1834D28C00C0F970 /* WidgetView.m */; };
 		DF34ACA21834DEE200C0F970 /* GoalPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF34ACA11834DEE200C0F970 /* GoalPickerView.m */; };
@@ -81,6 +82,8 @@
 		00612033183E917C0085FFD3 /* appDB.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = appDB.sqlite; sourceTree = "<group>"; };
 		00612035183E92390085FFD3 /* GoalDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoalDetail.h; sourceTree = "<group>"; };
 		00612036183E92390085FFD3 /* GoalDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalDetail.m; sourceTree = "<group>"; };
+		00671A37183EF36E00EF92A7 /* GraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphViewController.h; sourceTree = "<group>"; };
+		00671A38183EF36E00EF92A7 /* GraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphViewController.m; sourceTree = "<group>"; };
 		00DC5DE7183AE63B00AB6FAD /* GoalListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoalListView.h; sourceTree = "<group>"; };
 		00DC5DE8183AE63B00AB6FAD /* GoalListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalListView.m; sourceTree = "<group>"; };
 		00DC5DEA183AF0D300AB6FAD /* WidgetDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WidgetDetailView.h; sourceTree = "<group>"; };
@@ -171,7 +174,6 @@
 		0A2598E7183C80E7006C7345 /* NSNumberExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSNumberExtensions.h; sourceTree = "<group>"; };
 		0A2598E8183C8170006C7345 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		0A2598EA183C8174006C7345 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
-		0AB3FCD1183ECDFA00A23295 /* GraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphViewController.m; sourceTree = "<group>"; };
 		DF34AC9A1834D16D00C0F970 /* WidgetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WidgetViewController.h; sourceTree = "<group>"; };
 		DF34AC9B1834D16D00C0F970 /* WidgetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WidgetViewController.m; sourceTree = "<group>"; };
 		DF34AC9D1834D28C00C0F970 /* WidgetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WidgetView.h; sourceTree = "<group>"; };
@@ -386,6 +388,8 @@
 		DF7225B318331274003C0D8F /* App */ = {
 			isa = PBXGroup;
 			children = (
+				00671A37183EF36E00EF92A7 /* GraphViewController.h */,
+				00671A38183EF36E00EF92A7 /* GraphViewController.m */,
 				00612035183E92390085FFD3 /* GoalDetail.h */,
 				00612036183E92390085FFD3 /* GoalDetail.m */,
 				00612033183E917C0085FFD3 /* appDB.sqlite */,
@@ -573,6 +577,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00671A3A183EF39100EF92A7 /* GraphViewController.h in Sources */,
 				DF34ACB618382EF700C0F970 /* SettingsTableViewCell.m in Sources */,
 				00612030183E911C0085FFD3 /* Goal.m in Sources */,
 				DF34ACB318382E4800C0F970 /* SettingsTableViewController.m in Sources */,
@@ -590,13 +595,13 @@
 				00DC5DEC183AF0D300AB6FAD /* WidgetDetailView.m in Sources */,
 				00612031183E911C0085FFD3 /* RatingScale.m in Sources */,
 				DF34ACB91838A58400C0F970 /* SetProfileViewController.m in Sources */,
+				00671A39183EF36E00EF92A7 /* GraphViewController.m in Sources */,
 				00DC5DE9183AE63B00AB6FAD /* GoalListView.m in Sources */,
 				DF34ACA51834E03F00C0F970 /* Goal1ViewController.m in Sources */,
 				DF7225C418331274003C0D8F /* MainViewController.m in Sources */,
 				DF34AC9F1834D28C00C0F970 /* WidgetView.m in Sources */,
 				DF7225BE18331274003C0D8F /* MainAppDelegate.m in Sources */,
 				DF34ACA21834DEE200C0F970 /* GoalPickerView.m in Sources */,
-				0AB3FCD2183ECDFA00A23295 /* GraphViewController.m in Sources */,
 				00ECB3C3183AC95300F71B81 /* WelcomeView.m in Sources */,
 				DFF255B5183A0F7200A73387 /* TodayPMViewController.m in Sources */,
 				DFF255B8183A294100A73387 /* InitNotificationsViewController.m in Sources */,
