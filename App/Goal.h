@@ -30,7 +30,7 @@
 
 -(BOOL)updateData;
 
--(BOOL)deleteData;
+-(BOOL)deleteData:(int)goalID;
 
 -(int)getEnableGoal;
 

@@ -28,4 +28,6 @@
 -(int)getDayCount;
 -(void)dayCompleted;
 -(void)reloadData;
+
+-(void)resetParameter;
 @end

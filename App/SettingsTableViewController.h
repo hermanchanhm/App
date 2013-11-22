@@ -7,6 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Goal.h"
+#import "GoalDetail.h"
+#import "RatingScale.h"
 
 @interface SettingsTableViewController : UITableViewController <UIActionSheetDelegate>
 

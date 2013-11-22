@@ -84,10 +84,11 @@
     return result;
 }
 
--(BOOL)deleteData
+-(BOOL)deleteData:(int)goalID
 {
+    self.ID= goalID;
     self.name = @"<Goal #>";
-    self.description = NULL;
+    self.description = @"";
     self.point =0;
     self.feedback = 0;
     self.enable = 0;

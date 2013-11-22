@@ -156,4 +156,12 @@
     [self resetArray:[self arrFeedback]];
 }
 
+-(void)resetParameter
+{
+    NSString *querySQL = [NSString stringWithFormat:@"update parameter set value = 0 where name = 'DayCount'"];
+    [db open];
+    [db executeUpdate:querySQL];
+    [db close];
+}
+
 @end

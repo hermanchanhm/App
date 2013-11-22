@@ -34,27 +34,50 @@
     //NSString *docPath =[path objectAtIndex:0];
     
     //dbPathString = [docPath stringByAppendingPathComponent:databaseName];
-    NSString * str = NSHomeDirectory();
-    dbPathString = [str stringByAppendingPathComponent:databaseName];
+    //NSString * str = NSHomeDirectory();
+    //dbPathString = [str stringByAppendingPathComponent:databaseName];
+    ///-------
+    NSArray *path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *docPath =[path objectAtIndex:0];
+    dbPathString = [docPath stringByAppendingPathComponent:databaseName];
     
-    //[self createAndCheckDatabase];
+    
+    
+    [self createAndCheckDatabase];
     
     return [FMDatabase databaseWithPath:dbPathString];
 }
 
 -(void)createAndCheckDatabase
 {
+    /*
     BOOL success;
-    
     NSFileManager *fileManager = [NSFileManager defaultManager];
     success = [fileManager fileExistsAtPath:dbPathString];
-    
     if(success) return;
-    
     NSString *databasePathFromApp = [[[NSBundle mainBundle] resourcePath] stringByAppendingString:databaseName];
+    [fileManager copyItemAtPath:databasePathFromApp toPath:dbPathString error:nil];
+    */
+    
+    //--dbPathString = [[NSBundle mainBundle] pathForResource:@"appDB" ofType:@"sqlite"];
+    
+   // First, test for existence.
+   BOOL success;
+   NSFileManager *fileManager = [NSFileManager defaultManager];
+   NSError *error;
+   NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+   NSString *documentsDirectory = [paths objectAtIndex:0];
+   NSString *writableDBPath = [documentsDirectory stringByAppendingPathComponent:databaseName];
+   success = [fileManager fileExistsAtPath:writableDBPath];
+   if (success) return;
+   // The writable database does not exist, so copy the default to the appropriate location.
+   NSString *defaultDBPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:databaseName];
+   success = [fileManager copyItemAtPath:defaultDBPath toPath:writableDBPath error:&error];
+   if (!success) {
+        NSAssert1(0, @"Failed to create writable database file with message '%@'.", [error localizedDescription]);
+   }
    
     
-    [fileManager copyItemAtPath:databasePathFromApp toPath:dbPathString error:nil];
 }
 
 /*

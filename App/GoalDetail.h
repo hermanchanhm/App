@@ -28,5 +28,6 @@
 -(BOOL)updateGoalDetail;
 -(BOOL)addGoalDetail;
 -(NSMutableArray *)loadGoalDetailbyDay:(int)requestedDay;
+-(BOOL)removeGoalDetail:(int)removedGoalID;
 
 @end
