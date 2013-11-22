@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "Widget.h"
+#import "Goal.h"
+#import "ratingscale.h"
 @interface WidgetDetailView : UIViewController
 @property (strong, nonatomic) IBOutlet UIImageView *icon;
 @property (strong, nonatomic) IBOutlet UIImageView *real;
