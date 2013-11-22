@@ -69,6 +69,7 @@
     
     cell.textLabel.text = goal.name;
     cell.detailTextLabel.text= goal.description;
+    //cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %@", [goal stageOfChange], goal.description];
     
     return cell;
 }

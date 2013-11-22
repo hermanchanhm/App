@@ -42,7 +42,7 @@
 }
 
 -(void)setWidget:(NSString *)newWidget{
-    NSString *querySQL = [NSString stringWithFormat:@"update parameter set value = '%@' where name = 'widget'", newWidget];
+    NSString *querySQL = [NSString stringWithFormat:@"update parameter set Value = '%@' where Name = 'widget'", newWidget];
     
     [db open];
     

@@ -30,8 +30,12 @@
 
 -(BOOL)updateData;
 
--(BOOL)deleteData;
+-(BOOL)deleteData:(int)goalID;
 
 -(int)getEnableGoal;
+
+-(double)getAvgOfScores:(int)goalID;
+
+-(NSString *)stageOfChange;
 
 @end

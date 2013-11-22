@@ -11,6 +11,8 @@
 
 @interface TodayPMViewController : UIViewController
 
+@property (strong, nonatomic) RatingScale * objScale;
+
 @property (strong, nonatomic) IBOutlet UIButton *btnEndDay;
 
 @property (strong, nonatomic) IBOutlet UISegmentedControl *segmentFb01;

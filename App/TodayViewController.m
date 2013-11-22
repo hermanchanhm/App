@@ -10,10 +10,9 @@
 
 @interface TodayViewController ()
 {
-    NSMutableArray *arrRating;
-    RatingScale * scale;
     TodayPMViewController *todayPMView;
     int count;
+    bool isSaved;
 }
 @end
 
@@ -34,6 +33,9 @@
 - (void) viewWillAppear:(BOOL)animated
 {
     [self viewDidLoad];
+    
+    isSaved = false;
+    
 }
 
 - (void)viewDidLoad
@@ -41,12 +43,12 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
    
-    //set title as today's date
-        //format date
-    scale = [[RatingScale alloc]init];
-    arrRating = [scale getRating];
+    if(self.objScale == nil)
+        self.objScale = [[RatingScale alloc]init];
+    [[self objScale] reloadData];
     [self setCurrentRating];
-    count = [scale getDayCount];
+    count = [[self objScale] getDayCount];
+    isSaved = NO;
     
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
@@ -78,6 +80,16 @@
     
 }
 
+-(void)viewWillDisappear:(BOOL)animated
+{
+    if(!isSaved)
+    {
+        [self getCurrentRating];
+        [self.objScale setRating];
+    }
+}
+
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -90,22 +102,20 @@
     
     //Store the rating info
     [self getCurrentRating];
-    [scale setRating:arrRating];
-    
+    [self.objScale setRating];
+    isSaved = YES;
     
     //navigate to TodayPMViewController
     
     if(todayPMView == nil)
     {
         todayPMView = [self.storyboard instantiateViewControllerWithIdentifier:@"tonightVC"];
-        //self.todayPMView.to = self;
-        count++;
-        NSLog(@"View count : %d", count);
     }
     
+    todayPMView.objScale = self.objScale;
     
     [self.navigationController pushViewController:todayPMView animated:YES];
-    [todayPMView viewDidLoad];
+    
     //[self.navigationController popViewControllerAnimated:YES];
     
     //code to save the selections...
@@ -115,10 +125,10 @@
 }
 
 -(void)resetArrayRating{
-    [arrRating removeAllObjects];
+    [self.objScale.arrRating removeAllObjects];
     
     for(int i =0; i<5; i++){
-        [arrRating addObject:[NSNumber numberWithInt:1]];
+        [self.objScale.arrRating addObject:[NSNumber numberWithInt:1]];
     }
 }
 
@@ -128,28 +138,28 @@
     NSInteger value;
     
     value = [[self ratingSegment01]selectedSegmentIndex] + 1;
-    [arrRating replaceObjectAtIndex:0 withObject:[NSNumber numberWithInt:value]];
+    [self.objScale.arrRating replaceObjectAtIndex:0 withObject:[NSNumber numberWithInt:value]];
     
     value = [[self ratingSegment02]selectedSegmentIndex] + 1;
-    [arrRating replaceObjectAtIndex:1 withObject:[NSNumber numberWithInt:value]];
+    [self.objScale.arrRating replaceObjectAtIndex:1 withObject:[NSNumber numberWithInt:value]];
     
     value = [[self ratingSegment03]selectedSegmentIndex] + 1;
-    [arrRating replaceObjectAtIndex:2 withObject:[NSNumber numberWithInt:value]];
+    [self.objScale.arrRating replaceObjectAtIndex:2 withObject:[NSNumber numberWithInt:value]];
     
     value = [[self ratingSegment04]selectedSegmentIndex] + 1;
-    [arrRating replaceObjectAtIndex:3 withObject:[NSNumber numberWithInt:value]];
+    [self.objScale.arrRating replaceObjectAtIndex:3 withObject:[NSNumber numberWithInt:value]];
     
     value = [[self ratingSegment05]selectedSegmentIndex] + 1;
-    [arrRating replaceObjectAtIndex:4 withObject:[NSNumber numberWithInt:value]];
+    [self.objScale.arrRating replaceObjectAtIndex:4 withObject:[NSNumber numberWithInt:value]];
 
 }
 
 -(void)setCurrentRating{
-    self.ratingSegment01.selectedSegmentIndex = [[arrRating objectAtIndex:0] intValue];
-    self.ratingSegment01.selectedSegmentIndex = [[arrRating objectAtIndex:1] intValue];
-    self.ratingSegment01.selectedSegmentIndex = [[arrRating objectAtIndex:2] intValue];
-    self.ratingSegment01.selectedSegmentIndex = [[arrRating objectAtIndex:3] intValue];
-    self.ratingSegment01.selectedSegmentIndex = [[arrRating objectAtIndex:4] intValue];
+    self.ratingSegment01.selectedSegmentIndex = [[self.objScale.arrRating objectAtIndex:0] intValue] - 1;
+    self.ratingSegment02.selectedSegmentIndex = [[self.objScale.arrRating objectAtIndex:1] intValue] - 1;
+    self.ratingSegment03.selectedSegmentIndex = [[self.objScale.arrRating objectAtIndex:2] intValue] -1 ;
+    self.ratingSegment04.selectedSegmentIndex = [[self.objScale.arrRating objectAtIndex:3] intValue] -1 ;
+    self.ratingSegment05.selectedSegmentIndex = [[self.objScale.arrRating objectAtIndex:4] intValue] -1;
 }
 
 

@@ -52,7 +52,7 @@
                         <viewControllerLayoutGuide type="top" id="aFf-Bb-cwu"/>
                         <viewControllerLayoutGuide type="bottom" id="HdD-X1-bs1"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="p0a-Os-yxG" customClass="WidgetView">
+                    <view key="view" contentMode="scaleToFill" id="p0a-Os-yxG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
@@ -99,7 +99,7 @@
                                     <segue destination="ghb-qb-t0G" kind="push" id="oky-uq-UZB"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Click on pics to select" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lAA-ez-FU4">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Click on picture to select" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lAA-ez-FU4">
                                 <rect key="frame" x="77" y="118" width="210" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -968,8 +968,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Pd-PE-4a2">
                                 <rect key="frame" x="0.0" y="66" width="320" height="328"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.1960784314" green="0.4941176471" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">This is the contrat between patient ABC and physisian XYZ, MD...By tapping Agree........I willl try my best to accomplish all the Goals settted and blah blah blah............</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -1072,10 +1073,10 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="77" y="-1766"/>
         </scene>
-        <!--View Controller - Graphs-->
+        <!--Graph View Controller - Graphs-->
         <scene sceneID="hFa-wH-3fh">
             <objects>
-                <viewController title="Graphs" id="il5-ZV-w3H" sceneMemberID="viewController">
+                <viewController title="Graphs" id="il5-ZV-w3H" customClass="GraphViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Aqf-Rl-8Cl"/>
                         <viewControllerLayoutGuide type="bottom" id="qPp-MF-kLk"/>
@@ -1083,13 +1084,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     <view key="view" contentMode="scaleToFill" id="gD4-cD-8g3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="whp-yY-Tpl">
-                                <rect key="frame" x="141" y="446" width="39" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="pageIndicatorTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            </pageControl>
-                        </subviews>
                         <color key="backgroundColor" red="0.1960784314" green="0.4941176471" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Graphs" image="GraphTab(have to include link)" id="CCf-XD-O9e"/>
@@ -1321,9 +1315,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <rect key="frame" x="20" y="272" width="280" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
-                                    <segment title="Yes!!"/>
-                                    <segment title="Kinda..."/>
                                     <segment title="No :("/>
+                                    <segment title="Kinda..."/>
+                                    <segment title="Yes!!"/>
                                 </segments>
                                 <color key="tintColor" red="0.64976205149999999" green="0.87142630830000001" blue="0.95553651149999996" alpha="1" colorSpace="calibratedRGB"/>
                             </segmentedControl>
@@ -1339,9 +1333,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <rect key="frame" x="20" y="331" width="280" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
-                                    <segment title="Yes!!"/>
-                                    <segment title="Kinda..."/>
                                     <segment title="No :("/>
+                                    <segment title="Kinda..."/>
+                                    <segment title="Yes!!"/>
                                 </segments>
                                 <color key="tintColor" red="0.64976205149999999" green="0.87142630830000001" blue="0.95553651149999996" alpha="1" colorSpace="calibratedRGB"/>
                             </segmentedControl>
@@ -1357,9 +1351,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <rect key="frame" x="20" y="388" width="280" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
-                                    <segment title="Yes!!"/>
-                                    <segment title="Kinda..."/>
                                     <segment title="No :("/>
+                                    <segment title="Kinda..."/>
+                                    <segment title="Yes!!"/>
                                 </segments>
                                 <color key="tintColor" red="0.64976205149999999" green="0.87142630830000001" blue="0.95553651149999996" alpha="1" colorSpace="calibratedRGB"/>
                             </segmentedControl>
@@ -1375,9 +1369,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <rect key="frame" x="20" y="442" width="280" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
-                                    <segment title="Yes!!"/>
-                                    <segment title="Kinda..."/>
                                     <segment title="No :("/>
+                                    <segment title="Kinda..."/>
+                                    <segment title="Yes!!"/>
                                 </segments>
                                 <color key="tintColor" red="0.64976205149999999" green="0.87142630830000001" blue="0.95553651149999996" alpha="1" colorSpace="calibratedRGB"/>
                             </segmentedControl>
@@ -1393,9 +1387,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <rect key="frame" x="20" y="218" width="280" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
-                                    <segment title="Yes!!"/>
-                                    <segment title="Kinda..."/>
                                     <segment title="No :("/>
+                                    <segment title="Kinda..."/>
+                                    <segment title="Yes!!"/>
                                 </segments>
                                 <color key="tintColor" red="0.64976205149999999" green="0.87142630830000001" blue="0.95553651149999996" alpha="1" colorSpace="calibratedRGB"/>
                             </segmentedControl>
@@ -1496,7 +1490,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <color key="sectionIndexTrackingBackgroundColor" red="0.56470588239999997" green="0.74901960779999999" blue="0.81960784310000001" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="settingsCell" id="a1v-43-xFt" customClass="SettingsTableViewCell">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="a1v-43-xFt" id="koh-Wf-peB">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -1650,7 +1644,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Earn Exp by completing goals" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BTx-hL-JsQ">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Earn Exp. by completing goals" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BTx-hL-JsQ">
                                 <rect key="frame" x="71" y="86" width="229" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1682,6 +1676,15 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     <view key="view" contentMode="scaleToFill" id="5hn-7o-hAq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9v-RM-m0z">
+                                <rect key="frame" x="137" y="304" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.1960784314" green="0.4941176471" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </viewController>
@@ -1892,8 +1895,8 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="JV5-Cg-r6b"/>
+        <segue reference="PGN-Oc-QXy"/>
         <segue reference="oky-uq-UZB"/>
-        <segue reference="rsu-5W-ry4"/>
-        <segue reference="YjK-bT-RWV"/>
     </inferredMetricsTieBreakers>
 </document>
