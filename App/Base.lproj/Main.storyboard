@@ -1665,10 +1665,10 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="3898" y="-432"/>
         </scene>
-        <!--Reset View - Reset-->
+        <!--View Controller - Reset-->
         <scene sceneID="Ffk-cb-epk">
             <objects>
-                <viewController storyboardIdentifier="resetVC" title="Reset" id="iE4-HM-B8e" customClass="ResetView" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="resetVC" title="Reset" id="iE4-HM-B8e" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qmy-Mm-fsy"/>
                         <viewControllerLayoutGuide type="bottom" id="ZaO-Nq-jfG"/>
@@ -1683,16 +1683,10 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="btnReset:" destination="iE4-HM-B8e" eventType="touchUpInside" id="UZX-qh-LCe"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.1960784314" green="0.4941176471" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <connections>
-                        <outlet property="btnReset" destination="b9v-RM-m0z" id="QNa-8D-kdW"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yQz-nx-P8a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
