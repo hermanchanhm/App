@@ -220,4 +220,74 @@
     return array;
 }
 
+
+//-----------Graph
+
+-(int)getDayCount:(int)goalID
+{
+    int dayCount = 0;
+    NSString *querySQL = [NSString stringWithFormat:@"select Value from Parameter where Name = 'DayCount'"];
+    
+    [db open];
+    FMResultSet *resultSet = [db executeQuery:querySQL];
+    while([resultSet next])
+    {
+        dayCount = [resultSet intForColumnIndex:0];
+    }
+    [db close];
+    
+    return dayCount;
+}
+
+
+-(NSMutableArray *)getScoreData:(int)goalID
+{
+    NSMutableArray * array = [[NSMutableArray alloc]init];
+    
+    NSString *querySQL = [NSString stringWithFormat:@"select Score from Goal_Detail where Goal_ID = %d order by day", goalID];
+    
+    [db open];
+    
+    FMResultSet *resultSet = [db executeQuery:querySQL];
+
+    while([resultSet next])
+    {
+        [array addObject:[NSNumber numberWithDouble:[resultSet doubleForColumn:@"Score"]]];
+    }
+    
+    [db close];
+    
+    return array;
+}
+
+
+
+-(void)getGraphData
+{
+    GoalDetail * objGoalDetail = [[GoalDetail alloc]init];
+    NSMutableArray * array;
+    
+    int dayCount = 0;
+    double score = 0.0;
+    for(int i = 1; i<=5 ; i++)
+    {
+        //Get number of day of the period
+        dayCount = [objGoalDetail getDayCount:i];
+        
+        if(dayCount == 0)
+            continue;
+        
+        
+        //Get the Scores of Goal i th;  ( i from 1 to 5)
+        array = [objGoalDetail getScoreData:i];
+        
+        // get scores <scores are store in array from element 1 to (array.count -1) >
+        for( int i = 1 ; i < array.count; i++)
+        {
+        
+            score =   [[array objectAtIndex:i] doubleValue];
+        }
+    }
+}
+
 @end

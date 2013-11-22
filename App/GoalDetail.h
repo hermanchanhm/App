@@ -30,4 +30,7 @@
 -(NSMutableArray *)loadGoalDetailbyDay:(int)requestedDay;
 -(BOOL)removeGoalDetail:(int)removedGoalID;
 
+-(NSMutableArray *)getScoreData:(int)goalID;
+-(int)getDayCount:(int)goalID;
+
 @end

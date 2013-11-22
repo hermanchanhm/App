@@ -105,6 +105,9 @@
     
     [self.navigationController popViewControllerAnimated:YES];
     
+    
+    
+    
 }
 
 - (IBAction)valueChanged:(id)sender {
