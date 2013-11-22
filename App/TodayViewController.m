@@ -76,9 +76,35 @@
     //count++;
     //count = 0;
     
+    [self setGoalLabel];
+    
+}
+
+-(void)setGoalLabel
+{
+    Goal * objGoal=  [[Goal alloc]init];
+    
+    
+    [objGoal loadData:1];
+    [self.txtGoal1 setText:[NSString stringWithFormat:@"%@ - %d times/%@", objGoal.description, objGoal.numFrequency, objGoal.frequencyName]];
+    
+    [objGoal loadData:2];
+    [self.txtGoal2 setText:[NSString stringWithFormat:@"%@ - %d times/%@", objGoal.description, objGoal.numFrequency, objGoal.frequencyName]];
+    
+    [objGoal loadData:3];
+    [self.txtGoal3 setText:[NSString stringWithFormat:@"%@ - %d times/%@", objGoal.description, objGoal.numFrequency, objGoal.frequencyName]];
+    
+    [objGoal loadData:4];
+    [self.txtGoal4 setText:[NSString stringWithFormat:@"%@ - %d times/%@", objGoal.description, objGoal.numFrequency, objGoal.frequencyName]];
+    
+    [objGoal loadData:5];
+    [self.txtGoal5 setText:[NSString stringWithFormat:@"%@ - %d times/%@", objGoal.description, objGoal.numFrequency, objGoal.frequencyName]];
+    
     
     
 }
+
+
 
 -(void)viewWillDisappear:(BOOL)animated
 {

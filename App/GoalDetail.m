@@ -7,7 +7,7 @@
 //
 
 #import "GoalDetail.h"
-
+#import "Widget.h"
 
 @implementation GoalDetail
 
@@ -17,6 +17,11 @@
     if(self)
     {
         db = [[[DBConnection alloc]init] connectDB] ;
+        
+        
+        Widget * objWidget = [[Widget alloc] init];
+        [objWidget getWidget];
+        
         
     }
     

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="bR5-fj-yX7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="bR5-fj-yX7">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
@@ -1350,6 +1350,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <outlet property="ratingSegment03" destination="TyL-oc-TEV" id="sal-rZ-NBF"/>
                         <outlet property="ratingSegment04" destination="Ca0-nB-1jf" id="lKh-tI-h5N"/>
                         <outlet property="ratingSegment05" destination="0lf-9I-9lR" id="SO1-WR-NlI"/>
+                        <outlet property="txtGoal1" destination="eJx-kI-bLL" id="zvz-ZS-bmW"/>
+                        <outlet property="txtGoal2" destination="JE7-4w-u6O" id="cd8-0X-YLc"/>
+                        <outlet property="txtGoal3" destination="imy-Bm-iSK" id="mcL-1b-wTm"/>
+                        <outlet property="txtGoal4" destination="lvc-Yv-aHi" id="Mja-js-GD8"/>
+                        <outlet property="txtGoal5" destination="bqT-bo-wiA" id="wPv-xM-NHB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pFg-FO-d7Q" userLabel="First Responder" sceneMemberID="firstResponder"/>

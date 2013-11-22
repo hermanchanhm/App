@@ -10,6 +10,7 @@
 #import "DBConnection.h"
 
 
+
 @interface GoalDetail : NSObject
 {
     FMDatabase * db ;

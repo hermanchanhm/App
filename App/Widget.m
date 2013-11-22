@@ -48,11 +48,14 @@
     
     BOOL result = [db executeUpdate:querySQL];
     
-    if(result)  NSLog(@"Update Widget fail.");
+    if(!result)  NSLog(@"Update Widget fail.");
     else NSLog(@"Update widget successfully");
     
     [db close];
     widgetName = newWidget;
+    
+    
+    
 }
 
 @end

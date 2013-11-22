@@ -34,6 +34,7 @@
         //db = [con connectDB];
         db = [[[DBConnection alloc]init] connectDB] ;
         [self loadData:goalID];
+        
     }
     
     return self;
@@ -59,6 +60,11 @@
         [self setEnable:[resultSet intForColumn:@"Enable"]];
         [self setSelecFrequency:[resultSet intForColumn:@"SelectFrequency"]];
         [self setNumFrequency:[resultSet intForColumn:@"NumFrequency"]];
+        
+        if(self.selecFrequency == 0)
+            [self setFrequencyName:@"day"];
+        else
+            [self setFrequencyName:@"week"];
         
         NSLog(@"initLoad");
     }

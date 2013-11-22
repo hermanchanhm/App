@@ -125,9 +125,16 @@
 
 -(void)loadData
 {
+    if(_objGoal.enable == 0)
+        [[self choice]setText:@"Diet"];
+    else
+        [[self choice]setText:_objGoal.name];
     
-    [[self choice]setText:_objGoal.name];
-    [[self goalTextField]setText:_objGoal.description];
+    if(_objGoal.description == nil)
+        [[self goalTextField]setText:@""];
+    else
+        [[self goalTextField]setText:_objGoal.description];
+    
     [self.selectorLabel setText:[NSString stringWithFormat:@"%d",_objGoal.numFrequency]];
     self.optSelector.selectedSegmentIndex = _objGoal.selecFrequency;
     
