@@ -16,6 +16,8 @@
 @property (nonatomic, strong) CPTScatterPlot *plot4;
 @property (nonatomic, strong) CPTScatterPlot *plot5;
 
+@property (nonatomic, strong) CPTScatterPlot *currentPlot;
+
 @end
 
 @implementation GraphViewController
@@ -71,6 +73,22 @@
     return _plot5;
 }
 
+@synthesize currentPlot = _currentPlot;
+
+- (CPTScatterPlot *)currentPlot
+{
+    if (!_currentPlot)
+    {
+        _currentPlot = self.plot1;
+    }
+    return _currentPlot;
+}
+
+- (void)setCurrentPlot:(CPTScatterPlot *)currentPlot
+{
+    _currentPlot = currentPlot;
+}
+
 
 - (void)viewDidLoad
 {
@@ -104,14 +122,14 @@
     [graph applyTheme:[CPTTheme themeNamed: kCPTPlainWhiteTheme]];
     _hostView.hostedGraph = graph;
     
-    /*graph.title = @"Graph Title";
+    [self setGraphTitle];
     CPTMutableTextStyle *titleStyle = [CPTMutableTextStyle textStyle];
     titleStyle.color = [CPTColor blackColor];
     titleStyle.fontName = @"Helvetica-Bold";
     titleStyle.fontSize = 24.0f;
     graph.titleTextStyle = titleStyle;
     graph.titlePlotAreaFrameAnchor = CPTRectAnchorTop;
-    graph.titleDisplacement = CGPointMake(0.0f, 0.0f);*/
+    graph.titleDisplacement = CGPointMake(0.0f, 0.0f);
 }
 
 - (void)configurePlots
@@ -125,7 +143,7 @@
     self.plot3.dataSource = self;
     self.plot4.dataSource = self;
     self.plot5.dataSource = self;
-    [graph addPlot:self.plot1 toPlotSpace:plotSpace];
+    [graph addPlot:self.currentPlot toPlotSpace:plotSpace];
     
     //Zoom and Position of view over plot
     float count = [[NSNumber numberWithUnsignedInteger:
@@ -134,8 +152,8 @@
                                                             decimalValue]
                                                     length:[[NSNumber numberWithFloat:count*1.12f]
                                                             decimalValue]];
-    plotSpace.yRange = [CPTPlotRange plotRangeWithLocation:[[NSNumber numberWithFloat:-0.6] decimalValue]
-                                                    length:[[NSNumber numberWithInt:6] decimalValue]];
+    plotSpace.yRange = [CPTPlotRange plotRangeWithLocation:[[NSNumber numberWithFloat:-0.6f] decimalValue]
+                                                    length:[[NSNumber numberWithFloat:6.3f] decimalValue]];
     
     CPTMutableLineStyle *lineStyle = [self.plot1.dataLineStyle mutableCopy];
     lineStyle.lineWidth = 2.5;
@@ -299,6 +317,78 @@
             return [array objectAtIndex:index];
     }
     return [NSNumber numberWithInt:1];
+}
+
+- (IBAction)Button1Press:(UIButton *)sender
+{
+    if (self.currentPlot == self.plot1)
+        return;
+    [self.hostView.hostedGraph removePlot:self.currentPlot];
+    [self.hostView.hostedGraph addPlot:self.plot1];
+    [self.hostView.hostedGraph reloadData];
+    self.currentPlot = self.plot1;
+    [self setGraphTitle];
+}
+
+- (IBAction)Button2Press:(UIButton *)sender
+{
+    if (self.currentPlot == self.plot2)
+        return;
+    [self.hostView.hostedGraph removePlot:self.currentPlot];
+    [self.hostView.hostedGraph addPlot:self.plot2];
+    [self.hostView.hostedGraph reloadData];
+    self.currentPlot = self.plot2;
+    [self setGraphTitle];
+}
+
+- (IBAction)Button3Press:(UIButton *)sender
+{
+    if (self.currentPlot == self.plot3)
+        return;
+    [self.hostView.hostedGraph removePlot:self.currentPlot];
+    [self.hostView.hostedGraph addPlot:self.plot3];
+    [self.hostView.hostedGraph reloadData];
+    self.currentPlot = self.plot3;
+    [self setGraphTitle];
+}
+
+- (IBAction)Button4Press:(UIButton *)sender
+{
+    if (self.currentPlot == self.plot4)
+        return;
+    [self.hostView.hostedGraph removePlot:self.currentPlot];
+    [self.hostView.hostedGraph addPlot:self.plot4];
+    [self.hostView.hostedGraph reloadData];
+    self.currentPlot = self.plot4;
+    [self setGraphTitle];
+}
+
+- (IBAction)Button5Press:(UIButton *)sender
+{
+    if (self.currentPlot == self.plot5)
+        return;
+    [self.hostView.hostedGraph removePlot:self.currentPlot];
+    [self.hostView.hostedGraph addPlot:self.plot5];
+    [self.hostView.hostedGraph reloadData];
+    self.currentPlot = self.plot5;
+    [self setGraphTitle];
+}
+
+- (void)setGraphTitle
+{
+    int plotIndex;
+    if (self.currentPlot == self.plot1) {
+        plotIndex = 1;
+    } else if (self.currentPlot == self.plot2) {
+        plotIndex = 2;
+    } else if (self.currentPlot == self.plot3) {
+        plotIndex = 3;
+    } else if (self.currentPlot == self.plot4) {
+        plotIndex = 4;
+    } else {
+        plotIndex = 5;
+    }
+    self.hostView.hostedGraph.title = [NSString stringWithFormat:@"Goal %d",plotIndex];
 }
 
 
