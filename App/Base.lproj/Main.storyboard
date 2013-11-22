@@ -966,10 +966,10 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Pd-PE-4a2">
-                                <rect key="frame" x="0.0" y="66" width="320" height="328"/>
+                                <rect key="frame" x="20" y="92" width="280" height="328"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.1960784314" green="0.4941176471" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <string key="text">This is the contrat between patient ABC and physisian XYZ, MD...By tapping Agree........I willl try my best to accomplish all the Goals settted and blah blah blah............</string>
+                                <string key="text">By signing this contract I acknowledge that the road to accomplishing my goals will be full of hurdles, but I embrace these obstacles as I know that NOTHING can stop me from achieving my dreams. My journey begins now. </string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
