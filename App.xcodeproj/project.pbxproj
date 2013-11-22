@@ -16,7 +16,7 @@
 		00612032183E911C0085FFD3 /* Widget.m in Sources */ = {isa = PBXBuildFile; fileRef = 0061202B183E911C0085FFD3 /* Widget.m */; };
 		00612034183E917C0085FFD3 /* appDB.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 00612033183E917C0085FFD3 /* appDB.sqlite */; };
 		00612037183E92390085FFD3 /* GoalDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 00612036183E92390085FFD3 /* GoalDetail.m */; };
-		00671A39183EF36E00EF92A7 /* GraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00671A38183EF36E00EF92A7 /* GraphViewController.m */; };
+		00671A39183EF36E00EF92A7 /* GraphViewController.m in Resources */ = {isa = PBXBuildFile; fileRef = 00671A38183EF36E00EF92A7 /* GraphViewController.m */; };
 		00671A3A183EF39100EF92A7 /* GraphViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 00671A37183EF36E00EF92A7 /* GraphViewController.h */; };
 		00DC5DE9183AE63B00AB6FAD /* GoalListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DC5DE8183AE63B00AB6FAD /* GoalListView.m */; };
 		00DC5DEC183AF0D300AB6FAD /* WidgetDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DC5DEB183AF0D300AB6FAD /* WidgetDetailView.m */; };
@@ -556,6 +556,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF7225C618331274003C0D8F /* Images.xcassets in Resources */,
+				00671A39183EF36E00EF92A7 /* GraphViewController.m in Resources */,
 				DF7225B818331274003C0D8F /* InfoPlist.strings in Resources */,
 				DF7225C118331274003C0D8F /* Main.storyboard in Resources */,
 				00612034183E917C0085FFD3 /* appDB.sqlite in Resources */,
@@ -595,7 +596,6 @@
 				00DC5DEC183AF0D300AB6FAD /* WidgetDetailView.m in Sources */,
 				00612031183E911C0085FFD3 /* RatingScale.m in Sources */,
 				DF34ACB91838A58400C0F970 /* SetProfileViewController.m in Sources */,
-				00671A39183EF36E00EF92A7 /* GraphViewController.m in Sources */,
 				00DC5DE9183AE63B00AB6FAD /* GoalListView.m in Sources */,
 				DF34ACA51834E03F00C0F970 /* Goal1ViewController.m in Sources */,
 				DF7225C418331274003C0D8F /* MainViewController.m in Sources */,
