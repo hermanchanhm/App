@@ -44,19 +44,19 @@
 }
 
 - (IBAction)btnWidget01:(id)sender {
-    [self selectWidget:@"picture_01"];
+    [self selectWidget:@"squirtle1.png"];
 }
 
 - (IBAction)btnWidget02:(id)sender {
-    [self selectWidget:@"picture_02"];
+    [self selectWidget:@"machop1.png"];
 }
 
 - (IBAction)btnWidget03:(id)sender {
-    [self selectWidget:@"picture_03"];
+    [self selectWidget:@"pikachu1.png"];
 }
 
 - (IBAction)btnWidget04:(id)sender {
-    [self selectWidget:@"picture_04"];
+    [self selectWidget:@"charmander1.png"];
 }
 
 @end

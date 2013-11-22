@@ -30,7 +30,14 @@
     
     //check exp then load appropriate image...
 }
-
+- (void)viewDidAppear:(BOOL)animated
+{
+    Widget * objWidget = [[Widget alloc]init];
+    
+    
+    [self.icon setImage:[UIImage imageNamed:[objWidget getWidget]]];
+    [self.real setImage:[UIImage imageNamed:[objWidget getWidget]]];
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

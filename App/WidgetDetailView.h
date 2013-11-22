@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "Widget.h"
 @interface WidgetDetailView : UIViewController
+@property (strong, nonatomic) IBOutlet UIImageView *icon;
+@property (strong, nonatomic) IBOutlet UIImageView *real;
 @property (strong, nonatomic) IBOutlet UIButton *btnEvolve;
 - (IBAction)btnEvolveTapped:(id)sender;
 @property (strong, nonatomic) IBOutlet UILabel *expLabel;
