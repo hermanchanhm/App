@@ -62,8 +62,20 @@
         //update widget image
     } else { */
         //notify user changes
+        Widget * objWidget = [[Widget alloc]init];
+    NSString * str = [objWidget getWidget];
+    if ([str isEqualToString:@"machop1.png"]){
         [self.real setImage:[UIImage imageNamed:@"machop2.png"]];
-
+        [self.icon setImage:[UIImage imageNamed:@"machop2.png"]];}
+    if ([str isEqualToString:@"pikachu1.png"]){
+        [self.icon setImage:[UIImage imageNamed:@"pikachu2.png"]];
+        [self.real setImage:[UIImage imageNamed:@"pikachu2.png"]];}
+    if ([str isEqualToString:@"squirtle1.png"]){
+        [self.icon setImage:[UIImage imageNamed:@"squirtle2.png"]];
+        [self.real setImage:[UIImage imageNamed:@"squirtle2.png"]];}
+    if ([str isEqualToString:@"charmander1.png"]){
+        [self.real setImage:[UIImage imageNamed:@"charmander2.png"]];
+        [self.icon setImage:[UIImage imageNamed:@"charmander2.png"]];}
         UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Not Enough Exp."
                                                           message:@"You have to reach xxx Exp. to evolve"
                                                          delegate:nil
