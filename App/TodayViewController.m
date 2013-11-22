@@ -33,7 +33,7 @@
 - (void) viewWillAppear:(BOOL)animated
 {
     [self viewDidLoad];
-    
+    [self setGoalTitle];
     isSaved = false;
     
 }
@@ -89,7 +89,26 @@
     }
 }
 
-
+-(void)setGoalTitle
+{
+    //cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %d times/%@", goal.description, goal.numFrequency, goal.frequencyName];
+    Goal * objGoal = [[Goal alloc] init];
+    
+    [objGoal loadData:1];
+    [self.txtGoal01 setText:[NSString stringWithFormat:@"%@ - %d times/%@", objGoal.description, objGoal.numFrequency, objGoal.frequencyName]];
+    
+    [objGoal loadData:2];
+    [self.txtGoal02 setText:[NSString stringWithFormat:@"%@ - %d times/%@", objGoal.description, objGoal.numFrequency, objGoal.frequencyName]];
+    
+    [objGoal loadData:3];
+    [self.txtGoal03 setText:[NSString stringWithFormat:@"%@ - %d times/%@", objGoal.description, objGoal.numFrequency, objGoal.frequencyName]];
+    
+    [objGoal loadData:4];
+    [self.txtGoal04 setText:[NSString stringWithFormat:@"%@ - %d times/%@", objGoal.description, objGoal.numFrequency, objGoal.frequencyName]];
+    
+    [objGoal loadData:5];
+    [self.txtGoal05 setText:[NSString stringWithFormat:@"%@ - %d times/%@", objGoal.description, objGoal.numFrequency, objGoal.frequencyName]];
+}
 
 - (void)didReceiveMemoryWarning
 {
