@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0001D231183EF71900B861D2 /* GraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0001D230183EF71900B861D2 /* GraphViewController.m */; };
 		0061202C183E911C0085FFD3 /* DBConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 0061201F183E911C0085FFD3 /* DBConnection.m */; };
 		0061202D183E911C0085FFD3 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 00612021183E911C0085FFD3 /* FMDatabase.m */; };
 		0061202E183E911C0085FFD3 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 00612023183E911C0085FFD3 /* FMDatabasePool.m */; };
@@ -63,6 +64,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0001D22F183EF71900B861D2 /* GraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphViewController.h; sourceTree = "<group>"; };
+		0001D230183EF71900B861D2 /* GraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphViewController.m; sourceTree = "<group>"; };
 		0061201E183E911C0085FFD3 /* DBConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBConnection.h; sourceTree = "<group>"; };
 		0061201F183E911C0085FFD3 /* DBConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBConnection.m; sourceTree = "<group>"; };
 		00612020183E911C0085FFD3 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
@@ -384,6 +387,8 @@
 		DF7225B318331274003C0D8F /* App */ = {
 			isa = PBXGroup;
 			children = (
+				0001D22F183EF71900B861D2 /* GraphViewController.h */,
+				0001D230183EF71900B861D2 /* GraphViewController.m */,
 				00612035183E92390085FFD3 /* GoalDetail.h */,
 				00612036183E92390085FFD3 /* GoalDetail.m */,
 				00612033183E917C0085FFD3 /* appDB.sqlite */,
@@ -594,6 +599,7 @@
 				DF34AC9F1834D28C00C0F970 /* WidgetView.m in Sources */,
 				DF7225BE18331274003C0D8F /* MainAppDelegate.m in Sources */,
 				DF34ACA21834DEE200C0F970 /* GoalPickerView.m in Sources */,
+				0001D231183EF71900B861D2 /* GraphViewController.m in Sources */,
 				00ECB3C3183AC95300F71B81 /* WelcomeView.m in Sources */,
 				DFF255B5183A0F7200A73387 /* TodayPMViewController.m in Sources */,
 				DFF255B8183A294100A73387 /* InitNotificationsViewController.m in Sources */,
