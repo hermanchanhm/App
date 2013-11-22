@@ -16,6 +16,7 @@
 		00612032183E911C0085FFD3 /* Widget.m in Sources */ = {isa = PBXBuildFile; fileRef = 0061202B183E911C0085FFD3 /* Widget.m */; };
 		00612034183E917C0085FFD3 /* appDB.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 00612033183E917C0085FFD3 /* appDB.sqlite */; };
 		00612037183E92390085FFD3 /* GoalDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 00612036183E92390085FFD3 /* GoalDetail.m */; };
+		00671A33183EF18800EF92A7 /* GraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00671A32183EF18800EF92A7 /* GraphViewController.m */; };
 		00DC5DE9183AE63B00AB6FAD /* GoalListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DC5DE8183AE63B00AB6FAD /* GoalListView.m */; };
 		00DC5DEC183AF0D300AB6FAD /* WidgetDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DC5DEB183AF0D300AB6FAD /* WidgetDetailView.m */; };
 		00ECB3C0183AC84900F71B81 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 00ECB3BF183AC84900F71B81 /* libsqlite3.0.dylib */; };
@@ -81,6 +82,8 @@
 		00612033183E917C0085FFD3 /* appDB.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = appDB.sqlite; sourceTree = "<group>"; };
 		00612035183E92390085FFD3 /* GoalDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoalDetail.h; sourceTree = "<group>"; };
 		00612036183E92390085FFD3 /* GoalDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalDetail.m; sourceTree = "<group>"; };
+		00671A31183EF18800EF92A7 /* GraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphViewController.h; sourceTree = "<group>"; };
+		00671A32183EF18800EF92A7 /* GraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphViewController.m; sourceTree = "<group>"; };
 		00DC5DE7183AE63B00AB6FAD /* GoalListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoalListView.h; sourceTree = "<group>"; };
 		00DC5DE8183AE63B00AB6FAD /* GoalListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalListView.m; sourceTree = "<group>"; };
 		00DC5DEA183AF0D300AB6FAD /* WidgetDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WidgetDetailView.h; sourceTree = "<group>"; };
@@ -436,6 +439,8 @@
 				00DC5DEA183AF0D300AB6FAD /* WidgetDetailView.h */,
 				00DC5DEB183AF0D300AB6FAD /* WidgetDetailView.m */,
 				DF7225C318331274003C0D8F /* MainViewController.m */,
+				00671A31183EF18800EF92A7 /* GraphViewController.h */,
+				00671A32183EF18800EF92A7 /* GraphViewController.m */,
 				DF7225C518331274003C0D8F /* Images.xcassets */,
 				DF7225B418331274003C0D8F /* Supporting Files */,
 			);
@@ -590,6 +595,7 @@
 				00DC5DEC183AF0D300AB6FAD /* WidgetDetailView.m in Sources */,
 				00612031183E911C0085FFD3 /* RatingScale.m in Sources */,
 				DF34ACB91838A58400C0F970 /* SetProfileViewController.m in Sources */,
+				00671A33183EF18800EF92A7 /* GraphViewController.m in Sources */,
 				00DC5DE9183AE63B00AB6FAD /* GoalListView.m in Sources */,
 				DF34ACA51834E03F00C0F970 /* Goal1ViewController.m in Sources */,
 				DF7225C418331274003C0D8F /* MainViewController.m in Sources */,
