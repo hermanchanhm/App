@@ -142,6 +142,17 @@
         
         AppStage * objStage = [[AppStage alloc]init];
         [objStage setStage:0];
+        
+        //Trigger UIAlertView
+        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Reset Complete"
+                                                          message:@"All data has been erased. Please restart the App in order for the reset to take effect."
+                                                         delegate:nil
+                                                cancelButtonTitle:@"OK"
+                                                otherButtonTitles:nil];
+        [message show];
+
+        
+        
 
     }
 }
