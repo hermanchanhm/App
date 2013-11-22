@@ -269,12 +269,36 @@
 
 - (NSUInteger)numberOfRecordsForPlot:(CPTPlot *)plot
 {
-    return 6;   //TODO
+    GoalDetail * objGoalDetail = [[GoalDetail alloc]init];
+    return [objGoalDetail getDayCount:0];
 }
 
 - (NSNumber *)numberForPlot:(CPTPlot *)plot field:(NSUInteger)fieldEnum recordIndex:(NSUInteger)index
 {
-    return [NSNumber numberWithUnsignedInteger:index];  //TODO
+    int plotIndex;
+    if (plot == self.plot5) {
+        plotIndex = 5;
+    } else if (plot == self.plot4) {
+        plotIndex = 4;
+    } else if (plot == self.plot3) {
+        plotIndex = 3;
+    } else if (plot == self.plot2) {
+        plotIndex = 2;
+    } else {
+        plotIndex = 1;
+    }
+    
+    GoalDetail *objGoalDetail = [[GoalDetail alloc]init];
+    NSMutableArray * array = [objGoalDetail getScoreData:plotIndex];
+    
+    switch (fieldEnum)
+    {
+        case CPTScatterPlotFieldX:
+            return [NSNumber numberWithUnsignedInteger:index+1];
+        case CPTScatterPlotFieldY:
+            return [array objectAtIndex:index];
+    }
+    return [NSNumber numberWithInt:1];
 }
 
 
