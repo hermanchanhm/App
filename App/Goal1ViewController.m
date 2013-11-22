@@ -125,8 +125,8 @@
 
 -(void)loadData
 {
-    
-    [[self choice]setText:_objGoal.name];
+    if(_objGoal.enable != 0)
+        [[self choice]setText:_objGoal.name];
     [[self goalTextField]setText:_objGoal.description];
     [self.selectorLabel setText:[NSString stringWithFormat:@"%d",_objGoal.numFrequency]];
     self.optSelector.selectedSegmentIndex = _objGoal.selecFrequency;

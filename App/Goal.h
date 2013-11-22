@@ -22,6 +22,7 @@
 @property (nonatomic)int enable;
 @property (nonatomic)int selecFrequency;
 @property (nonatomic)int numFrequency;
+@property (strong, nonatomic) NSString * frequencyName;
 
 
 -(id)initWithGoalID:(int)goalID;

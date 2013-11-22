@@ -8,6 +8,7 @@
 
 #import "GraphViewController.h"
 
+
 @interface GraphViewController ()
 
 @property (nonatomic, strong) CPTScatterPlot *plot1;
@@ -61,6 +62,8 @@
     {
         _plot4 = [[CPTScatterPlot alloc] init];
     }
+
+    
     return _plot4;
 }
 
