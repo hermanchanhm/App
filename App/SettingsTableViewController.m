@@ -124,17 +124,19 @@
     NSString *buttonClicked = [actionSheet buttonTitleAtIndex:buttonIndex];
     if  ([buttonClicked isEqualToString:@"Reset and Erase All Data"])
     {
+       GoalDetail * objGoalDetail = [[GoalDetail alloc]init];
+  
+        Goal * objGoal = [[Goal alloc]init];
+        for(int i =1; i <= 5; i++)
+        {
+            [objGoalDetail removeGoalDetail:i];
+            [objGoal deleteData:i];
+        }
+        
         RatingScale * objRatingScale = [[RatingScale alloc]init];
         [objRatingScale resetParameter];
         
         [objRatingScale dayCompleted];
-        
-        Goal * objGoal = [[Goal alloc]init];
-        for(int i =1; i <= 5; i++)
-        {
-            
-            [objGoal deleteData:i];
-        }
 
     }
 }
