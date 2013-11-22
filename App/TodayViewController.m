@@ -116,41 +116,6 @@
     
     [self.navigationController pushViewController:todayPMView animated:YES];
     
-    //[self.navigationController popViewControllerAnimated:YES];
-    
-    //code to save the selections...
-    
-    //-----------
-    
-    GoalDetail * objGoalDetail = [[GoalDetail alloc]init];
-    NSMutableArray * array;
-    
-    int dayCount = 0;
-    double score = 0.0;
-    for(int i = 1; i<=5 ; i++)
-    {
-        //Get number of day of the period
-        dayCount = [objGoalDetail getDayCount:i];
-        NSLog(@"Goal %d - Number of days : %d", i, dayCount);
-        
-        //if(dayCount == 0)
-         //   continue;
-        
-        
-        //Get the Scores of Goal i th;  ( i from 1 to 5)
-        array = [objGoalDetail getScoreData:i];
-        
-        // get scores <scores are store in array from element 1 to (array.count -1) >
-        for( int j = 1 ; j < array.count; j++)
-        {
-            
-             score =   [[array objectAtIndex:j] doubleValue];
-            NSLog(@"Goal %d : Score of day %d : %f",i,j,score);
-        }
-    }
-    
-    //-------------
-    
 }
 
 -(void)resetArrayRating{
@@ -159,6 +124,8 @@
     for(int i =0; i<5; i++){
         [self.objScale.arrRating addObject:[NSNumber numberWithInt:1]];
     }
+    
+    
 }
 
 -(void)getCurrentRating{

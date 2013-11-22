@@ -253,7 +253,11 @@
     while([resultSet next])
     {
         [array addObject:[NSNumber numberWithDouble:[resultSet doubleForColumn:@"Score"]]];
+        
+        
     }
+    
+    
     
     [db close];
     
