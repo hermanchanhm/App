@@ -46,7 +46,7 @@
     UILocalNotification* AMNotification = [[UILocalNotification alloc] init];
     AMNotification.fireDate = AMPickerDate;
     AMNotification.alertBody = @"How Motivated Are You? Lock it in now!";
-    AMNotification.alertAction = @"Good Morning!";
+    //AMNotification.alertAction = @"Good Morning!";
     AMNotification.applicationIconBadgeNumber = [[UIApplication sharedApplication] applicationIconBadgeNumber] + 1;
     AMNotification.timeZone = [NSTimeZone defaultTimeZone];
     
@@ -62,7 +62,7 @@
     UILocalNotification* PMNotification = [[UILocalNotification alloc] init];
     PMNotification.fireDate = PMPickerDate;
     PMNotification.alertBody = @"Have You Achieved Your Goals For Today?";
-    PMNotification.alertAction = @"Good Evening!";
+    //PMNotification.alertAction = @"Good Evening!";
     PMNotification.applicationIconBadgeNumber = [[UIApplication sharedApplication] applicationIconBadgeNumber] + 1;
     PMNotification.timeZone = [NSTimeZone defaultTimeZone];
     
