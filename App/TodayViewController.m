@@ -69,6 +69,12 @@
     self.quoteLabel.numberOfLines = 0;
     self.quoteLabel.adjustsFontSizeToFitWidth = YES;
     
+    //shrink to fit
+    self.txtGoal01.adjustsFontSizeToFitWidth = YES;
+    self.txtGoal02.adjustsFontSizeToFitWidth = YES;
+    self.txtGoal03.adjustsFontSizeToFitWidth = YES;
+    self.txtGoal04.adjustsFontSizeToFitWidth = YES;
+    self.txtGoal05.adjustsFontSizeToFitWidth = YES;
     
     //hides the back button
     self.navigationItem.hidesBackButton = YES;

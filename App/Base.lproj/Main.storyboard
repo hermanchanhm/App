@@ -148,10 +148,10 @@
                                     <segue destination="gmQ-fc-gcw" kind="push" id="GVT-9x-eZR"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="RXa-Zn-dBD">
-                                <rect key="frame" x="20" y="132" width="280" height="370"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="RXa-Zn-dBD">
+                                <rect key="frame" x="20" y="132" width="280" height="287"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="0.7758424442472549" green="0.90110113622811538" blue="0.96207350127551017" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.1960784314" green="0.4941176471" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="sectionIndexTrackingBackgroundColor" red="0.1960784314" green="0.4941176471" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <sections>
                                     <tableViewSection id="4de-ZX-LGR">
