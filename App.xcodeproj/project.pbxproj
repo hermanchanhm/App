@@ -25,6 +25,7 @@
 		0A259898183C80CE006C7345 /* libCorePlot-CocoaTouch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A259896183C80CE006C7345 /* libCorePlot-CocoaTouch.a */; };
 		0A2598E9183C8170006C7345 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A2598E8183C8170006C7345 /* QuartzCore.framework */; };
 		0A2598EB183C8174006C7345 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A2598EA183C8174006C7345 /* Accelerate.framework */; };
+		0AB3FCD2183ECDFA00A23295 /* GraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AB3FCD1183ECDFA00A23295 /* GraphViewController.m */; };
 		DF34AC9C1834D16D00C0F970 /* WidgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF34AC9B1834D16D00C0F970 /* WidgetViewController.m */; };
 		DF34AC9F1834D28C00C0F970 /* WidgetView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF34AC9E1834D28C00C0F970 /* WidgetView.m */; };
 		DF34ACA21834DEE200C0F970 /* GoalPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF34ACA11834DEE200C0F970 /* GoalPickerView.m */; };
@@ -170,6 +171,8 @@
 		0A2598E7183C80E7006C7345 /* NSNumberExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSNumberExtensions.h; sourceTree = "<group>"; };
 		0A2598E8183C8170006C7345 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		0A2598EA183C8174006C7345 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		0AB3FCD0183ECDFA00A23295 /* GraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphViewController.h; sourceTree = "<group>"; };
+		0AB3FCD1183ECDFA00A23295 /* GraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphViewController.m; sourceTree = "<group>"; };
 		DF34AC9A1834D16D00C0F970 /* WidgetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WidgetViewController.h; sourceTree = "<group>"; };
 		DF34AC9B1834D16D00C0F970 /* WidgetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WidgetViewController.m; sourceTree = "<group>"; };
 		DF34AC9D1834D28C00C0F970 /* WidgetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WidgetView.h; sourceTree = "<group>"; };
@@ -434,6 +437,8 @@
 				00DC5DEA183AF0D300AB6FAD /* WidgetDetailView.h */,
 				00DC5DEB183AF0D300AB6FAD /* WidgetDetailView.m */,
 				DF7225C318331274003C0D8F /* MainViewController.m */,
+				0AB3FCD0183ECDFA00A23295 /* GraphViewController.h */,
+				0AB3FCD1183ECDFA00A23295 /* GraphViewController.m */,
 				DF7225C518331274003C0D8F /* Images.xcassets */,
 				DF7225B418331274003C0D8F /* Supporting Files */,
 			);
@@ -594,6 +599,7 @@
 				DF34AC9F1834D28C00C0F970 /* WidgetView.m in Sources */,
 				DF7225BE18331274003C0D8F /* MainAppDelegate.m in Sources */,
 				DF34ACA21834DEE200C0F970 /* GoalPickerView.m in Sources */,
+				0AB3FCD2183ECDFA00A23295 /* GraphViewController.m in Sources */,
 				00ECB3C3183AC95300F71B81 /* WelcomeView.m in Sources */,
 				DFF255B5183A0F7200A73387 /* TodayPMViewController.m in Sources */,
 				DFF255B8183A294100A73387 /* InitNotificationsViewController.m in Sources */,
