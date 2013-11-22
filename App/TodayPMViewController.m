@@ -30,7 +30,11 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    
+    self.txtGoal01.adjustsFontSizeToFitWidth = YES;
+    self.txtGoal02.adjustsFontSizeToFitWidth = YES;
+    self.txtGoal03.adjustsFontSizeToFitWidth = YES;
+    self.txtGoal04.adjustsFontSizeToFitWidth = YES;
+    self.txtGoal05.adjustsFontSizeToFitWidth = YES;
     //set title as today's date
     //format date
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
