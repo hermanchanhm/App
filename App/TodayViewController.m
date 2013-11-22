@@ -153,6 +153,7 @@
     
 }
 
+
 -(void)resetArrayRating{
     [self.objScale.arrRating removeAllObjects];
     

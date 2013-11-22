@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "CorePlot-cocoaTouch.h"
+#import "GoalDetail.h"
 
 @interface GraphViewController : UIViewController <CPTPlotDataSource>
 
