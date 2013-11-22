@@ -103,6 +103,9 @@
     self.objGoal.enable =1;
     [[self objGoal] updateData];
     
+    AppStage * objStage = [[AppStage alloc] init];
+    [objStage setStage:1];
+    
     [self.navigationController popViewControllerAnimated:YES];
     
     

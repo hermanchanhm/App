@@ -19,6 +19,7 @@
 		00612037183E92390085FFD3 /* GoalDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 00612036183E92390085FFD3 /* GoalDetail.m */; };
 		00DC5DE9183AE63B00AB6FAD /* GoalListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DC5DE8183AE63B00AB6FAD /* GoalListView.m */; };
 		00DC5DEC183AF0D300AB6FAD /* WidgetDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DC5DEB183AF0D300AB6FAD /* WidgetDetailView.m */; };
+		00DE0227183F643A00CAEB25 /* AppStage.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DE0226183F643A00CAEB25 /* AppStage.m */; };
 		00ECB3C0183AC84900F71B81 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 00ECB3BF183AC84900F71B81 /* libsqlite3.0.dylib */; };
 		00ECB3C3183AC95300F71B81 /* WelcomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00ECB3C2183AC95300F71B81 /* WelcomeView.m */; };
 		00ECB3C6183ACA7C00F71B81 /* SetGoalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00ECB3C5183ACA7C00F71B81 /* SetGoalView.m */; };
@@ -87,6 +88,8 @@
 		00DC5DE8183AE63B00AB6FAD /* GoalListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalListView.m; sourceTree = "<group>"; };
 		00DC5DEA183AF0D300AB6FAD /* WidgetDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WidgetDetailView.h; sourceTree = "<group>"; };
 		00DC5DEB183AF0D300AB6FAD /* WidgetDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WidgetDetailView.m; sourceTree = "<group>"; };
+		00DE0225183F643A00CAEB25 /* AppStage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppStage.h; sourceTree = "<group>"; };
+		00DE0226183F643A00CAEB25 /* AppStage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppStage.m; sourceTree = "<group>"; };
 		00ECB3BF183AC84900F71B81 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		00ECB3C1183AC95300F71B81 /* WelcomeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeView.h; sourceTree = "<group>"; };
 		00ECB3C2183AC95300F71B81 /* WelcomeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeView.m; sourceTree = "<group>"; };
@@ -439,6 +442,8 @@
 				00DC5DEA183AF0D300AB6FAD /* WidgetDetailView.h */,
 				00DC5DEB183AF0D300AB6FAD /* WidgetDetailView.m */,
 				DF7225C318331274003C0D8F /* MainViewController.m */,
+				00DE0225183F643A00CAEB25 /* AppStage.h */,
+				00DE0226183F643A00CAEB25 /* AppStage.m */,
 				DF7225C518331274003C0D8F /* Images.xcassets */,
 				DF7225B418331274003C0D8F /* Supporting Files */,
 			);
@@ -602,6 +607,7 @@
 				0001D231183EF71900B861D2 /* GraphViewController.m in Sources */,
 				00ECB3C3183AC95300F71B81 /* WelcomeView.m in Sources */,
 				DFF255B5183A0F7200A73387 /* TodayPMViewController.m in Sources */,
+				00DE0227183F643A00CAEB25 /* AppStage.m in Sources */,
 				DFF255B8183A294100A73387 /* InitNotificationsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -86,6 +86,8 @@
     [self.objScale dayCompleted];
     isSaved = true;
     
+    AppStage * objScale = [[AppStage alloc]init];
+    [objScale setStage:1];
     
     //navigate back to TodayView
     [self.navigationController popViewControllerAnimated:YES];

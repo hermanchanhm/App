@@ -28,6 +28,25 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    AppStage * objStage = [[AppStage alloc]init];
+    int currentStage = [objStage getStage];
+    
+    if(currentStage == 1){
+        if(self.todayView ==nil)
+            self.todayView = [self.storyboard instantiateViewControllerWithIdentifier:@"todayVC"];
+        [self.navigationController pushViewController:self.todayView animated:YES];
+    }else if(currentStage == 2){
+        if(self.todayView ==nil)
+            self.todayView = [self.storyboard instantiateViewControllerWithIdentifier:@"todayVC"];
+        [self.navigationController pushViewController:self.todayView animated:YES];
+        
+        if(self.todayPMView==nil)
+            self.todayPMView = [self.storyboard instantiateViewControllerWithIdentifier:@"tonightVC"];
+        [self.navigationController pushViewController:self.todayPMView animated:YES];
+        self.todayPMView.objScale = self.todayView.objScale;
+    }
+    
     /*
     Goal * objGoal = [[Goal alloc]init];
     int goalCount = [objGoal getEnableGoal];
@@ -67,4 +86,10 @@
     }
      */
 }
+
+-(void)getCurrentState
+{
+    
+}
+
 @end

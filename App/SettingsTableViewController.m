@@ -137,6 +137,9 @@
         [objRatingScale resetParameter];
         
         [objRatingScale dayCompleted];
+        
+        AppStage * objStage = [[AppStage alloc]init];
+        [objStage setStage:0];
 
     }
 }
