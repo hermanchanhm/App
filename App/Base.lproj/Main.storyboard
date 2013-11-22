@@ -1523,6 +1523,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <outlet property="segmentFb03" destination="fFt-HU-W12" id="ig9-IK-n9g"/>
                         <outlet property="segmentFb04" destination="0nC-Ib-CX5" id="tAh-2I-myE"/>
                         <outlet property="segmentFb05" destination="5Ds-cN-Mze" id="dsG-PQ-M4d"/>
+                        <outlet property="txtGoal01" destination="10f-EA-9fJ" id="kaz-hU-9ux"/>
+                        <outlet property="txtGoal02" destination="6zM-f5-eH6" id="ehq-2Y-ECt"/>
+                        <outlet property="txtGoal03" destination="9l2-9T-s8k" id="o2e-KF-zYf"/>
+                        <outlet property="txtGoal04" destination="MGj-DH-u6C" id="2Ri-52-Vc6"/>
+                        <outlet property="txtGoal05" destination="8fk-wn-ZKI" id="e1D-W3-fSL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pbr-ld-825" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1570,7 +1575,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <color key="sectionIndexTrackingBackgroundColor" red="0.1960784314" green="0.4941176471" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="settingsCell" id="a1v-43-xFt" customClass="SettingsTableViewCell">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="a1v-43-xFt" id="koh-Wf-peB">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -1979,8 +1984,8 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="YjK-bT-RWV"/>
         <segue reference="oky-uq-UZB"/>
-        <segue reference="rsu-5W-ry4"/>
+        <segue reference="JV5-Cg-r6b"/>
+        <segue reference="PGN-Oc-QXy"/>
     </inferredMetricsTieBreakers>
 </document>
