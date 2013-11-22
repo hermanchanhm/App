@@ -95,7 +95,7 @@
 -(BOOL)deleteData:(int)goalID
 {
     self.ID= goalID;
-    self.name = @"<Goal #>";
+    self.name = [NSString stringWithFormat:@"<Goal %d>",goalID];
     self.description = @"";
     self.point =0;
     self.feedback = 0;

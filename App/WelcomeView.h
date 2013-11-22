@@ -11,12 +11,16 @@
 #import "WidgetViewController.h"
 #import "SetGoalView.h"
 #import "TodayViewController.h"
+#import "TodayPMViewController.h"
+#import "AppStage.h"
 
 @interface WelcomeView : UIViewController
 
 @property (strong, nonatomic) WidgetViewController *widgetView;
 @property (strong, nonatomic) SetGoalView *setGoalView;
 @property (strong, nonatomic) TodayViewController *todayView;
+@property (strong, nonatomic) TodayPMViewController *todayPMView;
+
 
 - (IBAction)btnStart:(id)sender;
 

@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "RatingScale.h"
 #import "Goal.h"
+#import "AppStage.h"
 
 @interface TodayPMViewController : UIViewController
 

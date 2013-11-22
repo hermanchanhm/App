@@ -130,6 +130,9 @@
     [self.objScale setRating];
     isSaved = YES;
     
+    AppStage * objStage = [[AppStage alloc]init];
+    [objStage setStage:2];
+    
     //navigate to TodayPMViewController
     
     if(todayPMView == nil)
