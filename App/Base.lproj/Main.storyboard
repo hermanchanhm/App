@@ -978,7 +978,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Agree">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.62928491710000001" green="0.19593978100000001" blue="0.13372490879999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -1877,14 +1877,14 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="GraphTab(have to include link)" width="32" height="32"/>
         <image name="Settings(no link needed)" width="32" height="32"/>
         <image name="Today (have to include link)" width="32" height="32"/>
-        <image name="charmander1" width="194" height="218"/>
+        <image name="charmander1" width="648" height="726"/>
         <image name="graph-icon" width="32" height="32"/>
         <image name="graph-picture" width="128" height="128"/>
         <image name="list" width="32" height="32"/>
-        <image name="machop1" width="186" height="215"/>
-        <image name="mewtwo" width="250" height="320"/>
-        <image name="pikachu1" width="300" height="281"/>
-        <image name="squirtle1" width="197" height="204"/>
+        <image name="machop1" width="620" height="716"/>
+        <image name="mewtwo" width="832" height="1066"/>
+        <image name="pikachu1" width="1000" height="936"/>
+        <image name="squirtle1" width="664" height="690"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
