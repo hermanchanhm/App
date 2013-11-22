@@ -19,6 +19,9 @@
 
 @property (nonatomic, strong) CPTScatterPlot *currentPlot;
 
+@property (strong, nonatomic) IBOutlet UILabel *label1;
+@property (strong, nonatomic) IBOutlet UILabel *label2;
+
 @end
 
 @implementation GraphViewController
@@ -106,6 +109,8 @@
     [self configureGraph];
     [self configurePlots];
     [self configureAxes];
+    
+    [self setLabels];
 }
 
 - (void)configureHost
@@ -293,6 +298,63 @@
     y.majorTickLocations = yLocations;
 }
 
+- (void)setLabels
+{
+    int plotIndex;
+    if (self.currentPlot == self.plot5) {
+        plotIndex = 5;
+    } else if (self.currentPlot == self.plot4) {
+        plotIndex = 4;
+    } else if (self.currentPlot == self.plot3) {
+        plotIndex = 3;
+    } else if (self.currentPlot == self.plot2) {
+        plotIndex = 2;
+    } else {
+        plotIndex = 1;
+    }
+    self.label1.text = [NSString stringWithFormat:@"Goal %d Stage:",plotIndex];
+    self.label2.text = [self getStageString:self.currentPlot];
+}
+
+- (NSString *)getStageString:(CPTPlot *)plot
+{
+    int plotIndex;
+    if (plot == self.plot5) {
+        plotIndex = 5;
+    } else if (plot == self.plot4) {
+        plotIndex = 4;
+    } else if (plot == self.plot3) {
+        plotIndex = 3;
+    } else if (plot == self.plot2) {
+        plotIndex = 2;
+    } else {
+        plotIndex = 1;
+    }
+    
+    GoalDetail *objGoalDetail = [[GoalDetail alloc]init];
+    NSMutableArray * array = [objGoalDetail getScoreData:plotIndex];
+    int count = [objGoalDetail getDayCount:0];
+    
+    double sum = 0;
+    for (int i = 0; i < count; i++)
+    {
+        sum += [[array objectAtIndex:i] doubleValue];
+    }
+    sum /= count;
+    
+    if (sum <= 1) {
+        return @"Precontemplative";
+    } else if (sum <= 2) {
+        return @"Contemplative";
+    } else if (sum <= 3) {
+        return @"Preparation";
+    } else if (sum <= 4) {
+        return @"Action";
+    } else {
+        return @"Maintanence";
+    }
+}
+
 - (NSUInteger)numberOfRecordsForPlot:(CPTPlot *)plot
 {
     GoalDetail * objGoalDetail = [[GoalDetail alloc]init];
@@ -336,6 +398,7 @@
     [self.hostView.hostedGraph reloadData];
     self.currentPlot = self.plot1;
     [self setGraphTitle];
+    [self setLabels];
 }
 
 - (IBAction)Button2Press:(UIButton *)sender
@@ -347,6 +410,7 @@
     [self.hostView.hostedGraph reloadData];
     self.currentPlot = self.plot2;
     [self setGraphTitle];
+    [self setLabels];
 }
 
 - (IBAction)Button3Press:(UIButton *)sender
@@ -358,6 +422,7 @@
     [self.hostView.hostedGraph reloadData];
     self.currentPlot = self.plot3;
     [self setGraphTitle];
+    [self setLabels];
 }
 
 - (IBAction)Button4Press:(UIButton *)sender
@@ -369,6 +434,7 @@
     [self.hostView.hostedGraph reloadData];
     self.currentPlot = self.plot4;
     [self setGraphTitle];
+    [self setLabels];
 }
 
 - (IBAction)Button5Press:(UIButton *)sender
@@ -380,6 +446,7 @@
     [self.hostView.hostedGraph reloadData];
     self.currentPlot = self.plot5;
     [self setGraphTitle];
+    [self setLabels];
 }
 
 - (void)setGraphTitle
