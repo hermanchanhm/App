@@ -120,6 +120,7 @@
 
 - (void) actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
+    
     NSString *buttonClicked = [actionSheet buttonTitleAtIndex:buttonIndex];
     if  ([buttonClicked isEqualToString:@"Reset and Erase All Data"])
     {
