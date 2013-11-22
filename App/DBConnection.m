@@ -63,13 +63,13 @@
     //NSString * str = NSHomeDirectory();
     //dbPathString = [str stringByAppendingPathComponent:databaseName];
     ///-------
-    NSArray *path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *docPath =[path objectAtIndex:0];
-    dbPathString = [docPath stringByAppendingPathComponent:databaseName];
+    //NSArray *path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+   // NSString *docPath =[path objectAtIndex:0];
+    //dbPathString = [docPath stringByAppendingPathComponent:databaseName];
     
     
     
-    [self createAndCheckDatabase];
+    //[self createAndCheckDatabase];
     
     return [FMDatabase databaseWithPath:dbPathString];
 }
