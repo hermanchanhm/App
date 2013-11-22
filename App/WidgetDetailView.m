@@ -23,6 +23,8 @@
     return self;
 }
 
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -30,7 +32,14 @@
     
     //check exp then load appropriate image...
 }
-
+- (void)viewDidAppear:(BOOL)animated
+{
+    Widget * objWidget = [[Widget alloc]init];
+    
+    
+    [self.icon setImage:[UIImage imageNamed:[objWidget getWidget]]];
+    [self.real setImage:[UIImage imageNamed:[objWidget getWidget]]];
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -53,7 +62,8 @@
         //update widget image
     } else { */
         //notify user changes
-    
+        [self.real setImage:[UIImage imageNamed:@"machop2.png"]];
+
         UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Not Enough Exp."
                                                           message:@"You have to reach xxx Exp. to evolve"
                                                          delegate:nil
