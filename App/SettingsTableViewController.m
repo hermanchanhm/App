@@ -29,7 +29,7 @@
     [super viewDidLoad];
     
     //self.settingsArray = [[NSArray alloc] initWithObjects:@"Diet",@"Exercise",@"Bad Habit",@"4",@"5", nil];
-    self.settingsArray = @[@"View Goals", @"Notification Time", @"Widgets", @"Profile", @"Reset and Erase All Data"];
+    self.settingsArray = @[@"View Goals", @"Notification Time", @"Widgets", @"Reset and Erase All Data"];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -95,13 +95,15 @@
         [self.navigationController pushViewController:anotherVC animated:YES];
         
     }
+    /*
     if(indexPath.row==3)
     {
         //push to view selected on 4th row
         UIViewController *anotherVC = [self.storyboard instantiateViewControllerWithIdentifier:@"setprofileVC"];
         [self.navigationController pushViewController:anotherVC animated:YES];
     }
-    if(indexPath.row==4)
+     */
+    if(indexPath.row==3)
     {
         //Trigger UIActionSheet to confirm user selection
         
