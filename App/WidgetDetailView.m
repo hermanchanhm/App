@@ -77,21 +77,21 @@
         [self.real setImage:[UIImage imageNamed:@"machop2.png"]];
         
         [self.icon setImage:[UIImage imageNamed:@"machop2.png"]];}
-        self.levelLabel.text = @"LV2";
+        self.levelLabel.text = @"LV.2";
     if ([str isEqualToString:@"pikachu1.png"]){
         [self.icon setImage:[UIImage imageNamed:@"pikachu2.png"]];
         [self.real setImage:[UIImage imageNamed:@"pikachu2.png"]];}
-        self.levelLabel.text = @"LV2";
+        self.levelLabel.text = @"LV.2";
     if ([str isEqualToString:@"squirtle1.png"]){
         [self.icon setImage:[UIImage imageNamed:@"squirtle2.png"]];
         [self.real setImage:[UIImage imageNamed:@"squirtle2.png"]];}
-        self.levelLabel.text = @"LV2";
+        self.levelLabel.text = @"LV.2";
     if ([str isEqualToString:@"charmander1.png"]){
         [self.real setImage:[UIImage imageNamed:@"charmander2.png"]];
         [self.icon setImage:[UIImage imageNamed:@"charmander2.png"]];}
-        self.levelLabel.text = @"LV2";
-    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Enough Exp for evolution."
-                                                          message:@"Congradulations!Your widget has evolved!"
+        self.levelLabel.text = @"LV.2";
+    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Congratulations!"
+                                                          message:@"Enough Exp. for evolution. Your widget has evolved! Keep it up!"
                                                          delegate:nil
                                                 cancelButtonTitle:@"OK"
                                                 otherButtonTitles:nil];
