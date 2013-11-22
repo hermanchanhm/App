@@ -125,6 +125,7 @@
 
 -(void)loadData
 {
+    
     [[self choice]setText:_objGoal.name];
     [[self goalTextField]setText:_objGoal.description];
     [self.selectorLabel setText:[NSString stringWithFormat:@"%d",_objGoal.numFrequency]];
