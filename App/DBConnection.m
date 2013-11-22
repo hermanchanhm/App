@@ -28,7 +28,33 @@
 
 -(FMDatabase *)connectDB
 {
+    
+    NSString * home = NSHomeDirectory();
+    NSString *str = [NSString stringWithFormat:@"%@/Documents", home];
     databaseName = @"appDB.sqlite";
+    dbPathString = [str stringByAppendingPathComponent:databaseName];
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    BOOL success;
+    success = [fileManager fileExistsAtPath:dbPathString];
+   
+    if(!success)
+    {
+    // Showing App Document path
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsPath = [paths objectAtIndex:0];
+    
+    // Set Destination file path
+    NSString *fileInDocumentsPath = [documentsPath stringByAppendingPathComponent:@"appDB.sqlite"];
+    
+    // Set Origin file path
+    NSString *fileInBundlePath = [[NSBundle mainBundle] pathForResource:@"appDB" ofType:@"sqlite"];
+    
+    // File manager for copying
+    NSError *error = nil;
+    [fileManager copyItemAtPath:fileInBundlePath toPath:fileInDocumentsPath error:&error];
+    }
+    
+    
     
     //NSArray *path = NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory,NSUserDomainMask,YES);
     //NSString *docPath =[path objectAtIndex:0];
